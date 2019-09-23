@@ -1,0 +1,206 @@
+package application;
+
+import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.geometry.Insets;
+import javafx.geometry.Orientation;
+import javafx.geometry.Pos;
+import javafx.stage.Stage;
+import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Menu;
+import javafx.scene.control.MenuBar;
+import javafx.scene.control.MenuItem;
+import javafx.scene.control.SeparatorMenuItem;
+import javafx.scene.control.TextField;
+import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.Button;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyCodeCombination;
+import javafx.scene.input.KeyCombination;
+import javafx.scene.layout.Border;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.BorderStroke;
+import javafx.scene.layout.BorderStrokeStyle;
+import javafx.scene.layout.BorderWidths;
+import javafx.scene.layout.CornerRadii;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.Priority;
+import javafx.scene.layout.TilePane;
+import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontPosture;
+import javafx.scene.text.FontWeight;
+import javafx.scene.text.Text;
+
+public class InterfaceMotCroises extends Application {
+	// Variables de classe
+	BorderPane root;
+	BorderPane bpaneCentre;
+	// BorderPane bpaneDroite;
+	GridPane gpane;
+	MenuItem itemReglesDuJeu;
+	MenuItem itemThemeSport;
+	MenuItem itemThemeBible;
+	MenuItem itemThemeTech;
+	Text txtNomTheme;
+	VBox vboxDroite;
+
+	@Override
+	public void start(Stage primaryStage) {
+		try {
+			root = new BorderPane();
+			Scene scene = new Scene(root, 1000, 800);
+
+			// CONSTRUCTION DE L'INTERFACE
+			bpaneCentre = new BorderPane(); // Pour la partie du milieu
+
+			// La partie a droite du root(vbox)
+			// Pour le vbox a droite
+			vboxDroite = new VBox(); // Pour la partie de droite
+			
+			Text textBinevenue = new Text("Bienvenue! Pour jouer, cliquez sur un \nnuméro dans la grille, écrivez le mot et \ncliquer sur OK ou apuyyez sur la \ntouche Entrée (Entrer) pour continuer");
+			Font font = Font.font("Verdana", FontWeight.BOLD, FontPosture.REGULAR, 15);
+			textBinevenue.setFont(font);
+			vboxDroite.setMargin(textBinevenue, new Insets(40));
+			// vboxDroite.setAlignment(Pos.CENTER_RIGHT);
+
+			// Pour le gridpane de a droite(Dans le vbox)
+			gpane = new GridPane(); // Pour la partie de droite en bas
+			//gpane.setPadding(new Insets(100));
+			gpane.setVgap(10);
+			//gpane.setHgap(5);
+			BorderStroke bordureBleu = new BorderStroke(Color.BLACK, BorderStrokeStyle.SOLID, CornerRadii.EMPTY,new BorderWidths(5), new Insets(0));
+			Border bordure = new Border(bordureBleu);
+			gpane.setBorder(bordure);
+			vboxDroite.setMargin(gpane, new Insets(30));
+			
+			 
+
+			HBox hboxIcone = new HBox();
+			Button btnLettres = new Button("Lettres");
+			Button btnSolution = new Button("Solution");
+			Button btnOk = new Button("Ok");
+			Button btnAide = new Button("Aide");
+			TextField txtReponse = new TextField();
+			txtReponse.setPrefWidth(350);
+
+			//HBox hBoxButtonsLettreSolution = new HBox(5);
+			//HBox.setHgrow(btnLettres, Priority.ALWAYS);
+			//HBox.setHgrow(btnSolution, Priority.ALWAYS);
+			//BorderPane.setMargin(gpane, new Insets(10, 30, 10, 30));
+			gpane.add(txtReponse, 0, 0);
+			gpane.add(btnLettres, 0, 1);
+			gpane.add(btnSolution, 1, 1);
+			gpane.add(btnOk, 3,2 );
+			 gpane.add(btnAide, 4, 3);
+			
+			//hBoxButtonsLettreSolution.getChildren().addAll(btnLettres,btnSolution);
+			//hboxIcone.getChildren().addAll(btnLettres, btnSolution, btnOk, btnAide);
+
+			//gpane.getChildren().addAll(btnLettres,btnSolution,btnOk);
+
+			root.setCenter(bpaneCentre);
+			root.setRight(vboxDroite);
+
+			vboxDroite.setSpacing(200);
+			vboxDroite.getChildren().addAll(textBinevenue, gpane);
+
+			Menu menuThemes = new Menu("_Thèmes");
+			Menu menuAide = new Menu("Aide");
+			menuThemes.setMnemonicParsing(true);
+
+			itemThemeSport = new MenuItem("Le sport");
+			itemThemeBible = new MenuItem("La Bible");
+			itemThemeTech = new MenuItem("La technologie");
+			itemReglesDuJeu = new MenuItem("Rèlges du jeu");
+
+			// itemReglesDuJeu.setAccelerator(new KeyCodeCombination(KeyCode.R,
+			// KeyCombination.CONTROL_DOWN));
+
+			// BARRE DE MENU
+			MenuBar barreDeMenu = new MenuBar();
+			root.setTop(barreDeMenu);
+
+			menuThemes.getItems().addAll(itemThemeBible, itemThemeTech, itemThemeSport);
+			menuAide.getItems().addAll(itemReglesDuJeu);
+
+			barreDeMenu.getMenus().addAll(menuThemes, menuAide);
+
+			// LA GESTION DES EVENEMENTS DU MENU
+			itemReglesDuJeu.setOnAction(new EventHandler<ActionEvent>() {
+
+				@Override
+				public void handle(ActionEvent arg0) {
+					// TODO Auto-generated method stub
+					Alert alertInfo = new Alert(AlertType.INFORMATION);
+					String text = "Règles du jeu";
+					// Font font = Font.font("Verdana", FontWeight.BOLD, FontPosture.REGULAR, 30);
+					// text.setFont(font);
+					alertInfo.setTitle("Règles du jeu");
+					alertInfo.setHeaderText(text.toString().toUpperCase());
+					alertInfo.setContentText(
+							" o Quand vous cliquez sur un numéro, vous obtenez l’indice (texte descriptif) du mot recherché.  Vous pouvez avoir la solution, pour le mot en cours, en cliquant sur le bouton correspondant.\n\n o Le bouton Lettres vous fournit, en désordre, toutes les lettres du mot recherché. Pour répondre, vous écrivez le mot dans la grille correspondante et vous validez à l’aide du bouton OK ou la touche Entrée du clavier.\n\n o Dans le cas d’une mauvaise réponse, la solution vous est donnée. Le bouton Ok est sans effet si la grille du mot courant n’est pas complète. Vous pouvez supprimer les caractères entrés à l’aide de la touche retour arrière (<-) de votre clavier.\n\n o Noter que les caractères des mots validés ne peuvent être effacés. Si vous essayez un autre mot avant d’avoir validé le mot courant, ce dernier est remis à son état initial (toutes les lettres entrées sont effacées) et le nouveau mot devient le mot courant.  \n\no Si vous demandez les lettres et décidez de répondre plus tard, le programme doit se souvenir que vous avez déjà vu les lettres pour vous attribuer, le cas échéant, les points en conséquence. Notez que le programme vous redonnera la même séquence de lettres lors des prochains essais.");
+					alertInfo.showAndWait();
+
+				}
+			});
+
+			itemThemeBible.setOnAction(new EventHandler<ActionEvent>() {
+
+				@Override
+				public void handle(ActionEvent arg0) {
+					// TODO Auto-generated method stub
+					txtNomTheme = new Text("La Bible");
+					Font font = Font.font("Verdana", FontWeight.BOLD, FontPosture.REGULAR, 30);
+					txtNomTheme.setFont(font);
+					bpaneCentre.setAlignment(txtNomTheme, Pos.CENTER);
+					bpaneCentre.setTop(txtNomTheme);
+				}
+			});
+			itemThemeTech.setOnAction(new EventHandler<ActionEvent>() {
+
+				@Override
+				public void handle(ActionEvent arg0) {
+					// TODO Auto-generated method stub
+					txtNomTheme = new Text("La technologie");
+					Font font = Font.font("Verdana", FontWeight.BOLD, FontPosture.REGULAR, 30);
+					txtNomTheme.setFont(font);
+					bpaneCentre.setAlignment(txtNomTheme, Pos.CENTER);
+					bpaneCentre.setTop(txtNomTheme);
+				}
+			});
+			itemThemeSport.setOnAction(new EventHandler<ActionEvent>() {
+
+				@Override
+				public void handle(ActionEvent arg0) {
+					// TODO Auto-generated method stub
+
+					txtNomTheme = new Text("Le sport");
+					Font font = Font.font("Verdana", FontWeight.BOLD, FontPosture.REGULAR, 30);
+					txtNomTheme.setFont(font);
+
+					// txtNomTheme.setX(50);
+					// txtNomTheme.setY(7);
+					bpaneCentre.setAlignment(txtNomTheme, Pos.CENTER);
+					bpaneCentre.setTop(txtNomTheme);
+
+				}
+			});
+
+			primaryStage.setScene(scene);
+			primaryStage.setResizable(false);
+			primaryStage.setTitle("Mots croisés");
+			primaryStage.show();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public static void main(String[] args) {
+		launch(args);
+	}
+}

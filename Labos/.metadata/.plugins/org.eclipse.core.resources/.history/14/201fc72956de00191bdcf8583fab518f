@@ -1,0 +1,29 @@
+package application;
+
+
+
+import javafx.application.Application;
+import javafx.scene.layout.GridPane;
+import javafx.stage.Stage;
+
+public class Case extends Application {
+
+	
+	public void start(Stage primaryStage) {
+		try {
+			 //GridPane gPaneCase = contruireCases(tabNombre);
+			
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	
+	public void contruireCases(int inb1) {
+		
+	}
+	
+	public static void main(String[] args) {
+		launch(args);
+	}
+}

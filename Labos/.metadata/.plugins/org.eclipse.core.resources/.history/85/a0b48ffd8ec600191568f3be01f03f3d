@@ -1,0 +1,41 @@
+package application;
+
+import java.awt.Color;
+
+import javafx.application.Application;
+import javafx.geometry.Insets;
+import javafx.scene.Scene;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundFill;
+import javafx.scene.layout.CornerRadii;
+import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
+
+public class Exercice3 extends Application {
+
+	public void start(Stage primaryStage) {
+		try {
+			Pane root = new Pane();
+			Scene scene = new Scene(root, 400, 400);
+			
+			primaryStage.setTitle("Exercice3");
+			primaryStage.setScene(scene);
+			primaryStage.show();
+			
+			BackgroundFill bgFillVert = new BackgroundFill(Color.lightGray, new CornerRadii(10), new Insets(20)));
+			BackgroundFill bgFillRouge = new BackgroundFill(Color.RED new CornerRadii(25), new Insets(30)));
+			Background bg  = new Background(bgFillVert,bgFillRouge);
+			root.setBackground(bg);
+			
+			
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+
+	public static void main(String[] args) {
+		launch(args);
+	}
+}

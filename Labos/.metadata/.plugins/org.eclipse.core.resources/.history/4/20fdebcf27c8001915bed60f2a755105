@@ -1,0 +1,61 @@
+package application;
+
+import java.awt.Color;
+
+import javafx.application.Application;
+import javafx.geometry.Insets;
+import javafx.scene.Scene;
+import javafx.scene.image.Image;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundFill;
+import javafx.scene.layout.BackgroundImage;
+import javafx.scene.layout.BackgroundPosition;
+import javafx.scene.layout.BackgroundRepeat;
+import javafx.scene.layout.BackgroundSize;
+import javafx.scene.layout.CornerRadii;
+import javafx.scene.layout.Pane;
+import javafx.scene.paint.Paint;
+import javafx.stage.Stage;
+
+public class Exercice3 extends Application {
+
+	public void start(Stage primaryStage) {
+		try {
+			Pane root = new Pane();
+			Scene scene = new Scene(root, 400, 400);
+			
+			primaryStage.setTitle("Exercice3");
+			primaryStage.setScene(scene);
+			primaryStage.show();
+			
+			//Pour avoir les couleurs
+			BackgroundFill bgFillVert = new BackgroundFill(javafx.scene.paint.Color.LIGHTGREEN, new CornerRadii(10), new Insets(20));
+			BackgroundFill bgFillRouge = new BackgroundFill(javafx.scene.paint.Color.RED, new CornerRadii(25), new Insets(30));
+			Background bg  = new Background(bgFillVert,bgFillRouge);
+			
+			//Pour l'image
+			Image image = new Image("hydrangeas.PNG");
+			BackgroundSize bgTaille  = new BackgroundSize(100, 100, false, false, false, false);
+			BackgroundImage bgImage = new BackgroundImage(image, BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.CENTER, bgTaille);
+			Background bg1 = new Background(bgImage);
+			
+			//Pour avoir l'image et les couleurs
+			
+			//Background bg2 = new Background(bgFillVert,bgFillRouge,bgImage);
+			Background bg3  = new Background(new BackgroundFill[]{bgFillVert,bgFillRouge}, new BackgroundImage[] {bgImage});
+			
+			
+			//root.setBackground(bg);
+			//root.setBackground(bg1);
+			root.setBackground(bg3);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+
+	public static void main(String[] args) {
+		launch(args);
+	}
+}

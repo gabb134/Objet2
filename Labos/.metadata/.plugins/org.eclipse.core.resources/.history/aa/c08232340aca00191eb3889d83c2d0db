@@ -1,0 +1,365 @@
+package application;
+
+
+
+
+
+import javafx.application.Application;
+import javafx.geometry.HPos;
+import javafx.geometry.Insets;
+import javafx.geometry.Orientation;
+import javafx.geometry.Pos;
+import javafx.stage.Stage;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundFill;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.ColumnConstraints;
+import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.Priority;
+import javafx.scene.layout.StackPane;
+import javafx.scene.layout.TilePane;
+import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
+import javafx.scene.text.Text;
+
+
+public class Main extends Application {
+	
+	@Override
+	public void start(Stage primaryStage) {
+		try {
+
+			//FlowPane root = creerFlowPane();
+			
+			
+		//	HBox root = creerHBox();
+
+			//VBox root = creerVBox();
+
+
+			 BorderPane root = creerBorderPane();
+			 
+			//GridPane root = creerGridPane();
+			//TilePane root = creerTilePane();
+			
+			//StackPane root = creerStackPane();
+
+			//AnchorPane  root = creerAnchorPane();
+
+	         Scene scene = new Scene(root);
+			
+			// scene.setFill(Color.GREY);
+			//scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			
+			primaryStage.setScene(scene);
+			primaryStage.setTitle("Les panneaux de mise en page ");
+			primaryStage.show();
+			
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	private StackPane creerStackPane() {
+		// TODO Auto-generated method stub
+		
+		
+		StackPane stackPane = new StackPane();
+		
+	    Circle  cercle = new Circle();
+        cercle.setRadius(30);
+        cercle.setFill(Color.PINK);
+	    Text txtAide = new Text("?");
+	    txtAide.setFont(Font.font("Verdana", FontWeight.BOLD, 60));
+	    txtAide.setFill(Color.WHITE);
+	    txtAide.setStroke(Color.BLUEVIOLET); 
+	    stackPane.getChildren().addAll(cercle,txtAide );
+	
+		return stackPane;
+	}
+
+	private TilePane creerTilePane() {
+		
+		// similiare au FlowPane, sauf que les noeuds sont 
+		// placés dans des cellules de même taille. 
+		// les noeuds sont alignés horizontalement ou verticalement
+		
+		TilePane tilePane = new TilePane();
+		
+		tilePane.setPadding(new Insets(10));
+		tilePane.setVgap(5);
+		tilePane.setHgap(5);
+		tilePane.setPrefColumns(2);
+	
+		
+		Button btn1= new Button("bouton 1");
+	        	
+			TextField txtField = new TextField();
+			
+			Button btn2  =new Button("bouton 2");
+			Button btn3 = new Button (" bouton 3 a un nom long");
+			Button btn4 = new Button("4");
+			
+			Button btn5 = new Button("un bouton avec une taille fixée");
+			btn5.setPrefSize(200,50);
+		
+		  tilePane.getChildren().addAll(btn1,btn2,btn3,btn4,btn5);
+			
+		
+		return tilePane;
+	}
+
+	private GridPane creerGridPane() {
+		// TODO Auto-generated method stub
+		
+        GridPane gridpane = new GridPane();
+        gridpane.setPadding(new Insets(10));
+        
+        gridpane.setHgap(10);
+        gridpane.setVgap(10);
+        
+        // ajout des composants
+        Text txtBienvenue = new Text("Bienvenue");
+        txtBienvenue.setFont(Font.font("Tahoma", FontWeight.BOLD, 40));
+        txtBienvenue.setFill(Color.BLUE);
+        
+        // bienvenue  dans une cellule
+       //gridpane.add(txtBienvenue,0,0);
+        
+        
+        // bienvenue sur deux colonnes
+        gridpane.add(txtBienvenue,0,0,2,1);
+        GridPane.setHalignment(txtBienvenue, HPos.CENTER);
+        
+        
+        Label lblUtilisateur = new Label("Nom d'utilisateur");
+        lblUtilisateur.setFont(Font.font("Arial", FontWeight.LIGHT, 25));
+        gridpane.add(lblUtilisateur, 0,1);
+        
+        TextField  txtUtilisateur = new TextField(" nom d'utilisateur");
+        gridpane.add(txtUtilisateur, 1, 1);
+        
+        Label lblMotDePasse = new Label("Mot de passe");
+        lblMotDePasse.setFont(Font.font("Arial", FontWeight.LIGHT, 25));
+        gridpane.add(lblMotDePasse, 0,2);
+        
+        PasswordField   pwText = new PasswordField();
+        gridpane.add(pwText, 1, 2);
+        
+        
+		Button btnOk = new Button("OK");
+        btnOk.setTextFill(Color.BLUE);
+        btnOk.setFont(Font.font("Tahoma", FontWeight.BOLD, 30));
+        gridpane.add(btnOk, 1, 3);
+        
+        // Alignement du bouton OK à droite de la cellule
+        // par défaut, il est à gauche
+        GridPane.setHalignment(btnOk, HPos.RIGHT);
+       // gridpane.setGridLinesVisible(true);
+		return gridpane;	
+	}
+
+	private BorderPane creerBorderPane() {
+		// TODO Auto-generated method stub
+		BorderPane bdPane = new BorderPane();
+        Button btn1= new Button("bouton 1");
+        
+      // bdPane.setPadding(new Insets(15));
+       BorderPane.setMargin(btn1, new Insets(20));
+	
+		TextField txtField = new TextField();
+		
+		Button btn2  =new Button("bouton 2");
+		Button btn3 = new Button (" bouton 3 a un non long");
+		Button btn4 = new Button("4");
+		Button btn5 = new Button("un bouton avec une taille fixée");
+		btn5.setPrefSize(200,50);
+		
+		bdPane.setTop(btn1);
+		bdPane.setCenter(btn2);
+		bdPane.setLeft(btn4);
+		bdPane.setRight(btn3);
+		bdPane.setBottom(btn5);
+
+		// noter les positions par défaut: 
+		// Haut: Pos.TOP_LEFT
+		// Bas: Pos.BOTTOM_LEFT
+		// Gauche: Pos.TOP_LEFT
+		// droite: Pos.TOP_RIGTH
+		//Centre: Pos.CENTER
+		
+		
+		// Exemples
+	   	BorderPane.setAlignment(btn1, Pos.CENTER);
+		
+		 //BorderPane.setAlignment(btn3,Pos.CENTER_LEFT);
+		
+		//tester d'autres positionnements. 
+	
+		return bdPane;
+	}
+
+	private FlowPane creerFlowPane() {
+		// les noeuds sont alignés horizontalement ou verticalement
+		// prenons le cas horizontal 
+		
+		
+		FlowPane flPane = new FlowPane();  // ou FlowPane flPane = new FlowPane(Orientation.HORIZONTAL) 
+			
+		flPane.setPrefSize(100, 100);
+		//Par défaut les noeuds sont alignés de gauche à droite. 
+		//flPane.setAlignment(Pos.TOP_CENTER);
+		
+		//padding: distance entre les noeuds et les bordures du panneau. 
+	
+		flPane.setPadding(new Insets(10,5,10,5));
+		flPane.setVgap(5);
+		flPane.setHgap(5);
+	
+
+		//flPane.setStyle("-fx-background-color: DAE6F3;");
+		
+		BackgroundFill  bgFond = new BackgroundFill(Color.AQUA, null, null);
+		flPane.setBackground(new Background(bgFond));
+		
+		Button btn1= new Button("bouton 1");
+	    // pour ajouter des espaces autour d'un contrôle
+		//FlowPane.setMargin(btn1, new Insets(40,55,20,25));
+		
+		// Noter qu'on peut choisir le nombre de composants pour le retour à la ligne suivante
+		//flPane.setPrefWrapLength(flPane.getPrefWrapLength()); 
+		//flPane.setPrefWrapLength(800);
+		
+		TextField txtField = new TextField();
+		
+		Button btn2  =new Button("bouton 2");
+		Button btn3 = new Button (" bouton 3 a un nom long");
+		
+		
+		Button btn4 = new Button("4");
+		Button btn5 = new Button("un bouton avec une taille fixée");
+		btn5.setPrefSize(300,50);
+		
+		flPane.getChildren().addAll(btn1, btn2,txtField, btn3,btn4,btn5);	
+		return flPane;
+	}
+
+	private VBox creerVBox() {
+		// TODO Auto-generated method stub
+		VBox  vBox = new VBox();
+		
+		// prend la même valeur pour les 4 arguments (TopRigthBottomLeft)
+		vBox.setPadding(new Insets(50));
+	    vBox.setSpacing(10);
+		Button btn1= new Button("bouton 1");
+		btn1.setPrefSize(200, 50);
+		btn1.setMaxSize(600, 200);
+		TextField txtField = new TextField(" peut changer de taille");
+		txtField.setMaxSize(400, 100);
+		Button btn2  =new Button("bouton 2");
+		Button btn3 = new Button (" bouton 3 a un non long");
+		Button btn4 = new Button("4");
+		Button btn5 = new Button("un bouton avec une taille fixée");
+		btn5.setPrefSize(200,50);
+	
+		// par défaut les composants ne changent pas de taille quand on agrandit la fenêtre. 
+			
+		VBox.setVgrow(txtField, Priority.ALWAYS);
+		VBox.setVgrow(btn1, Priority.ALWAYS);	
+		vBox.getChildren().addAll(btn1, btn2,txtField, btn3,btn4,btn5);	
+		return vBox;
+	}
+
+	private HBox creerHBox() {
+		HBox  hBox = new HBox();
+		//padding: distance entre les noeuds et les bordures du panneau VBox. 
+		//Spacing: distance entre les noeuds.
+		//margins: espace supplémentaire autour d'un contrôle, 
+		
+		hBox.setPadding(new Insets(40,10,40,15));
+	    hBox.setSpacing(20);
+		Button btn1= new Button("bouton 1");
+		
+		btn1.setPrefSize(200, 50);
+		
+		btn1.setMaxSize(400, 200);
+		btn1.setMinSize(250, 30);
+	
+		TextField txtField = new TextField(" peut changer de taille");
+		TextField txtField1 = new TextField("ne  peut pas changer de taille");
+		Button btn2  =new Button("bouton 2");
+		Button btn3 = new Button (" bouton 3 a un non long");
+		Button btn4 = new Button("4");
+		Button btn5 = new Button("un bouton avec une taille fixée");
+		btn5.setPrefSize(200,50);
+	
+		
+		//HBox.setMargin(btn1, new Insets(20,20,20,70));
+	    //HBox.setMargin(btn2, new Insets(20,20,20,50));
+		
+		
+		hBox.getChildren().addAll(btn1, btn2,txtField, btn3,txtField1,btn4,btn5);
+		// par défaut les composants ne changent pas de taille quand on agrandit. 
+
+
+		//agrandissement d'un composant avec le Layout
+		HBox.setHgrow(txtField, Priority.ALWAYS);
+		HBox.setHgrow(btn4, Priority.ALWAYS);
+      	
+		HBox.setHgrow(btn1, Priority.ALWAYS);
+		btn4.setMaxWidth(Double.MAX_VALUE);
+		
+		// pour limiter l'expansion des contrôles. 
+		btn4.setMaxWidth(100);
+		txtField.setMaxWidth(400);
+		
+		
+		// Pour éviter les ...quand on réduit la largeur de la fenêtre 
+		
+		//btn1.setMinWidth(Button.USE_PREF_SIZE);
+		
+		
+		// si on veut interdire le redimensionnement d'un composant
+		// min = max = prefferred size
+		
+	     btn2.setMinWidth(400);
+	     btn2.setMaxWidth(400);
+	     btn2.setPrefWidth(100);
+	     
+		return hBox;
+	}
+
+	private AnchorPane creerAnchorPane() {
+		
+		Button btnEnregistrer = new Button("Enregistrer");
+		Button btnAnnuler = new Button("Annuler");
+		Font font =Font.font("Tahoma", FontWeight.BOLD, 30);
+		btnEnregistrer.setFont(font);
+		btnAnnuler.setFont(font);
+		HBox hBox = new HBox(10, btnEnregistrer, btnAnnuler);
+		AnchorPane ancrPane = new AnchorPane(hBox);
+		AnchorPane.setBottomAnchor(hBox, 20.0);
+		AnchorPane.setRightAnchor(hBox, 20.0);
+		
+		
+	     
+		return ancrPane;
+		
+	}
+	
+	public static void main(String[] args) {
+		launch(args);
+	}
+}

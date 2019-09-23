@@ -1,0 +1,10 @@
+H;"Charpentier, il est l'époux de Marie, la mère de Jésus";Joseph
+H;"Ces quatre livres exposent la vie et la doctrine de Jésus-Christ";Evangiles
+H;"Lieu de naissance de Jésus";Bethleem
+H;"Le mont où Jésus se rendit prier la veille de sa mort";Oliviers
+H;"L'un des trois Rois mages venus adorer l'enfant Jésus";Balthazar
+H;"Patrie de Joseph, celui à qui Pilate permit d'ensevelir Jésus-Christ";Arimathie
+V;"On lui doit probablement l'expression «s'en laver les mains» (prénom et nom)";Ponce*pilate
+V;"Jésus fut baptisé dans les eaux de ce fleuve par Jean-Baptiste";Jourdain
+V;"Il fut ressuscité à Béthanie par Jésus";Lazare
+V;"Jésus y accomplit son premier miracle: l'eau changée en vin";Cana

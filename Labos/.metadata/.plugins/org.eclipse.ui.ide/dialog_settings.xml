@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="NewWizardAction">
+		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.fx.ide.jdt.ui.javafx"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.fx.ide"/>
+		</list>
+	</section>
+	<section name="ExternalProjectImportWizard">
+		<item key="WizardProjectsImportPage.STORE_NESTED_PROJECTS" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="false"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\cg.marrero\OneDrive - Cegep Gerald-Godin\Hiver2019\ProgObjet1\Labos\Projet2"/>
+			<item value="C:\Users\GabrielMarrero\OneDrive - Cegep Gerald-Godin\Automne2019\Objet2\Theorie\Cours4\Cours 4\exempleCours4"/>
+			<item value="C:\Users\GabrielMarrero\OneDrive - Cegep Gerald-Godin\Automne2019\Objet2\Theorie\Cours1\Cours1_suite\Cours1 (suite)\gestionnaireDeMiseEnPage"/>
+			<item value="C:\Users\GabrielMarrero\OneDrive - Cegep Gerald-Godin\Automne2019\Objet2\Theorie\Cours3\exempleCours3"/>
+			<item value="C:\Users\GabrielMarrero\OneDrive - Cegep Gerald-Godin\Automne2019\Objet2\Labos\Labo1"/>
+			<item value="/Users/gabo/OneDrive - Cegep Gerald-Godin/Automne2019/Objet2/Theorie/Cours3/exempleCours3"/>
+			<item value="/Users/gabo/OneDrive - Cegep Gerald-Godin/Automne2019/Objet2/Theorie/Cours2/exempleCours2"/>
+			<item value="C:\Users\cg.marrero\OneDrive - Cegep Gerald-Godin\Automne2019\Objet2\Theorie\Cours1\Cours1_suite\Cours1 (suite)\gestionnaireDeMiseEnPage"/>
+			<item value="C:\Users\cg.marrero\OneDrive - Cegep Gerald-Godin\Automne2019\Objet2\Theorie\Cours1\Cours1_suite\Cours1 (suite)\exempleCours1"/>
+			<item value="C:\Users\gabo\OneDrive - Cegep Gerald-Godin\Automne2019\Objet2\Theorie\Cours 1\Cours1_suite\Cours1 (suite)\gestionnaireDeMiseEnPage"/>
+			<item value="C:\Users\gabo\OneDrive - Cegep Gerald-Godin\Automne2019\Objet2\Theorie\Cours 1\Cours1_suite\Cours1 (suite)\exempleCours1"/>
+			<item value="C:\Users\cg.marrero\OneDrive - Cegep Gerald-Godin\Automne2019\Objet2\Theorie\Cours 1\Cours1_suite\Cours1 (suite)\gestionnaireDeMiseEnPage"/>
+			<item value="C:\Users\cg.marrero\OneDrive - Cegep Gerald-Godin\Automne2019\Objet2\Theorie\Cours 1\Cours1_suite\Cours1 (suite)\exempleCours1"/>
+			<item value="/Users/gabo/OneDrive - Cegep Gerald-Godin/Automne2019/Objet2/Theorie/Cours 1/Cours1_suite/Cours1 (suite)/gestionnaireDeMiseEnPage"/>
+			<item value="/Users/gabo/OneDrive - Cegep Gerald-Godin/Automne2019/Objet2/Theorie/Cours 1/Cours1_suite/Cours1 (suite)/exempleCours1"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
+</section>

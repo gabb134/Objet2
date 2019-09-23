@@ -1,0 +1,84 @@
+package application;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.NoSuchElementException;
+import java.util.StringTokenizer;
+
+public class LectureDonnees {
+	private int[][] tabNombres;
+	private ArrayList<Mot> arrMots = new ArrayList<Mot>();
+
+	public LectureDonnees(String strFIchier) {
+		BufferedReader brFichier = null;
+		String strLigne;
+		StringTokenizer st;
+		String nbLignes = "";
+		String strNumeros = "";
+		String nbColonnes = "";
+		int compteurLignes = 0;
+		int intLignes = 0;
+		int intColonnes = 0;
+
+		try {
+			brFichier = new BufferedReader(new FileReader(strFIchier));
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		try {
+			while ((strLigne = brFichier.readLine()) != null) {
+
+				try {
+					if (compteurLignes == 0) {
+						st = new StringTokenizer(strLigne, ",");
+
+						nbLignes = st.nextToken().trim();// lignes
+						nbColonnes = st.nextToken().trim();// colonnes
+						intLignes = Integer.parseInt(nbLignes);
+						intColonnes = Integer.parseInt(nbColonnes);
+						tabNombres = new int[intLignes][intColonnes];
+
+					} else if (compteurLignes > Integer.parseInt(nbLignes)) {
+						strNumeros = strLigne.trim().toUpperCase();
+						//System.out.println(strNumeros);
+					}else if (compteurLignes > 0 && compteurLignes <= Integer.parseInt(nbLignes)) {
+						strLigne = strLigne.replace(",", "");
+						for (int j = 0; j < strLigne.length(); j++) {
+							tabNombres[compteurLignes-1][j] = strLigne.charAt(j);
+						}
+						System.out.println(strLigne);
+
+					}
+
+				} catch (NoSuchElementException e) {
+
+				}
+				compteurLignes++;
+			}
+			//System.out.println(intLignes + " " + intColonnes+"\n"+strNumeros);
+
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			System.out.println(e.toString());
+		}
+
+	}
+	public void afficherGrille() {
+		for (int i = 0; i < tabNombres.length; i++) {
+			for (int j = 0; j < tabNombres[i].length; j++) {
+				System.out.print(" " + tabNombres[i][j] + " ");
+			}
+			System.out.println();
+		}
+	}
+
+	public static void main(String[] args) {
+		LectureDonnees l = new LectureDonnees("grilleBible.txt");
+		//l.afficherGrille();
+	}
+}

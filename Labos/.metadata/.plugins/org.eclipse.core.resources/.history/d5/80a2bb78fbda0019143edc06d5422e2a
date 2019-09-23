@@ -1,0 +1,13 @@
+package application;
+
+import java.util.ArrayList;
+
+public class LectureDonnees {
+
+	private ArrayList<Mot> arrMots = new ArrayList<Mot>();
+	
+
+	public static void main(String[] args) {
+		
+	}
+}

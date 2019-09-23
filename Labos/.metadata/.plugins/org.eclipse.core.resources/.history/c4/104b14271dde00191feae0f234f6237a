@@ -1,0 +1,9 @@
+package application;
+
+import com.sun.glass.ui.Application;
+
+import javafx.stage.Stage;
+
+public class Case extends Application {
+
+}

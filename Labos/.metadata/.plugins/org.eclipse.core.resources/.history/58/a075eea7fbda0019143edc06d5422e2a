@@ -1,0 +1,26 @@
+package application;
+
+import java.io.BufferedReader;
+import java.util.ArrayList;
+import java.util.StringTokenizer;
+
+public class LectureDonnees {
+
+	private ArrayList<Mot> arrMots = new ArrayList<Mot>();
+
+	public LectureDonnees(String strFIchier) {
+		BufferedReader brFichier = null;
+		String strLigne;
+		StringTokenizer st;
+		String nbLignes = "";
+		String strMots = "";
+		String nbColonnes = "";
+		int compteurLignes = 0;
+		int intLignes = 0;
+		int intColonnes = 0;
+	}
+
+	public static void main(String[] args) {
+
+	}
+}

@@ -1,0 +1,144 @@
+package application;
+
+import javafx.application.Application;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.Border;
+import javafx.scene.layout.BorderStroke;
+import javafx.scene.layout.BorderStrokeStyle;
+import javafx.scene.layout.BorderWidths;
+import javafx.scene.layout.CornerRadii;
+import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.Priority;
+import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.StrokeLineCap;
+import javafx.scene.shape.StrokeLineJoin;
+import javafx.scene.shape.StrokeType;
+import javafx.stage.Stage;
+
+public class Exercice4 extends Application {
+
+	public void start(Stage primaryStage) {
+		try {
+			
+			//HBox root = creerHBox();
+			VBox root = creerVBox();
+			Scene scene = new Scene(root);
+			
+			primaryStage.setTitle("Exercice4: Les layouts");
+			primaryStage.setScene(scene);
+			primaryStage.show();
+			
+		
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+
+	private HBox creerHBox() {
+		HBox  hBox = new HBox();
+		//padding: distance entre les noeuds et les bordures du panneau VBox. 
+		//Spacing: distance entre les noeuds.
+		//margins: espace supplémentaire autour d'un contrôle, 
+		
+		hBox.setPadding(new Insets(40,10,40,15));
+	    hBox.setSpacing(20);
+		Button btn1= new Button("bouton 1");
+		
+	//	btn1.setPrefSize(200, 50);
+		
+	//	btn1.setMaxSize(400, 200);
+	//	btn1.setMinSize(250, 30);
+	
+		TextField txtField = new TextField(" peut changer de taille");
+		TextField txtField1 = new TextField("ne  peut pas changer de taille");
+		Button btn2  =new Button("bouton 2");
+		Button btn3 = new Button (" bouton 3 a un non long");
+		Button btn4 = new Button("4");
+		Button btn5 = new Button("un bouton avec une taille fixée");
+		btn5.setPrefSize(200,50);
+	
+		
+		//HBox.setMargin(btn1, new Insets(20,20,20,70));
+	    //HBox.setMargin(btn2, new Insets(20,20,20,50));
+		
+		
+		hBox.getChildren().addAll(btn1, btn2,txtField, btn3,txtField1,btn4,btn5);
+		// par défaut les composants ne changent pas de taille quand on agrandit. 
+
+
+		//agrandissement d'un composant avec le Layout
+		HBox.setHgrow(txtField, Priority.ALWAYS);
+		HBox.setHgrow(btn4, Priority.ALWAYS);
+      	
+		HBox.setHgrow(btn1, Priority.ALWAYS);
+		btn4.setMaxWidth(Double.MAX_VALUE);
+		
+		// pour limiter l'expansion des contrôles. 
+		btn4.setMaxWidth(100);
+		txtField.setMaxWidth(400);
+		
+		//Pour l'Alignement
+		hBox.setAlignment(Pos.CENTER);
+		
+		// Pour éviter les ...quand on réduit la largeur de la fenêtre 
+		
+		//btn1.setMinWidth(Button.USE_PREF_SIZE);
+		
+		
+		// si on veut interdire le redimensionnement d'un composant
+		// min = max = prefferred size
+		
+	  //   btn2.setMinWidth(400);
+	   //  btn2.setMaxWidth(400);
+	    // btn2.setPrefWidth(100);
+		
+		//Pour la bordure
+		BorderStrokeStyle styleCyan = new BorderStrokeStyle(StrokeType.INSIDE, StrokeLineJoin.MITER, StrokeLineCap.BUTT, 10, 0, null);
+
+		//BorderStroke bordureBleu = new BorderStroke(Color.ALICEBLUE.BLUE, styleBleu, CornerRadii.EMPTY, new BorderWidths(30), new Insets(20));
+		BorderStroke bordureCyan = new BorderStroke(Color.ALICEBLUE.CYAN, styleCyan, new CornerRadii(15), new BorderWidths(16), new Insets(0));
+
+		Border bordure = new Border(bordureCyan);
+		
+		hBox.setBorder(bordure);
+	     
+		return hBox;
+	}
+	private VBox creerVBox() {
+		// TODO Auto-generated method stub
+		VBox  vBox = new VBox();
+		
+		// prend la même valeur pour les 4 arguments (TopRigthBottomLeft)
+		vBox.setPadding(new Insets(50));
+	    vBox.setSpacing(10);
+		Button btn1= new Button("bouton 1");
+		//btn1.setPrefSize(200, 50);
+		//btn1.setMaxSize(600, 200);
+		//TextField txtField = new TextField(" peut changer de taille");
+		//txtField.setMaxSize(400, 100);
+		Button btn2  =new Button("bouton 2");
+		Button btn3 = new Button (" bouton 3 a un non long");
+		Button btn4 = new Button("4");
+		Button btn5 = new Button("encore un bouton");
+		btn5.setPrefSize(100,50);
+	
+		// par défaut les composants ne changent pas de taille quand on agrandit la fenêtre. 
+			
+		//VBox.setVgrow(txtField, Priority.ALWAYS);
+		VBox.setVgrow(btn1, Priority.ALWAYS);	
+		vBox.getChildren().addAll(btn1, btn2, btn3,btn4,btn5);	
+		return vBox;
+	}
+
+	public static void main(String[] args) {
+		launch(args);
+	}
+
+}

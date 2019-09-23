@@ -1,0 +1,67 @@
+package application;
+
+import java.awt.font.NumericShaper;
+
+import javafx.application.Application;
+import javafx.beans.binding.NumberBinding;
+import javafx.scene.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.FlowPane;
+import javafx.stage.Stage;
+
+public class Exercice2 extends Application {
+	@Override
+	public void start(Stage primaryStage) {
+		try {
+			Group root = new Group();
+			Scene scene = new Scene(root, 320, 200);
+			
+			primaryStage.setTitle("Exercice2");
+			primaryStage.setScene(scene);
+			primaryStage.show();
+			// scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+
+			//Création de buttons et de labels
+			Label lbl1 = new Label("Test interface Graphique");
+			Button btnQuitter = new Button("Quitter");
+			Button btnOk = new Button("Ok");
+			Button btnAnnuler = new Button("Annuler");
+			
+			//Positionnement des buttons et des labels
+			lbl1.setLayoutX(20);
+			lbl1.setLayoutY(30);
+			
+			btnQuitter.setLayoutX(30);
+			btnQuitter.setLayoutY(60);
+			btnOk.setLayoutX(10);
+			btnOk.setLayoutY(30);
+			
+			NumberBinding layX = btnOk.layoutXProperty().add(btnOk.widthProperty().add(10));
+			btnAnnuler.layoutXProperty().bind(layX);
+			btnAnnuler.layoutYProperty().bind(btnOk.layoutYProperty());
+			
+			
+			
+			root.setTranslateX(100);
+			
+			
+			btnQuitter.setRotate(45);
+			
+			
+			//Ajout des buttons et des labels
+			root.getChildren().add(lbl1);
+			root.getChildren().add(btnQuitter);
+			root.getChildren().addAll(btnOk,btnQuitter);
+			
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public static void main(String[] args) {
+		launch(args);
+	}
+}

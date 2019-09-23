@@ -1,0 +1,38 @@
+package application;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.util.ArrayList;
+import java.util.StringTokenizer;
+
+public class LectureDonnees {
+
+	private ArrayList<Mot> arrMots = new ArrayList<Mot>();
+
+	public LectureDonnees(String strFIchier) {
+		BufferedReader brFichier = null;
+		String strLigne;
+		StringTokenizer st;
+		String nbLignes = "";
+		String strMots = "";
+		String nbColonnes = "";
+		int compteurLignes = 0;
+		int intLignes = 0;
+		int intColonnes = 0;
+		
+	
+		try {
+			brFichier = new BufferedReader(new FileReader(strFIchier));
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+	}
+
+	public static void main(String[] args) {
+		LectureDonnees l = new LectureDonnees("grilleBible.txt");
+	}
+}

@@ -1,0 +1,21 @@
+package application;
+
+
+
+import javafx.application.Application;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
+import javafx.stage.Stage;
+
+public class Case  {
+	
+	
+	GridPane gpane;
+	HBox hbox;
+	
+
+	public Case(int intb1,GridPane gpane) {
+		
+	}
+
+}
