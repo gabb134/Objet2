@@ -155,6 +155,7 @@ public class InterfaceMotCroises extends Application {
 			// txtReponse.setMaxHeight(500);
 			// txtReponse.setPrefSize(10, 2);
 			txtReponse.setMaxSize(220, -10);
+			txtReponse.setEditable(false);
 			btnLettres.setBorder(borduregGpane);
 			btnSolution.setBorder(borduregGpane);
 			btnOk.setBorder(borduregGpane);
@@ -170,7 +171,9 @@ public class InterfaceMotCroises extends Application {
 			txtVotreScore.setTextAlignment(TextAlignment.CENTER);
 			txtFieldvotreSocre.setFont(font1);
 			txtFieldvotreSocre.setAlignment(Pos.CENTER);
-
+			txtFieldvotreSocre.setEditable(false);
+			
+			
 			vboxMax.setBackground(couleurFill);
 			vboxMax.setPadding(new Insets(5));
 			vboxMax.setPrefWidth(10);
@@ -182,6 +185,7 @@ public class InterfaceMotCroises extends Application {
 
 			txtFieldmaximum.setFont(font1);
 			txtFieldmaximum.setAlignment(Pos.CENTER);
+			txtFieldmaximum.setEditable(false);
 			// txtReponse.setPrefHeight(10);
 
 			gpane.add(txtReponse, 0, 0, 2, 1);
@@ -204,41 +208,6 @@ public class InterfaceMotCroises extends Application {
 			
 			
 			
-			// POUR LA GRILLE LES CASES ET LES CERCLES DES NUMEROS
-			gpaneCase = new GridPane();
-			//root.setLeft(vboxGauche);
-			gpaneCase.setPadding(new Insets(10));
-			 //gpaneCase.setGridLinesVisible(true);
-			gpaneCase.setAlignment(Pos.CENTER);
-			gpaneCase.setVgap(2);
-			gpaneCase.setHgap(2);
-			//root.setMargin(gpaneCase, new Insets(30));
-			vboxGauche.getChildren().addAll(gpaneCase);
-			LectureDonnees l = new LectureDonnees("grilleSport.txt", "donneesSport.txt"); 
-			
-			
-			tabNombres = l.getTabNombres();
-			arrMots = l.getArrMots();
-			
-			for (int i = 0; i < tabNombres.length; i++) {
-				for (int j = 0; j < tabNombres[i].length; j++) {
-					// System.out.print(" " + tabNombres[i][k] + " ");
-					int intNombre = tabNombres[i][j];
-				
-					System.out.println(tabNombres[i][j]);
-					int intNombreCercleGrille=0;
-					if(intNombre!= -1 && intNombre!= 0) {
-						intNombreCercleGrille = intNombre;
-					}
-					Case caseCreer = new Case(intNombre,i,j,intNombreCercleGrille); //objet qui envoie le nombre , les lignes et le colonne a la classe casecreer
-					
-					System.out.println(caseCreer.creerHbox());
-					gpaneCase.add(caseCreer.creerHbox(),j,i);
-				
-					
-				}
-				System.out.println();
-			}
 			
 			
 			
@@ -310,7 +279,46 @@ public class InterfaceMotCroises extends Application {
 					
 					
 					
-					//le faire avec un vbox
+					//grille bible
+					
+					// POUR LA GRILLE LES CASES ET LES CERCLES DES NUMEROS
+					gpaneCase = new GridPane();
+					//root.setLeft(vboxGauche);
+					gpaneCase.setPadding(new Insets(10));
+					 //gpaneCase.setGridLinesVisible(true);
+					gpaneCase.setAlignment(Pos.CENTER);
+					gpaneCase.setVgap(2);
+					gpaneCase.setHgap(2);
+					//root.setMargin(gpaneCase, new Insets(30));
+					vboxGauche.getChildren().addAll(gpaneCase);
+					
+					LectureDonnees l = new LectureDonnees("grilleBible.txt", "donneesBible.txt"); 
+					
+					
+					tabNombres = l.getTabNombres();
+					arrMots = l.getArrMots();
+					
+					for (int i = 0; i < tabNombres.length; i++) {
+						for (int j = 0; j < tabNombres[i].length; j++) {
+							// System.out.print(" " + tabNombres[i][k] + " ");
+							int intNombre = tabNombres[i][j];
+						
+							//System.out.println(tabNombres[i][j]);
+							int intNombreCercleGrille=0;
+							if(intNombre!= -1 && intNombre!= 0) {
+								intNombreCercleGrille = intNombre;
+							}
+							Case caseCreer = new Case(intNombre,i,j,intNombreCercleGrille); //objet qui envoie le nombre , les lignes et le colonne a la classe casecreer
+							
+							//System.out.println(caseCreer.creerHbox());
+							gpaneCase.add(caseCreer.creerHbox(),j,i);
+						
+							
+						}
+						System.out.println();
+					}
+					
+					
 				
 				}
 			});
@@ -353,6 +361,48 @@ public class InterfaceMotCroises extends Application {
 					hboxtxtTheme.getChildren().add(txtNomTheme);
 					hboxtxtTheme.setAlignment(Pos.CENTER);
 					vboxGauche.getChildren().add(hboxtxtTheme);
+					
+					
+					//grille sport
+					
+					// POUR LA GRILLE LES CASES ET LES CERCLES DES NUMEROS
+					gpaneCase = new GridPane();
+					//root.setLeft(vboxGauche);
+					gpaneCase.setPadding(new Insets(10));
+					 //gpaneCase.setGridLinesVisible(true);
+					gpaneCase.setAlignment(Pos.CENTER);
+					gpaneCase.setVgap(2);
+					gpaneCase.setHgap(2);
+					//root.setMargin(gpaneCase, new Insets(30));
+					vboxGauche.getChildren().addAll(gpaneCase);
+					
+					LectureDonnees l = new LectureDonnees("grilleSport.txt", "donneesSport.txt"); 
+					
+					
+					tabNombres = l.getTabNombres();
+					arrMots = l.getArrMots();
+					
+					for (int i = 0; i < tabNombres.length; i++) {
+						for (int j = 0; j < tabNombres[i].length; j++) {
+							// System.out.print(" " + tabNombres[i][k] + " ");
+							int intNombre = tabNombres[i][j];
+						
+							//System.out.println(tabNombres[i][j]);
+							int intNombreCercleGrille=0;
+							if(intNombre!= -1 && intNombre!= 0) {
+								intNombreCercleGrille = intNombre;
+							}
+							Case caseCreer = new Case(intNombre,i,j,intNombreCercleGrille); //objet qui envoie le nombre , les lignes et le colonne a la classe casecreer
+							
+							//System.out.println(caseCreer.creerHbox());
+							gpaneCase.add(caseCreer.creerHbox(),j,i);
+						
+							
+						}
+						System.out.println();
+					}
+					
+					
 					
 					
 					
