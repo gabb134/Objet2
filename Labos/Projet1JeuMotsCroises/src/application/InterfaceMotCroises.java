@@ -196,16 +196,16 @@ public class InterfaceMotCroises extends Application {
 			
 			// POUR LA GRILLE LES CASES ET LES CERCLES DES NUMEROS
 			gpaneCase = new GridPane();
-			root.setLeft(gpaneCase);
+			//root.setLeft(vboxGauche);
 			gpaneCase.setPadding(new Insets(2));
 			 //gpaneCase.setGridLinesVisible(true);
 			//gpaneCase.setAlignment(Pos.CENTER);
 			gpaneCase.setVgap(2);
 			gpaneCase.setHgap(2);
 			//root.setMargin(gpaneCase, new Insets(30));
-
+			vboxGauche.getChildren().addAll(gpaneCase);
 			LectureDonnees l = new LectureDonnees("grilleBible.txt", gpaneCase); // envoie l'objet cree avec le lecture du fichier et le gridpane
-
+			
 			
 
 			
@@ -262,12 +262,15 @@ public class InterfaceMotCroises extends Application {
 				@Override
 				public void handle(ActionEvent arg0) {
 					// TODO Auto-generated method stub
+					//vboxGauche = new VBox();
 					txtNomTheme = new Text("La Bible");
 					Font font = Font.font("Verdana", FontWeight.BOLD, FontPosture.REGULAR, 30);
 					txtNomTheme.setFont(font);
 					//vboxGauche.setAlignment(txtNomTheme, Pos.CENTER);
 					//bpaneCentre.setTop(txtNomTheme);
 					
+					vboxGauche.getChildren().clear();
+					vboxGauche.getChildren().add(txtNomTheme);
 					
 					//le faire avec un vbox
 				
@@ -283,6 +286,8 @@ public class InterfaceMotCroises extends Application {
 					txtNomTheme.setFont(font);
 					//bpaneCentre.setAlignment(txtNomTheme, Pos.CENTER);
 					//bpaneCentre.setTop(txtNomTheme);
+					vboxGauche.getChildren().clear();
+					vboxGauche.getChildren().add(txtNomTheme);
 					
 					
 					//le faire avec un vbox
@@ -300,8 +305,10 @@ public class InterfaceMotCroises extends Application {
 					//bpaneCentre.setAlignment(txtNomTheme, Pos.CENTER);
 					//bpaneCentre.setTop(txtNomTheme);
 					
+					vboxGauche.getChildren().clear();
+					vboxGauche.getChildren().add(txtNomTheme);
 					
-					//le faire avec un vbox
+					
 					
 					
 				}
@@ -311,6 +318,7 @@ public class InterfaceMotCroises extends Application {
 				@Override
 				public void handle(ActionEvent event) {
 					// TODO Auto-generated method stub
+				
 					Alert alertInfo = new Alert(AlertType.INFORMATION);
 					String text = "Règles du jeu";
 					alertInfo.setTitle("Règles du jeu");
