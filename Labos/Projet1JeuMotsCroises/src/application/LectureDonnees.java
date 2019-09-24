@@ -61,7 +61,7 @@ public class LectureDonnees {
 							tabNombres[compteurLignes - 1][j] = Integer.parseInt(st1.nextToken().trim());
 
 							// Voir comment construire les cases ici, lors de la lecture
-
+							
 						}
 						// System.out.println(strLigne);
 
@@ -132,9 +132,10 @@ public class LectureDonnees {
 					strMot = st1.nextToken().trim();
 					//System.out.println(strMot);
 					// Inserer dans un tableau
-					System.out.println(orientation.toString());
+					//System.out.println(orientation);
 					Mot mot = new Mot(orientation, strIndice, strMot);
 					arrMots.add(mot);
+					//System.out.println(orientation);
 
 				} catch (NoSuchElementException e) {
 
@@ -151,6 +152,30 @@ public class LectureDonnees {
 
 
 
+	public int[][] getTabNombres() {
+		return tabNombres;
+	}
+
+
+
+	public void setTabNombres(int[][] tabNombres) {
+		this.tabNombres = tabNombres;
+	}
+
+
+
+	public ArrayList<Mot> getArrMots() {
+		return arrMots;
+	}
+
+
+
+	public void setArrMots(ArrayList<Mot> arrMots) {
+		this.arrMots = arrMots;
+	}
+
+
+
 	public void afficherGrille() {
 		for (int i = 0; i < tabNombres.length; i++) {
 			for (int j = 0; j < tabNombres[i].length; j++) {
@@ -161,8 +186,8 @@ public class LectureDonnees {
 	}
 
 	public static void main(String[] args) {
-		LectureDonnees l = new LectureDonnees("grilleBible.txt","donneesBible.txt");
-		// l.afficherGrille();
+		LectureDonnees l = new LectureDonnees("grilleSport.txt","donneesSport.txt");
+		 l.afficherGrille();
 		// l.lectureDonneesMot("donneesBible.txt");
 	}
 }

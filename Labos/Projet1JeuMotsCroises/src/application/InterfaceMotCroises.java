@@ -1,5 +1,7 @@
 package application;
 
+import java.util.ArrayList;
+
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
@@ -43,19 +45,24 @@ import javafx.scene.text.TextAlignment;
 
 public class InterfaceMotCroises extends Application {
 	// Variables de classe
-	BorderPane root;
-	BorderPane bpaneCentre;
+	private BorderPane root;
+	private BorderPane bpaneCentre;
 	// BorderPane bpaneDroite;
-	GridPane gpane;
-	MenuItem itemReglesDuJeu;
-	MenuItem itemThemeSport;
-	MenuItem itemThemeBible;
-	MenuItem itemThemeTech;
-	MenuItem itemQuitter;
-	Text txtNomTheme;
-	VBox vboxDroite;
-	VBox vboxGauche;
-	GridPane gpaneCase;
+	private GridPane gpane;
+	private MenuItem itemReglesDuJeu;
+	private MenuItem itemThemeSport;
+	private MenuItem itemThemeBible;
+	private MenuItem itemThemeTech;
+	private MenuItem itemQuitter;
+	private Text txtNomTheme;
+	private VBox vboxDroite;
+	private VBox vboxGauche;
+	private GridPane gpaneCase;
+	HBox hboxtxtTheme;
+	
+	private int [][] tabNombres;
+	private ArrayList<Mot> arrMots;
+	
 
 	@Override
 	public void start(Stage primaryStage) {
@@ -84,7 +91,10 @@ public class InterfaceMotCroises extends Application {
 			vboxDroite.setMargin(hboxTextBienvenue, new Insets(15));
 
 			txtNomTheme = new Text("Mots croisés par Gabriel Marrero");
-			vboxGauche.getChildren().add(txtNomTheme);
+			hboxtxtTheme = new HBox();
+			hboxtxtTheme.getChildren().add(txtNomTheme);
+			hboxtxtTheme.setAlignment(Pos.CENTER);
+			vboxGauche.getChildren().add(hboxtxtTheme);
 			
 			Font font3 = Font.font("Verdana", FontWeight.BOLD, FontPosture.REGULAR, 30);
 			txtNomTheme.setFont(font3);
@@ -128,7 +138,7 @@ public class InterfaceMotCroises extends Application {
 					new BorderWidths(2), new Insets(0));
 			Border borduregGpane = new Border(bordureNoir);
 			Background couleurFill = new Background(
-					new BackgroundFill(Color.YELLOW, new CornerRadii(5), new Insets(0)));
+					new BackgroundFill(Color.LIGHTSTEELBLUE, new CornerRadii(5), new Insets(0)));
 			Font font1 = Font.font("Verdana", FontWeight.BOLD, FontPosture.REGULAR, 15);
 			Font font2 = Font.font("Verdana", FontWeight.BOLD, FontPosture.REGULAR, 10);
 
@@ -197,17 +207,40 @@ public class InterfaceMotCroises extends Application {
 			// POUR LA GRILLE LES CASES ET LES CERCLES DES NUMEROS
 			gpaneCase = new GridPane();
 			//root.setLeft(vboxGauche);
-			gpaneCase.setPadding(new Insets(2));
+			gpaneCase.setPadding(new Insets(10));
 			 //gpaneCase.setGridLinesVisible(true);
-			//gpaneCase.setAlignment(Pos.CENTER);
+			gpaneCase.setAlignment(Pos.CENTER);
 			gpaneCase.setVgap(2);
 			gpaneCase.setHgap(2);
 			//root.setMargin(gpaneCase, new Insets(30));
 			vboxGauche.getChildren().addAll(gpaneCase);
-			//LectureDonnees l = new LectureDonnees("grilleBible.txt", gpaneCase); // envoie l'objet cree avec le lecture du fichier et le gridpane
+			LectureDonnees l = new LectureDonnees("grilleSport.txt", "donneesSport.txt"); 
 			
 			
-
+			tabNombres = l.getTabNombres();
+			arrMots = l.getArrMots();
+			
+			for (int i = 0; i < tabNombres.length; i++) {
+				for (int j = 0; j < tabNombres[i].length; j++) {
+					// System.out.print(" " + tabNombres[i][k] + " ");
+					int intNombre = tabNombres[i][j];
+				
+					System.out.println(tabNombres[i][j]);
+					int intNombreCercleGrille=0;
+					if(intNombre!= -1 && intNombre!= 0) {
+						intNombreCercleGrille = intNombre;
+					}
+					Case caseCreer = new Case(intNombre,i,j,intNombreCercleGrille); //objet qui envoie le nombre , les lignes et le colonne a la classe casecreer
+					
+					System.out.println(caseCreer.creerHbox());
+					gpaneCase.add(caseCreer.creerHbox(),j,i);
+				
+					
+				}
+				System.out.println();
+			}
+			
+			
 			
 			// BARRE DE MENU
 			Menu menuThemes = new Menu("_Thèmes");
@@ -270,7 +303,12 @@ public class InterfaceMotCroises extends Application {
 					//bpaneCentre.setTop(txtNomTheme);
 					
 					vboxGauche.getChildren().clear();
-					vboxGauche.getChildren().add(txtNomTheme);
+					hboxtxtTheme.getChildren().clear();
+					hboxtxtTheme.getChildren().add(txtNomTheme);
+					hboxtxtTheme.setAlignment(Pos.CENTER);
+					vboxGauche.getChildren().add(hboxtxtTheme);
+					
+					
 					
 					//le faire avec un vbox
 				
@@ -286,8 +324,12 @@ public class InterfaceMotCroises extends Application {
 					txtNomTheme.setFont(font);
 					//bpaneCentre.setAlignment(txtNomTheme, Pos.CENTER);
 					//bpaneCentre.setTop(txtNomTheme);
+					
 					vboxGauche.getChildren().clear();
-					vboxGauche.getChildren().add(txtNomTheme);
+					hboxtxtTheme.getChildren().clear();
+					hboxtxtTheme.getChildren().add(txtNomTheme);
+					hboxtxtTheme.setAlignment(Pos.CENTER);
+					vboxGauche.getChildren().add(hboxtxtTheme);
 					
 					
 					//le faire avec un vbox
@@ -305,9 +347,12 @@ public class InterfaceMotCroises extends Application {
 					//bpaneCentre.setAlignment(txtNomTheme, Pos.CENTER);
 					//bpaneCentre.setTop(txtNomTheme);
 					
-					vboxGauche.getChildren().clear();
-					vboxGauche.getChildren().add(txtNomTheme);
 					
+					vboxGauche.getChildren().clear();
+					hboxtxtTheme.getChildren().clear();
+					hboxtxtTheme.getChildren().add(txtNomTheme);
+					hboxtxtTheme.setAlignment(Pos.CENTER);
+					vboxGauche.getChildren().add(hboxtxtTheme);
 					
 					
 					

@@ -11,6 +11,11 @@ public class Mot {
 		this.strIndice = strIndice;
 		this.strMot = strMot;
 	}
+	
+	public String toString() {
+		return orientation+" "+strIndice+" "+strMot;
+		
+	}
 
 
 }

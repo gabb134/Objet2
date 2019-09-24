@@ -37,14 +37,15 @@
 <fullyQualifiedTypeName name="application.LectureDonnees"/>
 <fullyQualifiedTypeName name="application.InterfaceMotCroises"/>
 <fullyQualifiedTypeName name="javafx.scene.layout.GridPane"/>
-<fullyQualifiedTypeName name="javafx.scene.layout.HBox"/>
-<fullyQualifiedTypeName name="javafx.scene.paint.Color"/>
 <fullyQualifiedTypeName name="javafx.scene.control.TextField"/>
 <fullyQualifiedTypeName name="javafx.scene.layout.CornerRadii"/>
-<fullyQualifiedTypeName name="javafx.scene.text.Text"/>
 <fullyQualifiedTypeName name="javafx.scene.layout.VBox"/>
 <fullyQualifiedTypeName name="javafx.geometry.Pos"/>
-<fullyQualifiedTypeName name="javafx.scene.text.TextAlignment"/>
 <fullyQualifiedTypeName name="application.EnumOrientation"/>
 <fullyQualifiedTypeName name="application.Mot"/>
+<fullyQualifiedTypeName name="javafx.scene.text.Text"/>
+<fullyQualifiedTypeName name="javafx.scene.paint.Color"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="javafx.scene.text.TextAlignment"/>
+<fullyQualifiedTypeName name="javafx.scene.layout.HBox"/>
 </qualifiedTypeNameHistroy>
