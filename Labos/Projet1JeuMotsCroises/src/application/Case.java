@@ -3,33 +3,66 @@ package application;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.Border;
+import javafx.scene.layout.BorderStroke;
+import javafx.scene.layout.BorderStrokeStyle;
+import javafx.scene.layout.BorderWidths;
+import javafx.scene.layout.CornerRadii;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 public class Case {
 
-	GridPane gpane;
+	//GridPane gpane;
 	int intNb1;
+	HBox hboxCase;
+	int intLigne;
+	int intColonne;
 
-	public Case(int intNb1, GridPane gpane) {
+	public Case(int intNb1,int intLigne,int intColonne) {
 		this.intNb1 = intNb1;
-		this.gpane = gpane;
+		this.intLigne = intLigne;
+		this.intColonne = intColonne;
+		//this.gpane = gpane;
 
-		gpane = new GridPane();
-		gpane.setPadding(new Insets(5));
-		//gpane.setGridLinesVisible(true); 
-		gpane.setAlignment(Pos.CENTER);
-		gpane.setVgap(2);
-		gpane.setHgap(2);
+	
+	}
+	public HBox creerHbox() { //methode qui cree les hbox selon les donnees dans la grille
 		
 		
 		
+			hboxCase = new HBox(1);
+		TextField txtCase = new TextField();
+		txtCase.setMaxSize(8, 2);
+		BorderStroke bordureNoir = new BorderStroke(Color.BLACK, BorderStrokeStyle.SOLID, new CornerRadii(7), new BorderWidths(3), new Insets(0));
+		Border bordure = new Border(bordureNoir);
+		
+		
+		switch (intNb1) {
+		case -1: // quand c'est vide
+			
+			
+			break;
+		case 0:// les cases 
+	
+		hboxCase.setBorder(bordure);
+		hboxCase.getChildren().addAll(txtCase);
+		
+
+			break;
+
+		default: //les autres numéros les cercles noirs
+	
+			break;
+		}
+		
+		return hboxCase; 
 	}
 
-	public GridPane getGpane() {
-		return gpane;
-	}
+
 
 	public int getIntNb1() {
 		return intNb1;
