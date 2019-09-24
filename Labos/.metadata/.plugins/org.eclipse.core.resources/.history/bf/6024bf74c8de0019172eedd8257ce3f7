@@ -2,12 +2,12 @@ package application;
 
 
 public class Mot {
-	private EnumOrientation orientation ;
+	private String strOrientation ;
 	private String strIndice;
 	private String strMot;
 	
-	public Mot(EnumOrientation orientation,String strIndice,String strMot) {
-		this.orientation = orientation;
+	public Mot(String strOrientation,String strIndice,String strMot) {
+		this.strOrientation = strOrientation;
 		this.strIndice = strIndice;
 		this.strMot = strMot;
 	}

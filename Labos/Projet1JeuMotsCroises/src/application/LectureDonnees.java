@@ -13,12 +13,12 @@ import javafx.scene.layout.GridPane;
 public class LectureDonnees {
 	private int[][] tabNombres;
 	private ArrayList<Mot> arrMots = new ArrayList<Mot>();
-	private ArrayList<Case> arrCase = new ArrayList<Case>();
+	//private ArrayList<Case> arrCase = new ArrayList<Case>();
 	
-	GridPane gpane;
+	//GridPane gpane;
 
-	public LectureDonnees(String strFIchier, GridPane gpane) {
-		this.gpane = gpane;
+	public LectureDonnees(String strFIchier,String strFichierMot) {
+		//this.gpane = gpane;
 		BufferedReader brFichier = null;
 		String strLigne;
 		StringTokenizer st;
@@ -73,58 +73,68 @@ public class LectureDonnees {
 				compteurLignes++;
 			}
 
-			for (int i = 0; i < tabNombres.length; i++) {
+			/*for (int i = 0; i < tabNombres.length; i++) {
 				for (int j = 0; j < tabNombres[i].length; j++) {
 					// System.out.print(" " + tabNombres[i][k] + " ");
 					int intNombre = tabNombres[i][j];
+					// grille, liste de mots
 					
 					
-					
-					Case caseCreer = new Case(intNombre,i,j); //objet qui envoie le nombre , les lignes et le colonne a la classe casecreer
-					gpane.getChildren().add(caseCreer.creerHbox());
-					arrCase.add(caseCreer);
+				//	Case caseCreer = new Case(intNombre,i,j); //objet qui envoie le nombre , les lignes et le colonne a la classe casecreer
+					//gpane.getChildren().add(caseCreer.creerHbox());
+				//	arrCase.add(caseCreer);
 					
 				}
 				System.out.println();
-			}
+			}*/
 			// System.out.println(intLignes + " " + intColonnes+"\n"+strNumeros);
 
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			System.out.println(e.toString());
 		}
-
-	}
-
-	public void lectureDonneesMot(String strFichierMot) {
-		BufferedReader brFichier = null;
-		String strLigne;
-		StringTokenizer st;
-		String strOrientation = "";
+		
+		//LEcture du deuxieme fichier
+		
+		BufferedReader brFichier1 = null;
+		String strLigne1;
+		StringTokenizer st1;
+		EnumOrientation orientation = null;
 		String strIndice = "";
 		String strMot = "";
 
 		try {
-			brFichier = new BufferedReader(new FileReader(strFichierMot));
+			brFichier1 = new BufferedReader(new FileReader(strFichierMot));
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
 		try {
-			while ((strLigne = brFichier.readLine()) != null) {
+			while ((strLigne1 = brFichier1.readLine()) != null) {
 
 				try {
-					st = new StringTokenizer(strLigne, ";");
-					strOrientation = st.nextToken().trim();
+					st1 = new StringTokenizer(strLigne1, ";");
+					switch(st1.nextToken()) {
+					case "V":
+						orientation = EnumOrientation.VERTICAL;
+						break;
+					case "H":
+						orientation = EnumOrientation.HORIZONTALE;
+						break;
+					
+					}
 
 					// StringTokenizer st2 = new StringTokenizer(strIndice,"\"");
-					strIndice = st.nextToken().trim();
+					strIndice = st1.nextToken().trim();
 					// strIndice.replace("\"", "");
 					// System.out.println(strIndice);
-					strMot = st.nextToken().trim();
-					System.out.println(strMot);
+					strMot = st1.nextToken().trim();
+					//System.out.println(strMot);
 					// Inserer dans un tableau
+					System.out.println(orientation.toString());
+					Mot mot = new Mot(orientation, strIndice, strMot);
+					arrMots.add(mot);
 
 				} catch (NoSuchElementException e) {
 
@@ -134,8 +144,12 @@ public class LectureDonnees {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
+		
 
 	}
+
+
 
 	public void afficherGrille() {
 		for (int i = 0; i < tabNombres.length; i++) {
@@ -147,7 +161,7 @@ public class LectureDonnees {
 	}
 
 	public static void main(String[] args) {
-		//LectureDonnees l = new LectureDonnees("grilleBible.txt");
+		LectureDonnees l = new LectureDonnees("grilleBible.txt","donneesBible.txt");
 		// l.afficherGrille();
 		// l.lectureDonneesMot("donneesBible.txt");
 	}

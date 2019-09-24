@@ -1,0 +1,10 @@
+package application;
+
+public enum EnumOrientation { HORIZONTALE("H"),VERTICAL("V");
+	
+	private String Orientation;
+	
+	
+
+
+}

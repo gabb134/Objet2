@@ -45,4 +45,6 @@
 <fullyQualifiedTypeName name="javafx.scene.layout.VBox"/>
 <fullyQualifiedTypeName name="javafx.geometry.Pos"/>
 <fullyQualifiedTypeName name="javafx.scene.text.TextAlignment"/>
+<fullyQualifiedTypeName name="application.EnumOrientation"/>
+<fullyQualifiedTypeName name="application.Mot"/>
 </qualifiedTypeNameHistroy>

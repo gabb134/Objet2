@@ -204,7 +204,7 @@ public class InterfaceMotCroises extends Application {
 			gpaneCase.setHgap(2);
 			//root.setMargin(gpaneCase, new Insets(30));
 			vboxGauche.getChildren().addAll(gpaneCase);
-			LectureDonnees l = new LectureDonnees("grilleBible.txt", gpaneCase); // envoie l'objet cree avec le lecture du fichier et le gridpane
+			//LectureDonnees l = new LectureDonnees("grilleBible.txt", gpaneCase); // envoie l'objet cree avec le lecture du fichier et le gridpane
 			
 			
 
