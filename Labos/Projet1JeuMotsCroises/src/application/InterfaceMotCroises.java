@@ -23,6 +23,7 @@ import javafx.scene.control.Button;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyCodeCombination;
 import javafx.scene.input.KeyCombination;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.Border;
@@ -60,8 +61,8 @@ public class InterfaceMotCroises extends Application {
 	private GridPane gpaneCase;
 	HBox hboxtxtTheme;
 	
-	private int [][] tabNombres;
-	private ArrayList<Mot> arrMots;
+	private  int [][] tabNombres;
+	private  ArrayList<Mot> arrMots;
 	
 
 	@Override
@@ -239,14 +240,8 @@ public class InterfaceMotCroises extends Application {
 				@Override
 				public void handle(ActionEvent arg0) {
 					// TODO Auto-generated method stub
-					Alert alertInfo = new Alert(AlertType.INFORMATION);
-					String text = "Règles du jeu";
-					alertInfo.setTitle("Règles du jeu");
-					alertInfo.setHeaderText(text.toString().toUpperCase());
-					alertInfo.setContentText(
-							" o Quand vous cliquez sur un numéro, vous obtenez l’indice (texte descriptif) du mot recherché.  Vous pouvez avoir la solution, pour le mot en cours, en cliquant sur le bouton correspondant.\n\n o Le bouton Lettres vous fournit, en désordre, toutes les lettres du mot recherché. Pour répondre, vous écrivez le mot dans la grille correspondante et vous validez à l’aide du bouton OK ou la touche Entrée du clavier.\n\n o Dans le cas d’une mauvaise réponse, la solution vous est donnée. Le bouton Ok est sans effet si la grille du mot courant n’est pas complète. Vous pouvez supprimer les caractères entrés à l’aide de la touche retour arrière (<-) de votre clavier.\n\n o Noter que les caractères des mots validés ne peuvent être effacés. Si vous essayez un autre mot avant d’avoir validé le mot courant, ce dernier est remis à son état initial (toutes les lettres entrées sont effacées) et le nouveau mot devient le mot courant.  \n\no Si vous demandez les lettres et décidez de répondre plus tard, le programme doit se souvenir que vous avez déjà vu les lettres pour vous attribuer, le cas échéant, les points en conséquence. Notez que le programme vous redonnera la même séquence de lettres lors des prochains essais.");
-					alertInfo.showAndWait();
-
+				
+					AfficherMenuRegle();
 				}
 			});
 			itemQuitter.setOnAction(new EventHandler<ActionEvent>() {
@@ -278,46 +273,11 @@ public class InterfaceMotCroises extends Application {
 					vboxGauche.getChildren().add(hboxtxtTheme);
 					
 					
+			
 					
-					//grille bible
+					LectureDonnees lBible = new LectureDonnees("grilleBible.txt", "donneesBible.txt"); 
 					
-					// POUR LA GRILLE LES CASES ET LES CERCLES DES NUMEROS
-					gpaneCase = new GridPane();
-					//root.setLeft(vboxGauche);
-					gpaneCase.setPadding(new Insets(10));
-					 //gpaneCase.setGridLinesVisible(true);
-					gpaneCase.setAlignment(Pos.CENTER);
-					gpaneCase.setVgap(2);
-					gpaneCase.setHgap(2);
-					//root.setMargin(gpaneCase, new Insets(30));
-					vboxGauche.getChildren().addAll(gpaneCase);
-					
-					LectureDonnees l = new LectureDonnees("grilleBible.txt", "donneesBible.txt"); 
-					
-					
-					tabNombres = l.getTabNombres();
-					arrMots = l.getArrMots();
-					
-					for (int i = 0; i < tabNombres.length; i++) {
-						for (int j = 0; j < tabNombres[i].length; j++) {
-							// System.out.print(" " + tabNombres[i][k] + " ");
-							int intNombre = tabNombres[i][j];
-						
-							//System.out.println(tabNombres[i][j]);
-							int intNombreCercleGrille=0;
-							if(intNombre!= -1 && intNombre!= 0) {
-								intNombreCercleGrille = intNombre;
-							}
-							Case caseCreer = new Case(intNombre,i,j,intNombreCercleGrille); //objet qui envoie le nombre , les lignes et le colonne a la classe casecreer
-							
-							//System.out.println(caseCreer.creerHbox());
-							gpaneCase.add(caseCreer.creerHbox(),j,i);
-						
-							
-						}
-						System.out.println();
-					}
-					
+					GestionGrille(lBible);
 					
 				
 				}
@@ -338,44 +298,9 @@ public class InterfaceMotCroises extends Application {
 					hboxtxtTheme.getChildren().add(txtNomTheme);
 					hboxtxtTheme.setAlignment(Pos.CENTER);
 					vboxGauche.getChildren().add(hboxtxtTheme);
+					LectureDonnees lTech = new LectureDonnees("grilleTechnologie.txt", "donneesTechnologie.txt");
+					GestionGrille(lTech);
 					
-					
-					// POUR LA GRILLE LES CASES ET LES CERCLES DES NUMEROS
-					gpaneCase = new GridPane();
-					//root.setLeft(vboxGauche);
-					gpaneCase.setPadding(new Insets(10));
-					 //gpaneCase.setGridLinesVisible(true);
-					gpaneCase.setAlignment(Pos.CENTER);
-					gpaneCase.setVgap(2);
-					gpaneCase.setHgap(2);
-					//root.setMargin(gpaneCase, new Insets(30));
-					vboxGauche.getChildren().addAll(gpaneCase);
-					
-					LectureDonnees l = new LectureDonnees("grilleTechnologie.txt", "donneesTechnologie.txt"); 
-					
-					
-					tabNombres = l.getTabNombres();
-					arrMots = l.getArrMots();
-					
-					for (int i = 0; i < tabNombres.length; i++) {
-						for (int j = 0; j < tabNombres[i].length; j++) {
-							// System.out.print(" " + tabNombres[i][k] + " ");
-							int intNombre = tabNombres[i][j];
-						
-							//System.out.println(tabNombres[i][j]);
-							int intNombreCercleGrille=0;
-							if(intNombre!= -1 && intNombre!= 0) {
-								intNombreCercleGrille = intNombre;
-							}
-							Case caseCreer = new Case(intNombre,i,j,intNombreCercleGrille); //objet qui envoie le nombre , les lignes et le colonne a la classe casecreer
-							
-							//System.out.println(caseCreer.creerHbox());
-							gpaneCase.add(caseCreer.creerHbox(),j,i);
-						
-							
-						}
-						System.out.println();
-					}
 				}
 			});
 			itemThemeSport.setOnAction(new EventHandler<ActionEvent>() {
@@ -398,52 +323,10 @@ public class InterfaceMotCroises extends Application {
 					vboxGauche.getChildren().add(hboxtxtTheme);
 					
 					
-					//grille sport
 					
-					// POUR LA GRILLE LES CASES ET LES CERCLES DES NUMEROS
-					gpaneCase = new GridPane();
-					//root.setLeft(vboxGauche);
-					gpaneCase.setPadding(new Insets(10));
-					 //gpaneCase.setGridLinesVisible(true);
-					gpaneCase.setAlignment(Pos.CENTER);
-					gpaneCase.setVgap(2);
-					gpaneCase.setHgap(2);
-					//root.setMargin(gpaneCase, new Insets(30));
-					vboxGauche.getChildren().addAll(gpaneCase);
+					LectureDonnees lSport = new LectureDonnees("grilleSport.txt", "donneesSport.txt"); 
 					
-					LectureDonnees l = new LectureDonnees("grilleSport.txt", "donneesSport.txt"); 
-					
-					
-					tabNombres = l.getTabNombres();
-					arrMots = l.getArrMots();
-					
-					for (int i = 0; i < tabNombres.length; i++) {
-						
-						for (int j = 0; j < tabNombres[i].length; j++) {
-							// System.out.print(" " + tabNombres[i][k] + " ");
-							int intNombre = tabNombres[i][j];
-						
-							//System.out.println(tabNombres[i][j]);
-							int intNombreCercleGrille=0;
-							if(intNombre!= -1 && intNombre!= 0) {
-								intNombreCercleGrille = intNombre;
-							}
-							Case caseCreer = new Case(intNombre,i,j,intNombreCercleGrille); //objet qui envoie le nombre , les lignes et le colonne a la classe casecreer
-							
-							//System.out.println(caseCreer.creerHbox());
-							gpaneCase.add(caseCreer.creerHbox(),j,i);
-							
-							
-							
-							
-						}
-						System.out.println();
-					}
-					
-				
-					
-					
-					
+					GestionGrille(lSport);
 					
 					
 				}
@@ -454,13 +337,7 @@ public class InterfaceMotCroises extends Application {
 				public void handle(ActionEvent event) {
 					// TODO Auto-generated method stub
 				
-					Alert alertInfo = new Alert(AlertType.INFORMATION);
-					String text = "Règles du jeu";
-					alertInfo.setTitle("Règles du jeu");
-					alertInfo.setHeaderText(text.toString().toUpperCase());
-					alertInfo.setContentText(
-							" o Quand vous cliquez sur un numéro, vous obtenez l’indice (texte descriptif) du mot recherché.  Vous pouvez avoir la solution, pour le mot en cours, en cliquant sur le bouton correspondant.\n\n o Le bouton Lettres vous fournit, en désordre, toutes les lettres du mot recherché. Pour répondre, vous écrivez le mot dans la grille correspondante et vous validez à l’aide du bouton OK ou la touche Entrée du clavier.\n\n o Dans le cas d’une mauvaise réponse, la solution vous est donnée. Le bouton Ok est sans effet si la grille du mot courant n’est pas complète. Vous pouvez supprimer les caractères entrés à l’aide de la touche retour arrière (<-) de votre clavier.\n\n o Noter que les caractères des mots validés ne peuvent être effacés. Si vous essayez un autre mot avant d’avoir validé le mot courant, ce dernier est remis à son état initial (toutes les lettres entrées sont effacées) et le nouveau mot devient le mot courant.  \n\no Si vous demandez les lettres et décidez de répondre plus tard, le programme doit se souvenir que vous avez déjà vu les lettres pour vous attribuer, le cas échéant, les points en conséquence. Notez que le programme vous redonnera la même séquence de lettres lors des prochains essais.");
-					alertInfo.showAndWait();
+					AfficherMenuRegle();
 				}
 
 			});
@@ -474,6 +351,76 @@ public class InterfaceMotCroises extends Application {
 		}
 	}
 	
+	public void GestionGrille (LectureDonnees l) {
+
+		
+		// POUR LA GRILLE LES CASES ET LES CERCLES DES NUMEROS
+		gpaneCase = new GridPane();
+		//root.setLeft(vboxGauche);
+		gpaneCase.setPadding(new Insets(10));
+		 //gpaneCase.setGridLinesVisible(true);
+		gpaneCase.setAlignment(Pos.CENTER);
+		gpaneCase.setVgap(2);
+		gpaneCase.setHgap(2);
+		//root.setMargin(gpaneCase, new Insets(30));
+		vboxGauche.getChildren().addAll(gpaneCase);
+		
+		
+		
+		tabNombres = l.getTabNombres();
+		arrMots = l.getArrMots();
+		
+		for (int i = 0; i < tabNombres.length; i++) {
+			
+			for (int j = 0; j < tabNombres[i].length; j++) {
+				
+				int intNombre = tabNombres[i][j];
+			
+			
+				int intNombreCercleGrille=0;
+				if(intNombre!= -1 && intNombre!= 0) {
+					intNombreCercleGrille = intNombre;
+				}
+				Case caseCreer = new Case(intNombre,i,j,intNombreCercleGrille); //objet qui envoie le nombre , les lignes et le colonne a la classe casecreer
+				
+			
+				gpaneCase.add(caseCreer.creerHbox(),j,i);
+				
+				
+				if(intNombre!= -1 && intNombre!= 0) { // verifie que si c'est les numéro que je click
+					caseCreer.getHboxCase().addEventHandler(MouseEvent.MOUSE_CLICKED,new EventHandler<MouseEvent> () {
+
+						@Override
+						public void handle(MouseEvent arg0) {
+							// TODO Auto-generated method stub
+							System.out.println("gestionnaire d'evenements enregistré avec addEventHandler\n"+"Nombre séléctionné :"+intNombre+"\n");
+							//System.out.println(tabNombres[i][j]);
+						}
+						
+					});
+
+
+				}
+				
+				
+				
+			}
+			System.out.println();
+		}
+		
+	
+		
+	}
+	
+	public void AfficherMenuRegle() {
+		Alert alertInfo = new Alert(AlertType.INFORMATION);
+		String text = "Règles du jeu";
+		alertInfo.setTitle("Règles du jeu");
+		alertInfo.setHeaderText(text.toString().toUpperCase());
+		alertInfo.setContentText(
+				" o Quand vous cliquez sur un numéro, vous obtenez l’indice (texte descriptif) du mot recherché.  Vous pouvez avoir la solution, pour le mot en cours, en cliquant sur le bouton correspondant.\n\n o Le bouton Lettres vous fournit, en désordre, toutes les lettres du mot recherché. Pour répondre, vous écrivez le mot dans la grille correspondante et vous validez à l’aide du bouton OK ou la touche Entrée du clavier.\n\n o Dans le cas d’une mauvaise réponse, la solution vous est donnée. Le bouton Ok est sans effet si la grille du mot courant n’est pas complète. Vous pouvez supprimer les caractères entrés à l’aide de la touche retour arrière (<-) de votre clavier.\n\n o Noter que les caractères des mots validés ne peuvent être effacés. Si vous essayez un autre mot avant d’avoir validé le mot courant, ce dernier est remis à son état initial (toutes les lettres entrées sont effacées) et le nouveau mot devient le mot courant.  \n\no Si vous demandez les lettres et décidez de répondre plus tard, le programme doit se souvenir que vous avez déjà vu les lettres pour vous attribuer, le cas échéant, les points en conséquence. Notez que le programme vous redonnera la même séquence de lettres lors des prochains essais.");
+		alertInfo.showAndWait();
+	}
 
 	public GridPane getgpaneCase() {
 		return gpaneCase;

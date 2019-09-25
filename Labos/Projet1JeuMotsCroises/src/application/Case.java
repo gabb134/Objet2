@@ -25,6 +25,12 @@ public class Case {
 	private HBox hboxCase;
 	//private HBox hboxCercle;
 	private int intLigne;
+	public HBox getHboxCase() {
+		return hboxCase;
+	}
+
+
+
 	private int intColonne;
 	private int intNombreCercleGrille;
 
