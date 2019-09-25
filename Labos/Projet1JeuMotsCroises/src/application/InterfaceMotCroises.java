@@ -339,6 +339,18 @@ public class InterfaceMotCroises extends Application {
 					hboxtxtTheme.setAlignment(Pos.CENTER);
 					vboxGauche.getChildren().add(hboxtxtTheme);
 					
+					
+					// POUR LA GRILLE LES CASES ET LES CERCLES DES NUMEROS
+					gpaneCase = new GridPane();
+					//root.setLeft(vboxGauche);
+					gpaneCase.setPadding(new Insets(10));
+					 //gpaneCase.setGridLinesVisible(true);
+					gpaneCase.setAlignment(Pos.CENTER);
+					gpaneCase.setVgap(2);
+					gpaneCase.setHgap(2);
+					//root.setMargin(gpaneCase, new Insets(30));
+					vboxGauche.getChildren().addAll(gpaneCase);
+					
 					LectureDonnees l = new LectureDonnees("grilleTechnologie.txt", "donneesTechnologie.txt"); 
 					
 					
@@ -406,6 +418,7 @@ public class InterfaceMotCroises extends Application {
 					arrMots = l.getArrMots();
 					
 					for (int i = 0; i < tabNombres.length; i++) {
+						
 						for (int j = 0; j < tabNombres[i].length; j++) {
 							// System.out.print(" " + tabNombres[i][k] + " ");
 							int intNombre = tabNombres[i][j];
@@ -419,11 +432,15 @@ public class InterfaceMotCroises extends Application {
 							
 							//System.out.println(caseCreer.creerHbox());
 							gpaneCase.add(caseCreer.creerHbox(),j,i);
-						
+							
+							
+							
 							
 						}
 						System.out.println();
 					}
+					
+				
 					
 					
 					
@@ -456,6 +473,7 @@ public class InterfaceMotCroises extends Application {
 			e.printStackTrace();
 		}
 	}
+	
 
 	public GridPane getgpaneCase() {
 		return gpaneCase;
