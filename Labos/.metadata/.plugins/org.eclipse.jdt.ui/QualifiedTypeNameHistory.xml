@@ -31,7 +31,6 @@
 <fullyQualifiedTypeName name="com.sun.javafx.application.LauncherImpl"/>
 <fullyQualifiedTypeName name="javafx.application.Application"/>
 <fullyQualifiedTypeName name="java.lang.Exception"/>
-<fullyQualifiedTypeName name="javafx.event.EventHandler"/>
 <fullyQualifiedTypeName name="application.Case"/>
 <fullyQualifiedTypeName name="application.InterfaceMotCroises"/>
 <fullyQualifiedTypeName name="javafx.scene.layout.GridPane"/>
@@ -40,7 +39,6 @@
 <fullyQualifiedTypeName name="javafx.geometry.Pos"/>
 <fullyQualifiedTypeName name="application.EnumOrientation"/>
 <fullyQualifiedTypeName name="application.Mot"/>
-<fullyQualifiedTypeName name="javafx.scene.text.Text"/>
 <fullyQualifiedTypeName name="javafx.scene.paint.Color"/>
 <fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="javafx.scene.text.TextAlignment"/>
@@ -48,4 +46,6 @@
 <fullyQualifiedTypeName name="javafx.scene.layout.VBox"/>
 <fullyQualifiedTypeName name="javafx.scene.layout.TilePane"/>
 <fullyQualifiedTypeName name="application.LectureDonnees"/>
+<fullyQualifiedTypeName name="javafx.scene.text.Text"/>
+<fullyQualifiedTypeName name="javafx.event.EventHandler"/>
 </qualifiedTypeNameHistroy>

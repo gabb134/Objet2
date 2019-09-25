@@ -60,10 +60,18 @@ public class InterfaceMotCroises extends Application {
 	private VBox vboxGauche;
 	private GridPane gpaneCase;
 	HBox hboxtxtTheme;
-	
+	Text textBinevenue;
+	HBox hboxTextBienvenue;
+	HBox hboxTextIndice;
+	TextField txtReponse ;
 	private  int [][] tabNombres;
 	private  ArrayList<Mot> arrMots;
 	
+	
+	Button btnLettres;
+	Button btnSolution;
+	Button btnOk;
+	Button btnAide;
 
 	@Override
 	public void start(Stage primaryStage) {
@@ -79,11 +87,11 @@ public class InterfaceMotCroises extends Application {
 			// Text textBinevenue = new Text("Bienvenue! Pour jouer, cliquez sur un \nnuméro
 			// dans la grille, écrivez le mot et\ncliquer sur OK ou apuyyez sur la \ntouche
 			// Entrée (Entrer) pour continuer");
-			Text textBinevenue = new Text(
+			 textBinevenue = new Text(
 					"Bienvenue! Pour jouer, cliquez sur un numéro dans la grille, écrivez le mot et cliquer sur OK ou apuyyez sur la touche Entrée (Entrer) pour continuer");
 			Font font = Font.font("Verdana", FontWeight.BOLD, FontPosture.REGULAR, 15);
 
-			HBox hboxTextBienvenue = new HBox(5);
+			 hboxTextBienvenue = new HBox(5);
 			hboxTextBienvenue.setPrefWidth(150);
 			hboxTextBienvenue.setMaxSize(60, 30);
 			textBinevenue.setFont(font);
@@ -121,11 +129,11 @@ public class InterfaceMotCroises extends Application {
 			vboxDroite.setAlignment(Pos.CENTER_RIGHT);
 
 			HBox hboxIcone = new HBox();
-			Button btnLettres = new Button("LETTRES");
-			Button btnSolution = new Button("SOLUTION");
-			Button btnOk = new Button("OK");
-			Button btnAide = new Button("AIDE");
-			TextField txtReponse = new TextField();
+			 btnLettres = new Button("LETTRES");
+			 btnSolution = new Button("SOLUTION");
+			 btnOk = new Button("OK");
+			 btnAide = new Button("AIDE");
+			 txtReponse = new TextField();
 			Text txtVotreScore = new Text("VOTRE SCORE");
 			Text txtMaximum = new Text("MAXIMUM");
 			VBox vboxMax = new VBox(7);
@@ -205,7 +213,8 @@ public class InterfaceMotCroises extends Application {
 			root.setRight(vboxDroite);
 			vboxDroite.setSpacing(200);
 			hboxTextBienvenue.getChildren().add(textBinevenue);
-			vboxDroite.getChildren().addAll(hboxTextBienvenue, gpane);
+			//hboxTextIndice = new HBox(5);
+			vboxDroite.getChildren().addAll(hboxTextBienvenue,gpane);
 			
 			
 			
@@ -370,9 +379,9 @@ public class InterfaceMotCroises extends Application {
 		tabNombres = l.getTabNombres();
 		arrMots = l.getArrMots();
 		
-		for(Mot m:arrMots) {
+		/*for(Mot m:arrMots) {
 			//System.out.println(m);
-		}
+		}*/
 		
 		for (int i = 0; i < tabNombres.length; i++) {
 			
@@ -398,10 +407,29 @@ public class InterfaceMotCroises extends Application {
 						public void handle(MouseEvent arg0) {
 							// TODO Auto-generated method stub
 							//System.out.println("gestionnaire d'evenements enregistré avec addEventHandler\n"+"Nombre séléctionné :"+intNombre+"\n");
-							//System.out.println(tabNombres[i][j]);
+						//System.out.println(tabNombres[i][j]);
+							String strMot = arrMots.get(intNombre-1).getStrMot();
+							String strIndice = arrMots.get(intNombre-1).getStrIndice();
+							
+							Text txtIndice = new Text(strIndice);
+							Font font = Font.font("Verdana", FontWeight.BOLD, FontPosture.REGULAR, 15);
+							
+						
+						
+							txtIndice.setFont(font);
+							txtIndice.setTextAlignment(TextAlignment.CENTER);
+							txtIndice.setWrappingWidth(350);
+							
+							System.out.println(strMot);
+							hboxTextBienvenue.getChildren().clear();
+							hboxTextBienvenue.getChildren().addAll(txtIndice);
+							
+							
+							
 						}
 						
 					});
+					
 
 
 				}

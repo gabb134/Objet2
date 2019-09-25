@@ -1,4 +1,4 @@
-!SESSION 2019-09-25 13:54:14.236 -----------------------------------------------
+!SESSION 2019-09-25 16:50:09.380 -----------------------------------------------
 eclipse.buildId=4.12.0.I20190605-1800
 java.version=1.8.0_211
 java.vendor=Oracle Corporation
@@ -7,9 +7,9 @@ Framework arguments:  -product org.eclipse.epp.package.jee.product
 Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
 
 This is a continuation of log file C:\Users\cg.marrero\Documents\Objet2\Labos\.metadata\.bak_0.log
-Created Time: 2019-09-25 14:23:41.843
+Created Time: 2019-09-25 17:00:16.481
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:23:41.844
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:00:16.482
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -82,7 +82,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor180.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor179.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -91,7 +91,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/JavaIOFi
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindMutableFileSystemSupport(AbstractFXGraphRuntimeModule.java:249)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:23:41.849
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:00:16.488
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - Type org.eclipse.xtext.xbase.file.WorkspaceConfig not present
 
 !STACK 0
@@ -182,7 +182,7 @@ Caused by: java.lang.ClassNotFoundException: org.eclipse.xtext.xbase.file.Worksp
 	at java.lang.Class.forName(Unknown Source)
 	... 76 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:23:41.852
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:00:16.490
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -255,7 +255,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor200.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor192.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -264,11 +264,11 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/annotations/v
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindILinkingDiagnosticMessageProvider(AbstractFXGraphRuntimeModule.java:274)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:23:41.872
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:00:16.510
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Failed to create injector for org.eclipse.fx.ide.fxgraph.FXGraph
 
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:23:41.873
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:00:16.511
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Guice creation errors:
 
 1) No implementation for org.eclipse.xtext.builder.EclipseSourceFolderProvider was bound.
@@ -338,7 +338,7 @@ com.google.inject.CreationException: Guice creation errors:
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:23:41.904
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:00:16.701
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -411,7 +411,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor177.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor165.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -420,7 +420,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/FileLoca
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindFileLocations(AbstractFXGraphRuntimeModule.java:254)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:23:41.905
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:00:16.704
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -493,7 +493,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor180.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor179.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -502,7 +502,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/JavaIOFi
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindMutableFileSystemSupport(AbstractFXGraphRuntimeModule.java:249)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:23:41.907
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:00:16.705
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - Type org.eclipse.xtext.xbase.file.WorkspaceConfig not present
 
 !STACK 0
@@ -593,7 +593,7 @@ Caused by: java.lang.ClassNotFoundException: org.eclipse.xtext.xbase.file.Worksp
 	at java.lang.Class.forName(Unknown Source)
 	... 76 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:23:41.909
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:00:16.707
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -666,7 +666,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor200.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor192.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -675,11 +675,11 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/annotations/v
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindILinkingDiagnosticMessageProvider(AbstractFXGraphRuntimeModule.java:274)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:23:41.929
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:00:16.727
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Failed to create injector for org.eclipse.fx.ide.fxgraph.FXGraph
 
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:23:41.931
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:00:16.728
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Guice creation errors:
 
 1) No implementation for org.eclipse.xtext.builder.EclipseSourceFolderProvider was bound.
@@ -749,7 +749,7 @@ com.google.inject.CreationException: Guice creation errors:
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:23:42.226
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:01:14.121
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -822,7 +822,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor177.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor165.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -831,7 +831,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/FileLoca
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindFileLocations(AbstractFXGraphRuntimeModule.java:254)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:23:42.227
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:01:14.123
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -904,7 +904,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor180.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor179.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -913,7 +913,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/JavaIOFi
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindMutableFileSystemSupport(AbstractFXGraphRuntimeModule.java:249)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:23:42.229
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:01:14.125
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - Type org.eclipse.xtext.xbase.file.WorkspaceConfig not present
 
 !STACK 0
@@ -1004,7 +1004,7 @@ Caused by: java.lang.ClassNotFoundException: org.eclipse.xtext.xbase.file.Worksp
 	at java.lang.Class.forName(Unknown Source)
 	... 76 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:23:42.231
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:01:14.126
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -1077,7 +1077,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor200.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor192.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -1086,11 +1086,11 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/annotations/v
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindILinkingDiagnosticMessageProvider(AbstractFXGraphRuntimeModule.java:274)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:23:42.252
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:01:14.145
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Failed to create injector for org.eclipse.fx.ide.fxgraph.FXGraph
 
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:23:42.253
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:01:14.146
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Guice creation errors:
 
 1) No implementation for org.eclipse.xtext.builder.EclipseSourceFolderProvider was bound.
@@ -1160,7 +1160,7 @@ com.google.inject.CreationException: Guice creation errors:
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:23:49.647
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:01:32.170
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -1233,7 +1233,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor177.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor165.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -1242,7 +1242,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/FileLoca
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindFileLocations(AbstractFXGraphRuntimeModule.java:254)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:23:49.648
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:01:32.172
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -1315,7 +1315,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor180.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor179.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -1324,7 +1324,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/JavaIOFi
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindMutableFileSystemSupport(AbstractFXGraphRuntimeModule.java:249)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:23:49.650
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:01:32.174
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - Type org.eclipse.xtext.xbase.file.WorkspaceConfig not present
 
 !STACK 0
@@ -1415,7 +1415,7 @@ Caused by: java.lang.ClassNotFoundException: org.eclipse.xtext.xbase.file.Worksp
 	at java.lang.Class.forName(Unknown Source)
 	... 76 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:23:49.652
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:01:32.175
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -1488,7 +1488,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor200.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor192.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -1497,11 +1497,11 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/annotations/v
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindILinkingDiagnosticMessageProvider(AbstractFXGraphRuntimeModule.java:274)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:23:49.673
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:01:32.206
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Failed to create injector for org.eclipse.fx.ide.fxgraph.FXGraph
 
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:23:49.674
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:01:32.207
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Guice creation errors:
 
 1) No implementation for org.eclipse.xtext.builder.EclipseSourceFolderProvider was bound.
@@ -1571,7 +1571,7 @@ com.google.inject.CreationException: Guice creation errors:
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:23:50.507
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:02:28.872
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -1644,7 +1644,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor177.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor165.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -1653,7 +1653,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/FileLoca
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindFileLocations(AbstractFXGraphRuntimeModule.java:254)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:23:50.509
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:02:28.874
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -1726,7 +1726,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor180.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor179.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -1735,7 +1735,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/JavaIOFi
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindMutableFileSystemSupport(AbstractFXGraphRuntimeModule.java:249)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:23:50.511
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:02:28.875
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - Type org.eclipse.xtext.xbase.file.WorkspaceConfig not present
 
 !STACK 0
@@ -1826,7 +1826,7 @@ Caused by: java.lang.ClassNotFoundException: org.eclipse.xtext.xbase.file.Worksp
 	at java.lang.Class.forName(Unknown Source)
 	... 76 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:23:50.513
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:02:28.877
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -1899,7 +1899,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor200.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor192.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -1908,11 +1908,11 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/annotations/v
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindILinkingDiagnosticMessageProvider(AbstractFXGraphRuntimeModule.java:274)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:23:50.533
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:02:28.896
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Failed to create injector for org.eclipse.fx.ide.fxgraph.FXGraph
 
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:23:50.535
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:02:28.897
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Guice creation errors:
 
 1) No implementation for org.eclipse.xtext.builder.EclipseSourceFolderProvider was bound.
@@ -1982,7 +1982,7 @@ com.google.inject.CreationException: Guice creation errors:
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:23:51.315
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:02:29.163
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -2055,7 +2055,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor177.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor165.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -2064,7 +2064,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/FileLoca
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindFileLocations(AbstractFXGraphRuntimeModule.java:254)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:23:51.317
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:02:29.165
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -2137,7 +2137,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor180.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor179.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -2146,7 +2146,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/JavaIOFi
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindMutableFileSystemSupport(AbstractFXGraphRuntimeModule.java:249)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:23:51.320
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:02:29.166
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - Type org.eclipse.xtext.xbase.file.WorkspaceConfig not present
 
 !STACK 0
@@ -2237,7 +2237,7 @@ Caused by: java.lang.ClassNotFoundException: org.eclipse.xtext.xbase.file.Worksp
 	at java.lang.Class.forName(Unknown Source)
 	... 76 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:23:51.322
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:02:29.168
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -2310,7 +2310,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor200.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor192.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -2319,11 +2319,11 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/annotations/v
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindILinkingDiagnosticMessageProvider(AbstractFXGraphRuntimeModule.java:274)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:23:51.353
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:02:29.187
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Failed to create injector for org.eclipse.fx.ide.fxgraph.FXGraph
 
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:23:51.354
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:02:29.188
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Guice creation errors:
 
 1) No implementation for org.eclipse.xtext.builder.EclipseSourceFolderProvider was bound.
@@ -2393,7 +2393,7 @@ com.google.inject.CreationException: Guice creation errors:
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:24:21.599
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:02:29.412
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -2466,7 +2466,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor177.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor165.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -2475,7 +2475,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/FileLoca
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindFileLocations(AbstractFXGraphRuntimeModule.java:254)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:24:21.600
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:02:29.414
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -2548,7 +2548,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor180.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor179.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -2557,7 +2557,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/JavaIOFi
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindMutableFileSystemSupport(AbstractFXGraphRuntimeModule.java:249)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:24:21.602
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:02:29.415
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - Type org.eclipse.xtext.xbase.file.WorkspaceConfig not present
 
 !STACK 0
@@ -2648,7 +2648,7 @@ Caused by: java.lang.ClassNotFoundException: org.eclipse.xtext.xbase.file.Worksp
 	at java.lang.Class.forName(Unknown Source)
 	... 76 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:24:21.604
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:02:29.417
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -2721,7 +2721,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor200.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor192.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -2730,11 +2730,11 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/annotations/v
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindILinkingDiagnosticMessageProvider(AbstractFXGraphRuntimeModule.java:274)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:24:21.623
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:02:29.444
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Failed to create injector for org.eclipse.fx.ide.fxgraph.FXGraph
 
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:24:21.625
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:02:29.445
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Guice creation errors:
 
 1) No implementation for org.eclipse.xtext.builder.EclipseSourceFolderProvider was bound.
@@ -2804,7 +2804,7 @@ com.google.inject.CreationException: Guice creation errors:
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:24:21.628
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:02:29.871
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -2877,7 +2877,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor177.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor165.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -2886,7 +2886,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/FileLoca
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindFileLocations(AbstractFXGraphRuntimeModule.java:254)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:24:21.630
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:02:29.873
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -2959,7 +2959,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor180.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor179.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -2968,7 +2968,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/JavaIOFi
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindMutableFileSystemSupport(AbstractFXGraphRuntimeModule.java:249)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:24:21.631
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:02:29.874
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - Type org.eclipse.xtext.xbase.file.WorkspaceConfig not present
 
 !STACK 0
@@ -3059,7 +3059,7 @@ Caused by: java.lang.ClassNotFoundException: org.eclipse.xtext.xbase.file.Worksp
 	at java.lang.Class.forName(Unknown Source)
 	... 76 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:24:21.633
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:02:29.875
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -3132,7 +3132,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor200.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor192.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -3141,11 +3141,11 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/annotations/v
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindILinkingDiagnosticMessageProvider(AbstractFXGraphRuntimeModule.java:274)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:24:21.653
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:02:29.894
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Failed to create injector for org.eclipse.fx.ide.fxgraph.FXGraph
 
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:24:21.654
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:02:29.895
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Guice creation errors:
 
 1) No implementation for org.eclipse.xtext.builder.EclipseSourceFolderProvider was bound.
@@ -3215,7 +3215,7 @@ com.google.inject.CreationException: Guice creation errors:
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:24:21.658
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:02:29.915
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -3288,7 +3288,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor177.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor165.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -3297,7 +3297,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/FileLoca
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindFileLocations(AbstractFXGraphRuntimeModule.java:254)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:24:21.659
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:02:29.918
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -3370,7 +3370,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor180.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor179.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -3379,7 +3379,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/JavaIOFi
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindMutableFileSystemSupport(AbstractFXGraphRuntimeModule.java:249)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:24:21.661
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:02:29.919
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - Type org.eclipse.xtext.xbase.file.WorkspaceConfig not present
 
 !STACK 0
@@ -3470,7 +3470,7 @@ Caused by: java.lang.ClassNotFoundException: org.eclipse.xtext.xbase.file.Worksp
 	at java.lang.Class.forName(Unknown Source)
 	... 76 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:24:21.663
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:02:29.921
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -3543,7 +3543,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor200.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor192.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -3552,11 +3552,11 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/annotations/v
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindILinkingDiagnosticMessageProvider(AbstractFXGraphRuntimeModule.java:274)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:24:21.683
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:02:29.939
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Failed to create injector for org.eclipse.fx.ide.fxgraph.FXGraph
 
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:24:21.684
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:02:29.940
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Guice creation errors:
 
 1) No implementation for org.eclipse.xtext.builder.EclipseSourceFolderProvider was bound.
@@ -3626,7 +3626,7 @@ com.google.inject.CreationException: Guice creation errors:
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:24:26.743
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:02:29.962
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -3699,7 +3699,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor177.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor165.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -3708,7 +3708,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/FileLoca
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindFileLocations(AbstractFXGraphRuntimeModule.java:254)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:24:26.744
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:02:29.964
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -3781,7 +3781,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor180.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor179.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -3790,7 +3790,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/JavaIOFi
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindMutableFileSystemSupport(AbstractFXGraphRuntimeModule.java:249)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:24:26.746
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:02:29.966
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - Type org.eclipse.xtext.xbase.file.WorkspaceConfig not present
 
 !STACK 0
@@ -3881,7 +3881,7 @@ Caused by: java.lang.ClassNotFoundException: org.eclipse.xtext.xbase.file.Worksp
 	at java.lang.Class.forName(Unknown Source)
 	... 76 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:24:26.749
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:02:29.967
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -3954,7 +3954,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor200.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor192.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -3963,11 +3963,11 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/annotations/v
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindILinkingDiagnosticMessageProvider(AbstractFXGraphRuntimeModule.java:274)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:24:26.770
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:02:29.986
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Failed to create injector for org.eclipse.fx.ide.fxgraph.FXGraph
 
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:24:26.771
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:02:29.987
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Guice creation errors:
 
 1) No implementation for org.eclipse.xtext.builder.EclipseSourceFolderProvider was bound.
@@ -4037,7 +4037,7 @@ com.google.inject.CreationException: Guice creation errors:
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:24:27.568
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:06:49.638
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -4110,7 +4110,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor177.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor165.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -4119,7 +4119,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/FileLoca
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindFileLocations(AbstractFXGraphRuntimeModule.java:254)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:24:27.569
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:06:49.640
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -4192,7 +4192,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor180.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor179.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -4201,7 +4201,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/JavaIOFi
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindMutableFileSystemSupport(AbstractFXGraphRuntimeModule.java:249)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:24:27.572
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:06:49.641
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - Type org.eclipse.xtext.xbase.file.WorkspaceConfig not present
 
 !STACK 0
@@ -4292,7 +4292,7 @@ Caused by: java.lang.ClassNotFoundException: org.eclipse.xtext.xbase.file.Worksp
 	at java.lang.Class.forName(Unknown Source)
 	... 76 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:24:27.574
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:06:49.643
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -4365,7 +4365,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor200.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor192.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -4374,11 +4374,11 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/annotations/v
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindILinkingDiagnosticMessageProvider(AbstractFXGraphRuntimeModule.java:274)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:24:27.594
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:06:49.662
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Failed to create injector for org.eclipse.fx.ide.fxgraph.FXGraph
 
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:24:27.595
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:06:49.663
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Guice creation errors:
 
 1) No implementation for org.eclipse.xtext.builder.EclipseSourceFolderProvider was bound.
@@ -4448,7 +4448,7 @@ com.google.inject.CreationException: Guice creation errors:
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:24:29.196
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:06:49.945
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -4521,7 +4521,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor177.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor165.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -4530,7 +4530,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/FileLoca
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindFileLocations(AbstractFXGraphRuntimeModule.java:254)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:24:29.197
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:06:49.946
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -4603,7 +4603,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor180.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor179.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -4612,7 +4612,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/JavaIOFi
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindMutableFileSystemSupport(AbstractFXGraphRuntimeModule.java:249)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:24:29.199
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:06:49.947
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - Type org.eclipse.xtext.xbase.file.WorkspaceConfig not present
 
 !STACK 0
@@ -4703,7 +4703,7 @@ Caused by: java.lang.ClassNotFoundException: org.eclipse.xtext.xbase.file.Worksp
 	at java.lang.Class.forName(Unknown Source)
 	... 76 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:24:29.201
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:06:49.949
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -4776,7 +4776,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor200.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor192.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -4785,11 +4785,11 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/annotations/v
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindILinkingDiagnosticMessageProvider(AbstractFXGraphRuntimeModule.java:274)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:24:29.222
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:06:49.968
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Failed to create injector for org.eclipse.fx.ide.fxgraph.FXGraph
 
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:24:29.223
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:06:49.969
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Guice creation errors:
 
 1) No implementation for org.eclipse.xtext.builder.EclipseSourceFolderProvider was bound.
@@ -4859,7 +4859,7 @@ com.google.inject.CreationException: Guice creation errors:
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:24:35.565
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:06:49.987
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -4932,7 +4932,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor177.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor165.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -4941,7 +4941,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/FileLoca
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindFileLocations(AbstractFXGraphRuntimeModule.java:254)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:24:35.567
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:06:49.989
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -5014,7 +5014,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor180.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor179.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -5023,7 +5023,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/JavaIOFi
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindMutableFileSystemSupport(AbstractFXGraphRuntimeModule.java:249)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:24:35.569
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:06:49.991
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - Type org.eclipse.xtext.xbase.file.WorkspaceConfig not present
 
 !STACK 0
@@ -5114,7 +5114,7 @@ Caused by: java.lang.ClassNotFoundException: org.eclipse.xtext.xbase.file.Worksp
 	at java.lang.Class.forName(Unknown Source)
 	... 76 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:24:35.571
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:06:49.992
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -5187,7 +5187,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor200.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor192.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -5196,11 +5196,11 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/annotations/v
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindILinkingDiagnosticMessageProvider(AbstractFXGraphRuntimeModule.java:274)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:24:35.590
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:06:50.011
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Failed to create injector for org.eclipse.fx.ide.fxgraph.FXGraph
 
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:24:35.591
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:06:50.012
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Guice creation errors:
 
 1) No implementation for org.eclipse.xtext.builder.EclipseSourceFolderProvider was bound.
@@ -5270,7 +5270,7 @@ com.google.inject.CreationException: Guice creation errors:
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:24:56.145
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:06:50.613
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -5343,7 +5343,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor177.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor165.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -5352,7 +5352,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/FileLoca
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindFileLocations(AbstractFXGraphRuntimeModule.java:254)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:24:56.146
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:06:50.615
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -5425,7 +5425,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor180.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor179.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -5434,7 +5434,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/JavaIOFi
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindMutableFileSystemSupport(AbstractFXGraphRuntimeModule.java:249)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:24:56.148
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:06:50.617
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - Type org.eclipse.xtext.xbase.file.WorkspaceConfig not present
 
 !STACK 0
@@ -5525,7 +5525,7 @@ Caused by: java.lang.ClassNotFoundException: org.eclipse.xtext.xbase.file.Worksp
 	at java.lang.Class.forName(Unknown Source)
 	... 76 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:24:56.151
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:06:50.618
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -5598,7 +5598,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor200.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor192.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -5607,11 +5607,11 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/annotations/v
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindILinkingDiagnosticMessageProvider(AbstractFXGraphRuntimeModule.java:274)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:24:56.171
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:06:50.637
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Failed to create injector for org.eclipse.fx.ide.fxgraph.FXGraph
 
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:24:56.172
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:06:50.638
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Guice creation errors:
 
 1) No implementation for org.eclipse.xtext.builder.EclipseSourceFolderProvider was bound.
@@ -5681,7 +5681,7 @@ com.google.inject.CreationException: Guice creation errors:
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:25:30.755
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:06:50.959
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -5754,7 +5754,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor177.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor165.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -5763,7 +5763,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/FileLoca
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindFileLocations(AbstractFXGraphRuntimeModule.java:254)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:25:30.755
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:06:50.962
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -5836,7 +5836,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor180.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor179.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -5845,7 +5845,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/JavaIOFi
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindMutableFileSystemSupport(AbstractFXGraphRuntimeModule.java:249)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:25:30.758
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:06:50.963
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - Type org.eclipse.xtext.xbase.file.WorkspaceConfig not present
 
 !STACK 0
@@ -5936,7 +5936,7 @@ Caused by: java.lang.ClassNotFoundException: org.eclipse.xtext.xbase.file.Worksp
 	at java.lang.Class.forName(Unknown Source)
 	... 76 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:25:30.760
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:06:50.964
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -6009,7 +6009,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor200.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor192.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -6018,11 +6018,11 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/annotations/v
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindILinkingDiagnosticMessageProvider(AbstractFXGraphRuntimeModule.java:274)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:25:30.779
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:06:50.982
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Failed to create injector for org.eclipse.fx.ide.fxgraph.FXGraph
 
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:25:30.781
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:06:50.983
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Guice creation errors:
 
 1) No implementation for org.eclipse.xtext.builder.EclipseSourceFolderProvider was bound.
@@ -6092,7 +6092,7 @@ com.google.inject.CreationException: Guice creation errors:
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:25:33.332
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:06:51.585
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -6165,7 +6165,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor177.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor165.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -6174,7 +6174,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/FileLoca
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindFileLocations(AbstractFXGraphRuntimeModule.java:254)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:25:33.333
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:06:51.587
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -6247,7 +6247,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor180.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor179.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -6256,7 +6256,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/JavaIOFi
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindMutableFileSystemSupport(AbstractFXGraphRuntimeModule.java:249)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:25:33.336
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:06:51.589
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - Type org.eclipse.xtext.xbase.file.WorkspaceConfig not present
 
 !STACK 0
@@ -6347,7 +6347,7 @@ Caused by: java.lang.ClassNotFoundException: org.eclipse.xtext.xbase.file.Worksp
 	at java.lang.Class.forName(Unknown Source)
 	... 76 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:25:33.338
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:06:51.590
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -6420,7 +6420,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor200.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor192.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -6429,11 +6429,11 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/annotations/v
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindILinkingDiagnosticMessageProvider(AbstractFXGraphRuntimeModule.java:274)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:25:33.359
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:06:51.609
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Failed to create injector for org.eclipse.fx.ide.fxgraph.FXGraph
 
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:25:33.360
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:06:51.610
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Guice creation errors:
 
 1) No implementation for org.eclipse.xtext.builder.EclipseSourceFolderProvider was bound.
@@ -6503,7 +6503,7 @@ com.google.inject.CreationException: Guice creation errors:
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:25:50.650
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:06:53.263
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -6576,7 +6576,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor177.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor165.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -6585,7 +6585,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/FileLoca
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindFileLocations(AbstractFXGraphRuntimeModule.java:254)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:25:50.651
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:06:53.266
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -6658,7 +6658,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor180.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor179.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -6667,7 +6667,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/JavaIOFi
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindMutableFileSystemSupport(AbstractFXGraphRuntimeModule.java:249)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:25:50.653
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:06:53.267
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - Type org.eclipse.xtext.xbase.file.WorkspaceConfig not present
 
 !STACK 0
@@ -6758,7 +6758,7 @@ Caused by: java.lang.ClassNotFoundException: org.eclipse.xtext.xbase.file.Worksp
 	at java.lang.Class.forName(Unknown Source)
 	... 76 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:25:50.655
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:06:53.269
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -6831,7 +6831,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor200.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor192.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -6840,11 +6840,11 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/annotations/v
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindILinkingDiagnosticMessageProvider(AbstractFXGraphRuntimeModule.java:274)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:25:50.674
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:06:53.288
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Failed to create injector for org.eclipse.fx.ide.fxgraph.FXGraph
 
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:25:50.675
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:06:53.289
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Guice creation errors:
 
 1) No implementation for org.eclipse.xtext.builder.EclipseSourceFolderProvider was bound.
@@ -6914,7 +6914,7 @@ com.google.inject.CreationException: Guice creation errors:
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:25:50.679
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:07:43.631
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -6987,7 +6987,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor177.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor165.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -6996,7 +6996,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/FileLoca
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindFileLocations(AbstractFXGraphRuntimeModule.java:254)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:25:50.681
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:07:43.633
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -7069,7 +7069,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor180.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor179.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -7078,7 +7078,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/JavaIOFi
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindMutableFileSystemSupport(AbstractFXGraphRuntimeModule.java:249)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:25:50.682
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:07:43.635
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - Type org.eclipse.xtext.xbase.file.WorkspaceConfig not present
 
 !STACK 0
@@ -7169,7 +7169,7 @@ Caused by: java.lang.ClassNotFoundException: org.eclipse.xtext.xbase.file.Worksp
 	at java.lang.Class.forName(Unknown Source)
 	... 76 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:25:50.684
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:07:43.636
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -7242,7 +7242,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor200.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor192.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -7251,11 +7251,11 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/annotations/v
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindILinkingDiagnosticMessageProvider(AbstractFXGraphRuntimeModule.java:274)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:25:50.704
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:07:43.656
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Failed to create injector for org.eclipse.fx.ide.fxgraph.FXGraph
 
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:25:50.705
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:07:43.657
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Guice creation errors:
 
 1) No implementation for org.eclipse.xtext.builder.EclipseSourceFolderProvider was bound.
@@ -7325,7 +7325,7 @@ com.google.inject.CreationException: Guice creation errors:
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:26:05.079
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:07:44.063
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -7398,7 +7398,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor177.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor165.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -7407,7 +7407,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/FileLoca
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindFileLocations(AbstractFXGraphRuntimeModule.java:254)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:26:05.080
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:07:44.065
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -7480,7 +7480,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor180.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor179.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -7489,7 +7489,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/JavaIOFi
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindMutableFileSystemSupport(AbstractFXGraphRuntimeModule.java:249)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:26:05.082
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:07:44.066
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - Type org.eclipse.xtext.xbase.file.WorkspaceConfig not present
 
 !STACK 0
@@ -7580,7 +7580,7 @@ Caused by: java.lang.ClassNotFoundException: org.eclipse.xtext.xbase.file.Worksp
 	at java.lang.Class.forName(Unknown Source)
 	... 76 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:26:05.084
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:07:44.068
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -7653,7 +7653,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor200.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor192.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -7662,11 +7662,11 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/annotations/v
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindILinkingDiagnosticMessageProvider(AbstractFXGraphRuntimeModule.java:274)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:26:05.104
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:07:44.087
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Failed to create injector for org.eclipse.fx.ide.fxgraph.FXGraph
 
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:26:05.105
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:07:44.088
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Guice creation errors:
 
 1) No implementation for org.eclipse.xtext.builder.EclipseSourceFolderProvider was bound.
@@ -7736,7 +7736,7 @@ com.google.inject.CreationException: Guice creation errors:
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:27:18.505
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:07:44.489
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -7809,7 +7809,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor177.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor165.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -7818,7 +7818,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/FileLoca
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindFileLocations(AbstractFXGraphRuntimeModule.java:254)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:27:18.506
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:07:44.491
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -7891,7 +7891,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor180.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor179.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -7900,7 +7900,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/JavaIOFi
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindMutableFileSystemSupport(AbstractFXGraphRuntimeModule.java:249)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:27:18.508
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:07:44.492
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - Type org.eclipse.xtext.xbase.file.WorkspaceConfig not present
 
 !STACK 0
@@ -7991,7 +7991,7 @@ Caused by: java.lang.ClassNotFoundException: org.eclipse.xtext.xbase.file.Worksp
 	at java.lang.Class.forName(Unknown Source)
 	... 76 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:27:18.510
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:07:44.494
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -8064,7 +8064,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor200.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor192.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -8073,11 +8073,11 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/annotations/v
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindILinkingDiagnosticMessageProvider(AbstractFXGraphRuntimeModule.java:274)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:27:18.529
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:07:44.513
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Failed to create injector for org.eclipse.fx.ide.fxgraph.FXGraph
 
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:27:18.530
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:07:44.514
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Guice creation errors:
 
 1) No implementation for org.eclipse.xtext.builder.EclipseSourceFolderProvider was bound.
@@ -8147,7 +8147,7 @@ com.google.inject.CreationException: Guice creation errors:
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:27:20.225
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:07:45.257
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -8220,7 +8220,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor177.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor165.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -8229,7 +8229,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/FileLoca
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindFileLocations(AbstractFXGraphRuntimeModule.java:254)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:27:20.228
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:07:45.259
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -8302,7 +8302,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor180.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor179.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -8311,7 +8311,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/JavaIOFi
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindMutableFileSystemSupport(AbstractFXGraphRuntimeModule.java:249)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:27:20.230
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:07:45.260
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - Type org.eclipse.xtext.xbase.file.WorkspaceConfig not present
 
 !STACK 0
@@ -8402,7 +8402,7 @@ Caused by: java.lang.ClassNotFoundException: org.eclipse.xtext.xbase.file.Worksp
 	at java.lang.Class.forName(Unknown Source)
 	... 76 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:27:20.232
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:07:45.262
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -8475,7 +8475,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor200.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor192.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -8484,11 +8484,11 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/annotations/v
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindILinkingDiagnosticMessageProvider(AbstractFXGraphRuntimeModule.java:274)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:27:20.252
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:07:45.280
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Failed to create injector for org.eclipse.fx.ide.fxgraph.FXGraph
 
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:27:20.253
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:07:45.281
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Guice creation errors:
 
 1) No implementation for org.eclipse.xtext.builder.EclipseSourceFolderProvider was bound.
@@ -8558,7 +8558,7 @@ com.google.inject.CreationException: Guice creation errors:
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:27:20.822
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:07:45.650
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -8631,7 +8631,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor177.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor165.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -8640,7 +8640,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/FileLoca
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindFileLocations(AbstractFXGraphRuntimeModule.java:254)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:27:20.824
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:07:45.652
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -8713,7 +8713,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor180.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor179.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -8722,7 +8722,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/JavaIOFi
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindMutableFileSystemSupport(AbstractFXGraphRuntimeModule.java:249)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:27:20.826
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:07:45.654
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - Type org.eclipse.xtext.xbase.file.WorkspaceConfig not present
 
 !STACK 0
@@ -8813,7 +8813,7 @@ Caused by: java.lang.ClassNotFoundException: org.eclipse.xtext.xbase.file.Worksp
 	at java.lang.Class.forName(Unknown Source)
 	... 76 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:27:20.828
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:07:45.655
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -8886,7 +8886,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor200.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor192.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -8895,11 +8895,11 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/annotations/v
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindILinkingDiagnosticMessageProvider(AbstractFXGraphRuntimeModule.java:274)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:27:20.847
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:07:45.673
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Failed to create injector for org.eclipse.fx.ide.fxgraph.FXGraph
 
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:27:20.848
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:07:45.674
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Guice creation errors:
 
 1) No implementation for org.eclipse.xtext.builder.EclipseSourceFolderProvider was bound.
@@ -8969,7 +8969,7 @@ com.google.inject.CreationException: Guice creation errors:
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:27:26.897
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:07:46.393
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -9042,7 +9042,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor177.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor165.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -9051,7 +9051,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/FileLoca
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindFileLocations(AbstractFXGraphRuntimeModule.java:254)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:27:26.899
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:07:46.395
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -9124,7 +9124,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor180.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor179.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -9133,7 +9133,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/JavaIOFi
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindMutableFileSystemSupport(AbstractFXGraphRuntimeModule.java:249)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:27:26.901
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:07:46.397
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - Type org.eclipse.xtext.xbase.file.WorkspaceConfig not present
 
 !STACK 0
@@ -9224,7 +9224,7 @@ Caused by: java.lang.ClassNotFoundException: org.eclipse.xtext.xbase.file.Worksp
 	at java.lang.Class.forName(Unknown Source)
 	... 76 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:27:26.903
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:07:46.399
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -9297,7 +9297,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor200.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor192.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -9306,11 +9306,11 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/annotations/v
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindILinkingDiagnosticMessageProvider(AbstractFXGraphRuntimeModule.java:274)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:27:26.923
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:07:46.416
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Failed to create injector for org.eclipse.fx.ide.fxgraph.FXGraph
 
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:27:26.924
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:07:46.417
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Guice creation errors:
 
 1) No implementation for org.eclipse.xtext.builder.EclipseSourceFolderProvider was bound.
@@ -9380,7 +9380,7 @@ com.google.inject.CreationException: Guice creation errors:
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:27:35.047
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:07:56.380
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -9453,7 +9453,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor177.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor165.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -9462,7 +9462,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/FileLoca
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindFileLocations(AbstractFXGraphRuntimeModule.java:254)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:27:35.049
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:07:56.382
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -9535,7 +9535,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor180.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor179.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -9544,7 +9544,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/JavaIOFi
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindMutableFileSystemSupport(AbstractFXGraphRuntimeModule.java:249)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:27:35.051
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:07:56.384
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - Type org.eclipse.xtext.xbase.file.WorkspaceConfig not present
 
 !STACK 0
@@ -9635,7 +9635,7 @@ Caused by: java.lang.ClassNotFoundException: org.eclipse.xtext.xbase.file.Worksp
 	at java.lang.Class.forName(Unknown Source)
 	... 76 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:27:35.053
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:07:56.385
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -9708,7 +9708,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor200.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor192.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -9717,11 +9717,11 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/annotations/v
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindILinkingDiagnosticMessageProvider(AbstractFXGraphRuntimeModule.java:274)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:27:35.072
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:07:56.412
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Failed to create injector for org.eclipse.fx.ide.fxgraph.FXGraph
 
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:27:35.074
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:07:56.413
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Guice creation errors:
 
 1) No implementation for org.eclipse.xtext.builder.EclipseSourceFolderProvider was bound.
@@ -9791,7 +9791,7 @@ com.google.inject.CreationException: Guice creation errors:
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:27:35.078
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:08:20.293
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -9864,7 +9864,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor177.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor165.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -9873,7 +9873,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/FileLoca
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindFileLocations(AbstractFXGraphRuntimeModule.java:254)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:27:35.079
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:08:20.295
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -9946,7 +9946,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor180.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor179.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -9955,7 +9955,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/JavaIOFi
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindMutableFileSystemSupport(AbstractFXGraphRuntimeModule.java:249)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:27:35.081
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:08:20.296
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - Type org.eclipse.xtext.xbase.file.WorkspaceConfig not present
 
 !STACK 0
@@ -10046,7 +10046,7 @@ Caused by: java.lang.ClassNotFoundException: org.eclipse.xtext.xbase.file.Worksp
 	at java.lang.Class.forName(Unknown Source)
 	... 76 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:27:35.083
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:08:20.298
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -10119,7 +10119,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor200.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor192.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -10128,11 +10128,11 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/annotations/v
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindILinkingDiagnosticMessageProvider(AbstractFXGraphRuntimeModule.java:274)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:27:35.102
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:08:20.317
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Failed to create injector for org.eclipse.fx.ide.fxgraph.FXGraph
 
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:27:35.103
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:08:20.318
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Guice creation errors:
 
 1) No implementation for org.eclipse.xtext.builder.EclipseSourceFolderProvider was bound.
@@ -10202,7 +10202,7 @@ com.google.inject.CreationException: Guice creation errors:
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:27:35.627
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:08:32.580
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -10275,7 +10275,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor177.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor165.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -10284,7 +10284,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/FileLoca
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindFileLocations(AbstractFXGraphRuntimeModule.java:254)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:27:35.628
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:08:32.583
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -10357,7 +10357,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor180.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor179.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -10366,7 +10366,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/JavaIOFi
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindMutableFileSystemSupport(AbstractFXGraphRuntimeModule.java:249)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:27:35.631
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:08:32.584
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - Type org.eclipse.xtext.xbase.file.WorkspaceConfig not present
 
 !STACK 0
@@ -10457,7 +10457,7 @@ Caused by: java.lang.ClassNotFoundException: org.eclipse.xtext.xbase.file.Worksp
 	at java.lang.Class.forName(Unknown Source)
 	... 76 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:27:35.633
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:08:32.586
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -10530,7 +10530,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor200.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor192.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -10539,11 +10539,11 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/annotations/v
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindILinkingDiagnosticMessageProvider(AbstractFXGraphRuntimeModule.java:274)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:27:35.655
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:08:32.605
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Failed to create injector for org.eclipse.fx.ide.fxgraph.FXGraph
 
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:27:35.657
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:08:32.606
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Guice creation errors:
 
 1) No implementation for org.eclipse.xtext.builder.EclipseSourceFolderProvider was bound.
@@ -10613,7 +10613,7 @@ com.google.inject.CreationException: Guice creation errors:
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:28:11.726
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:08:33.110
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -10686,7 +10686,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor177.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor165.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -10695,7 +10695,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/FileLoca
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindFileLocations(AbstractFXGraphRuntimeModule.java:254)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:28:11.727
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:08:33.112
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -10768,7 +10768,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor180.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor179.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -10777,7 +10777,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/JavaIOFi
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindMutableFileSystemSupport(AbstractFXGraphRuntimeModule.java:249)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:28:11.729
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:08:33.114
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - Type org.eclipse.xtext.xbase.file.WorkspaceConfig not present
 
 !STACK 0
@@ -10868,7 +10868,7 @@ Caused by: java.lang.ClassNotFoundException: org.eclipse.xtext.xbase.file.Worksp
 	at java.lang.Class.forName(Unknown Source)
 	... 76 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:28:11.731
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:08:33.115
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -10941,7 +10941,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor200.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor192.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -10950,11 +10950,11 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/annotations/v
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindILinkingDiagnosticMessageProvider(AbstractFXGraphRuntimeModule.java:274)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:28:11.751
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:08:33.134
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Failed to create injector for org.eclipse.fx.ide.fxgraph.FXGraph
 
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:28:11.752
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:08:33.135
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Guice creation errors:
 
 1) No implementation for org.eclipse.xtext.builder.EclipseSourceFolderProvider was bound.
@@ -11024,7 +11024,7 @@ com.google.inject.CreationException: Guice creation errors:
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:28:12.459
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:08:33.471
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -11097,7 +11097,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor177.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor165.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -11106,7 +11106,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/FileLoca
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindFileLocations(AbstractFXGraphRuntimeModule.java:254)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:28:12.461
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:08:33.474
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -11179,7 +11179,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor180.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor179.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -11188,7 +11188,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/JavaIOFi
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindMutableFileSystemSupport(AbstractFXGraphRuntimeModule.java:249)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:28:12.462
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:08:33.475
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - Type org.eclipse.xtext.xbase.file.WorkspaceConfig not present
 
 !STACK 0
@@ -11279,7 +11279,7 @@ Caused by: java.lang.ClassNotFoundException: org.eclipse.xtext.xbase.file.Worksp
 	at java.lang.Class.forName(Unknown Source)
 	... 76 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:28:12.464
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:08:33.477
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -11352,7 +11352,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor200.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor192.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -11361,11 +11361,11 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/annotations/v
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindILinkingDiagnosticMessageProvider(AbstractFXGraphRuntimeModule.java:274)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:28:12.484
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:08:33.496
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Failed to create injector for org.eclipse.fx.ide.fxgraph.FXGraph
 
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:28:12.485
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:08:33.497
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Guice creation errors:
 
 1) No implementation for org.eclipse.xtext.builder.EclipseSourceFolderProvider was bound.
@@ -11435,7 +11435,7 @@ com.google.inject.CreationException: Guice creation errors:
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:28:19.424
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:08:36.078
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -11508,7 +11508,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor177.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor165.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -11517,7 +11517,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/FileLoca
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindFileLocations(AbstractFXGraphRuntimeModule.java:254)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:28:19.426
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:08:36.080
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -11590,7 +11590,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor180.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor179.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -11599,7 +11599,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/JavaIOFi
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindMutableFileSystemSupport(AbstractFXGraphRuntimeModule.java:249)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:28:19.427
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:08:36.081
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - Type org.eclipse.xtext.xbase.file.WorkspaceConfig not present
 
 !STACK 0
@@ -11690,7 +11690,7 @@ Caused by: java.lang.ClassNotFoundException: org.eclipse.xtext.xbase.file.Worksp
 	at java.lang.Class.forName(Unknown Source)
 	... 76 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:28:19.429
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:08:36.083
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -11763,7 +11763,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor200.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor192.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -11772,11 +11772,11 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/annotations/v
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindILinkingDiagnosticMessageProvider(AbstractFXGraphRuntimeModule.java:274)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:28:19.449
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:08:36.101
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Failed to create injector for org.eclipse.fx.ide.fxgraph.FXGraph
 
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:28:19.450
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:08:36.102
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Guice creation errors:
 
 1) No implementation for org.eclipse.xtext.builder.EclipseSourceFolderProvider was bound.
@@ -11846,7 +11846,7 @@ com.google.inject.CreationException: Guice creation errors:
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:28:19.757
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:08:36.431
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -11919,7 +11919,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor177.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor165.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -11928,7 +11928,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/FileLoca
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindFileLocations(AbstractFXGraphRuntimeModule.java:254)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:28:19.759
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:08:36.433
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -12001,7 +12001,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor180.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor179.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -12010,7 +12010,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/JavaIOFi
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindMutableFileSystemSupport(AbstractFXGraphRuntimeModule.java:249)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:28:19.761
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:08:36.435
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - Type org.eclipse.xtext.xbase.file.WorkspaceConfig not present
 
 !STACK 0
@@ -12101,7 +12101,7 @@ Caused by: java.lang.ClassNotFoundException: org.eclipse.xtext.xbase.file.Worksp
 	at java.lang.Class.forName(Unknown Source)
 	... 76 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:28:19.763
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:08:36.436
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -12174,7 +12174,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor200.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor192.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -12183,11 +12183,11 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/annotations/v
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindILinkingDiagnosticMessageProvider(AbstractFXGraphRuntimeModule.java:274)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:28:19.783
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:08:36.455
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Failed to create injector for org.eclipse.fx.ide.fxgraph.FXGraph
 
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:28:19.784
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:08:36.455
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Guice creation errors:
 
 1) No implementation for org.eclipse.xtext.builder.EclipseSourceFolderProvider was bound.
@@ -12257,7 +12257,7 @@ com.google.inject.CreationException: Guice creation errors:
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:31:03.874
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:08:37.350
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -12330,7 +12330,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor177.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor165.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -12339,7 +12339,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/FileLoca
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindFileLocations(AbstractFXGraphRuntimeModule.java:254)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:31:03.875
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:08:37.352
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -12412,7 +12412,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor180.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor179.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
@@ -12421,7 +12421,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/JavaIOFi
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindMutableFileSystemSupport(AbstractFXGraphRuntimeModule.java:249)
 	... 70 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:31:03.877
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:08:37.354
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - Type org.eclipse.xtext.xbase.file.WorkspaceConfig not present
 
 !STACK 0
@@ -12512,7 +12512,7 @@ Caused by: java.lang.ClassNotFoundException: org.eclipse.xtext.xbase.file.Worksp
 	at java.lang.Class.forName(Unknown Source)
 	... 76 more
 
-!ENTRY org.apache.log4j 4 0 2019-09-25 14:31:03.879
+!ENTRY org.apache.log4j 4 0 2019-09-25 17:08:37.355
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -12585,7 +12585,7 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor200.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor192.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
