@@ -370,6 +370,10 @@ public class InterfaceMotCroises extends Application {
 		tabNombres = l.getTabNombres();
 		arrMots = l.getArrMots();
 		
+		for(Mot m:arrMots) {
+			//System.out.println(m);
+		}
+		
 		for (int i = 0; i < tabNombres.length; i++) {
 			
 			for (int j = 0; j < tabNombres[i].length; j++) {
@@ -393,7 +397,7 @@ public class InterfaceMotCroises extends Application {
 						@Override
 						public void handle(MouseEvent arg0) {
 							// TODO Auto-generated method stub
-							System.out.println("gestionnaire d'evenements enregistré avec addEventHandler\n"+"Nombre séléctionné :"+intNombre+"\n");
+							//System.out.println("gestionnaire d'evenements enregistré avec addEventHandler\n"+"Nombre séléctionné :"+intNombre+"\n");
 							//System.out.println(tabNombres[i][j]);
 						}
 						
