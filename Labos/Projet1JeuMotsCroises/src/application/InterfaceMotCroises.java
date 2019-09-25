@@ -339,8 +339,31 @@ public class InterfaceMotCroises extends Application {
 					hboxtxtTheme.setAlignment(Pos.CENTER);
 					vboxGauche.getChildren().add(hboxtxtTheme);
 					
+					LectureDonnees l = new LectureDonnees("grilleTechnologie.txt", "donneesTechnologie.txt"); 
 					
-					//le faire avec un vbox
+					
+					tabNombres = l.getTabNombres();
+					arrMots = l.getArrMots();
+					
+					for (int i = 0; i < tabNombres.length; i++) {
+						for (int j = 0; j < tabNombres[i].length; j++) {
+							// System.out.print(" " + tabNombres[i][k] + " ");
+							int intNombre = tabNombres[i][j];
+						
+							//System.out.println(tabNombres[i][j]);
+							int intNombreCercleGrille=0;
+							if(intNombre!= -1 && intNombre!= 0) {
+								intNombreCercleGrille = intNombre;
+							}
+							Case caseCreer = new Case(intNombre,i,j,intNombreCercleGrille); //objet qui envoie le nombre , les lignes et le colonne a la classe casecreer
+							
+							//System.out.println(caseCreer.creerHbox());
+							gpaneCase.add(caseCreer.creerHbox(),j,i);
+						
+							
+						}
+						System.out.println();
+					}
 				}
 			});
 			itemThemeSport.setOnAction(new EventHandler<ActionEvent>() {

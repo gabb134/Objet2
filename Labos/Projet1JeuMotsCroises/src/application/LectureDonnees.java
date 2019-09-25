@@ -186,7 +186,7 @@ public class LectureDonnees {
 	}
 
 	public static void main(String[] args) {
-		LectureDonnees l = new LectureDonnees("grilleSport.txt","donneesSport.txt");
+		LectureDonnees l = new LectureDonnees("grilleTechnologie.txt","donneesTechnologie.txt");
 		 l.afficherGrille();
 		// l.lectureDonneesMot("donneesBible.txt");
 	}
