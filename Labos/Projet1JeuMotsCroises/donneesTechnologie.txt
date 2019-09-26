@@ -3,8 +3,8 @@ H;"En langage machine, un caractère alphanumérique équivaut à un ___ ou à huit b
 H;"Se dit d'un logiciel facilement utilisable par un public non spécialisé.";Convivial
 H;"Logiciel destiné à l'apprentissage de notions, d'une technique ou encore d'un autre logiciel.";Tutoriel
 H;"Il indique sur un écran de visualisation la position du prochain caractère à écrire ou de la prochaine opération à effectuer.";Curseur
-V;"Synonyme de chiffrer, c'est-à-dire rendre inintelligible une information à toute personne non autorisée dans le but d'en assurer la confidentialité.";Crypter
 V;"Consigne exprimée dans un langage de programmation qui permet d'exécuter une fonction particulière.";Instruction
-V;"Symbole graphique qui représente sur un écran une fonction ou une application logicielle que l'on peut sélectionner et activer.";Icone
 V;"Synonyme de formater.";Initialiser
 V;"Le logiciel Excel de Microsoft en est un.";Tableur
+V;"Synonyme de chiffrer, c'est-à-dire rendre inintelligible une information à toute personne non autorisée dans le but d'en assurer la confidentialité.";Crypter
+V;"Symbole graphique qui représente sur un écran une fonction ou une application logicielle que l'on peut sélectionner et activer.";Icone

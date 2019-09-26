@@ -1,7 +1,7 @@
 package application;
 
 
-public class Mot {
+public class Mot{
 	private EnumOrientation orientation ;
 	private String strIndice;
 	private String strMot;
@@ -28,6 +28,6 @@ public class Mot {
 		return orientation+" "+strIndice+" "+strMot;
 		
 	}
-
+	
 
 }

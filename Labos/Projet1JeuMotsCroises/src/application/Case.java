@@ -18,23 +18,38 @@ import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
 
-public class Case {
+public class Case extends HBox{
 
 	//GridPane gpane;
 	private int intNb1;
 	private HBox hboxCase;
 	//private HBox hboxCercle;
 	private int intLigne;
+	
 	public HBox getHboxCase() {
 		return hboxCase;
 	}
 
+	private Text txtCase ;
 
+	public Text getTxtCase() {
+		return txtCase;
+	}
+	public void setTxtCase(Text txtCase) {
+		this.txtCase = txtCase;
+	}
 
 	private int intColonne;
+	public int getIntLigne() {
+		return intLigne;
+	}
+	public int getIntColonne() {
+		return intColonne;
+	}
+
 	private int intNombreCercleGrille;
 
-	public Case(int intNb1,int intLigne,int intColonne,int intNombreCercleGrille) {
+	public Case (int intNb1,int intLigne,int intColonne,int intNombreCercleGrille) {
 		this.intNb1 = intNb1;
 		this.intLigne = intLigne;
 		this.intColonne = intColonne;
@@ -55,7 +70,7 @@ public class Case {
 			//hboxCercle = new HBox(1);
 			//hboxCercle.setPrefSize(15, 15);			
 			
-			Text txtCase = new Text();
+			 txtCase = new Text();
 			Text txtCercle = new Text(String.valueOf(intNombreCercleGrille));
 
 		
