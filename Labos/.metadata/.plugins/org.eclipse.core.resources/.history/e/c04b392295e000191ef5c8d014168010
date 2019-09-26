@@ -11,6 +11,7 @@ import javafx.geometry.Insets;
 import javafx.geometry.Orientation;
 import javafx.geometry.Pos;
 import javafx.stage.Stage;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Menu;
@@ -23,6 +24,7 @@ import javafx.scene.control.Button;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyCodeCombination;
 import javafx.scene.input.KeyCombination;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
@@ -90,7 +92,7 @@ public class InterfaceMotCroises extends Application {
 					"Bienvenue! Pour jouer, cliquez sur un numéro dans la grille, écrivez le mot et cliquer sur OK ou apuyyez sur la touche Entrée (Entrer) pour continuer");
 			Font font = Font.font("Verdana", FontWeight.BOLD, FontPosture.REGULAR, 15);
 
-			hboxTextBienvenue = new HBox(5);
+			hboxTextBienvenue = new HBox();
 			hboxTextBienvenue.setPrefWidth(150);
 			hboxTextBienvenue.setMaxSize(60, 30);
 			textBinevenue.setFont(font);
@@ -345,91 +347,122 @@ public class InterfaceMotCroises extends Application {
 		}
 	}
 
-	public void GestionGrille(LectureDonnees l) {
+	public void GestionGrille (LectureDonnees l) {
 
+		
 		// POUR LA GRILLE LES CASES ET LES CERCLES DES NUMEROS
 		gpaneCase = new GridPane();
-		// root.setLeft(vboxGauche);
+		//root.setLeft(vboxGauche);
 		gpaneCase.setPadding(new Insets(10));
-		// gpaneCase.setGridLinesVisible(true);
+		 //gpaneCase.setGridLinesVisible(true);
 		gpaneCase.setAlignment(Pos.CENTER);
 		gpaneCase.setVgap(2);
 		gpaneCase.setHgap(2);
-		// root.setMargin(gpaneCase, new Insets(30));
+		//root.setMargin(gpaneCase, new Insets(30));
 		vboxGauche.getChildren().addAll(gpaneCase);
-
+		hboxTextBienvenue.getChildren().clear();
+		hboxTextBienvenue.getChildren().addAll(textBinevenue);
+	
+	//	((Text)hboxTextBienvenue.getChildren().get(0)).setText(value);
+		btnOk.setDisable(true);
+		
+		
 		tabNombres = l.getTabNombres();
 		arrMots = l.getArrMots();
-
-		/*
-		 * for(Mot m:arrMots) { //System.out.println(m); }
-		 */
-		String strMot;
-		String strIndice;
-
-		Text txtIndice;
-		Font font;
-
+		
+		/*for(Mot m:arrMots) {
+			//System.out.println(m);
+		}*/
+		
 		for (int i = 0; i < tabNombres.length; i++) {
-
+			
 			for (int j = 0; j < tabNombres[i].length; j++) {
-
+				
 				int intNombre = tabNombres[i][j];
-
-				int intNombreCercleGrille = 0;
-				if (intNombre != -1 && intNombre != 0) {
+			
+			
+				int intNombreCercleGrille=0;
+				if(intNombre!= -1 && intNombre!= 0) {
 					intNombreCercleGrille = intNombre;
 				}
-				Case caseCreer = new Case(intNombre, i, j, intNombreCercleGrille); // objet qui envoie le nombre , les
-																					// lignes et le colonne a la classe
-																					// casecreer
-
-				gpaneCase.add(caseCreer.creerHbox(), j, i);
-
-				if (intNombre != -1 && intNombre != 0) { // verifie que si c'est les numéro que je click
-
-					strMot = arrMots.get(intNombre - 1).getStrMot();
-					strIndice = arrMots.get(intNombre - 1).getStrIndice();
-
-					txtIndice = new Text(strIndice);
-					font = Font.font("Verdana", FontWeight.BOLD, FontPosture.REGULAR, 15);
-					txtIndice.setFont(font);
-					txtIndice.setTextAlignment(TextAlignment.CENTER);
-					txtIndice.setWrappingWidth(350);
-
-					caseCreer.getHboxCase().addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
-
+				Case caseCreer = new Case(intNombre,i,j,intNombreCercleGrille); //objet qui envoie le nombre , les lignes et le colonne a la classe casecreer
+				
+			
+				gpaneCase.add(caseCreer,j,i);
+				
+				
+				if(intNombre!= -1 && intNombre!= 0) { // verifie que si c'est les numéro que je click
+					caseCreer.addEventHandler(MouseEvent.MOUSE_CLICKED,new EventHandler<MouseEvent> () {
+						
+						Mot motCourant = arrMots.get(intNombre-1);
+						String strMot =motCourant.getStrMot();
+						String strIndice = motCourant.getStrIndice();
+						
+						Text txtIndice = new Text(strIndice);
+						Font font = Font.font("Verdana", FontWeight.BOLD, FontPosture.REGULAR, 15);
 						@Override
-						public void handle(MouseEvent arg0) {
+						public void handle(MouseEvent e) {
 							// TODO Auto-generated method stub
-							// System.out.println("gestionnaire d'evenements enregistré avec
-							// addEventHandler\n"+"Nombre séléctionné :"+intNombre+"\n");
-							// System.out.println(tabNombres[i][j]);
-
+							//System.out.println("gestionnaire d'evenements enregistré avec addEventHandler\n"+"Nombre séléctionné :"+intNombre+"\n");
+				
+							txtIndice.setFont(font);
+							txtIndice.setTextAlignment(TextAlignment.CENTER);
+							txtIndice.setWrappingWidth(350);
+							btnOk.setDisable(false);
 							System.out.println(strMot);
 							hboxTextBienvenue.getChildren().clear();
 							hboxTextBienvenue.getChildren().addAll(txtIndice);
-
+							HBox c = (HBox) e.getSource();
+							Case c1= (Case) e.getSource();
+							int intCoorX =0;
+							int intCoorY =0;
+							
+							//(Case) c = e.getSource();
+							for(Node n: gpaneCase.getChildren()) {
+								if(GridPane.getColumnIndex(n)== c1.getIntLigne()) {
+									//System.out.println(c.getIntLigne());
+									intCoorX = c1.getIntLigne();
+								}
+								 if(GridPane.getColumnIndex(n) == c1.getIntColonne()) {
+									intCoorY = c1.getIntColonne();
+								}
+							}
+							System.out.println("Coordonnées x:"+intCoorX+"\nCoordonnées y:"+intCoorY);
+							
+							if(motCourant.getOrientation() == EnumOrientation.HORIZONTALE) {
+								
+							}
+							else if(motCourant.getOrientation() == EnumOrientation.VERTICAL) {
+								
+							}
 						}
-
+						
+						
 					});
-					btnLettres.setOnAction(new EventHandler<ActionEvent>() {
+				
 
-						@Override
-						public void handle(ActionEvent event) {
-							// TODO Auto-generated method stub
-
-							System.out.println("btnLettre apuyyé");
-
-						}
-					});
 
 				}
+			/*	if(intNombre ==0) {
+					caseCreer.getHboxCase().addEventHandler(KeyEvent.KEY_TYPED, new EventHandler<KeyEvent>() {
 
+						@Override
+						public void handle(KeyEvent event) {
+							// TODO Auto-generated method stub
+							
+						}
+					});
+				}*/
+				
+				
+				
+				
 			}
 			System.out.println();
 		}
-
+		
+	
+		
 	}
 
 	public void AfficherMenuRegle() {

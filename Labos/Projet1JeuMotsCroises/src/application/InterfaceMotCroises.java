@@ -388,11 +388,11 @@ public class InterfaceMotCroises extends Application {
 				Case caseCreer = new Case(intNombre,i,j,intNombreCercleGrille); //objet qui envoie le nombre , les lignes et le colonne a la classe casecreer
 				
 			
-				gpaneCase.add(caseCreer.creerHbox(),j,i);
+				gpaneCase.add(caseCreer,j,i);
 				
 				
 				if(intNombre!= -1 && intNombre!= 0) { // verifie que si c'est les numéro que je click
-					caseCreer.getHboxCase().addEventHandler(MouseEvent.MOUSE_CLICKED,new EventHandler<MouseEvent> () {
+					caseCreer.addEventHandler(MouseEvent.MOUSE_CLICKED,new EventHandler<MouseEvent> () {
 						
 						Mot motCourant = arrMots.get(intNombre-1);
 						String strMot =motCourant.getStrMot();
@@ -409,10 +409,10 @@ public class InterfaceMotCroises extends Application {
 							txtIndice.setTextAlignment(TextAlignment.CENTER);
 							txtIndice.setWrappingWidth(350);
 							btnOk.setDisable(false);
-							System.out.println(strMot);
+							System.out.println("Mot : "+strMot);
 							hboxTextBienvenue.getChildren().clear();
 							hboxTextBienvenue.getChildren().addAll(txtIndice);
-							HBox c = (HBox) e.getSource();
+							//HBox c = (HBox) e.getSource();
 							Case c1= (Case) e.getSource();
 							int intCoorX =0;
 							int intCoorY =0;
@@ -421,10 +421,10 @@ public class InterfaceMotCroises extends Application {
 							for(Node n: gpaneCase.getChildren()) {
 								if(GridPane.getColumnIndex(n)== c1.getIntLigne()) {
 									//System.out.println(c.getIntLigne());
-									intCoorX = c1.getIntLigne();
+									intCoorY = c1.getIntLigne();
 								}
 								 if(GridPane.getColumnIndex(n) == c1.getIntColonne()) {
-									intCoorY = c1.getIntColonne();
+									intCoorX = c1.getIntColonne();
 								}
 							}
 							System.out.println("Coordonnées x:"+intCoorX+"\nCoordonnées y:"+intCoorY);

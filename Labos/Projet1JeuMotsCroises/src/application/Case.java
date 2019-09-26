@@ -57,14 +57,9 @@ public class Case extends HBox{
 		 
 		//this.gpane = gpane;
 
-	
-	}
-	public HBox creerHbox() { //methode qui cree les hbox selon les donnees dans la grille
-		
-		
-		hboxCase = new HBox(1);
+		this.hboxCase = new HBox(1);
 			
-		hboxCase.setPrefSize(30, 30);
+		this.setPrefSize(30, 30);
 		
 			
 			//hboxCercle = new HBox(1);
@@ -93,23 +88,28 @@ public class Case extends HBox{
 		case 0:// les cases
 			
 			
-		hboxCase.setBorder(bordureCase);
-		hboxCase.getChildren().addAll(txtCase);
-		hboxCase.setBackground(couleurFill);
+		this.setBorder(bordureCase);
+		this.getChildren().addAll(txtCase);
+		this.setBackground(couleurFill);
 
 			break;
 
 		default: //les autres numéros les cercles noirs
 		
 			//hboxCase.setPrefSize(15, 15);
-			hboxCase.setBackground(couleurFillCercle);
-			hboxCase.getChildren().addAll(txtCercle);
-			hboxCase.setAlignment(Pos.CENTER);
+			this.setBackground(couleurFillCercle);
+			this.getChildren().addAll(txtCercle);
+			this.setAlignment(Pos.CENTER);
 			txtCercle.setFill(Color.WHITE);
 			
 			
 			break;
 		}
+		
+	
+	}
+	public HBox creerHbox() { //methode qui cree les hbox selon les donnees dans la grille
+		
 		
 		return hboxCase; 
 	}
