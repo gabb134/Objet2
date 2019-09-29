@@ -2,9 +2,12 @@ package application;
 
 import java.util.ArrayList;
 
+import com.sun.javafx.geom.AreaOp.IntOp;
+
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.geometry.HPos;
 import javafx.geometry.Insets;
@@ -73,6 +76,8 @@ public class InterfaceMotCroises extends Application {
 	Button btnSolution;
 	Button btnOk;
 	Button btnAide;
+	Case c1;
+	Case caseCreer;
 
 	@Override
 	public void start(Stage primaryStage) {
@@ -347,122 +352,125 @@ public class InterfaceMotCroises extends Application {
 		}
 	}
 
-	public void GestionGrille (LectureDonnees l) {
+	public void GestionGrille(LectureDonnees l) {
 
-		
 		// POUR LA GRILLE LES CASES ET LES CERCLES DES NUMEROS
 		gpaneCase = new GridPane();
-		//root.setLeft(vboxGauche);
+		// root.setLeft(vboxGauche);
 		gpaneCase.setPadding(new Insets(10));
-		 //gpaneCase.setGridLinesVisible(true);
+		// gpaneCase.setGridLinesVisible(true);
 		gpaneCase.setAlignment(Pos.CENTER);
 		gpaneCase.setVgap(2);
 		gpaneCase.setHgap(2);
-		//root.setMargin(gpaneCase, new Insets(30));
+		// root.setMargin(gpaneCase, new Insets(30));
 		vboxGauche.getChildren().addAll(gpaneCase);
 		hboxTextBienvenue.getChildren().clear();
 		hboxTextBienvenue.getChildren().addAll(textBinevenue);
-	
-	//	((Text)hboxTextBienvenue.getChildren().get(0)).setText(value);
+
+		// ((Text)hboxTextBienvenue.getChildren().get(0)).setText(value);
 		btnOk.setDisable(true);
-		
-		
+
 		tabNombres = l.getTabNombres();
 		arrMots = l.getArrMots();
-		
-		/*for(Mot m:arrMots) {
-			//System.out.println(m);
-		}*/
-		
+
+		/*
+		 * for(Mot m:arrMots) { //System.out.println(m); }
+		 */
+
 		for (int i = 0; i < tabNombres.length; i++) {
-			
+
 			for (int j = 0; j < tabNombres[i].length; j++) {
-				
+
 				int intNombre = tabNombres[i][j];
-			
-			
-				int intNombreCercleGrille=0;
-				if(intNombre!= -1 && intNombre!= 0) {
+
+				int intNombreCercleGrille = 0;
+				if (intNombre != -1 && intNombre != 0) {
 					intNombreCercleGrille = intNombre;
 				}
-				Case caseCreer = new Case(intNombre,i,j,intNombreCercleGrille); //objet qui envoie le nombre , les lignes et le colonne a la classe casecreer
-				
-			
-				gpaneCase.add(caseCreer,j,i);
-				
-				
-				if(intNombre!= -1 && intNombre!= 0) { // verifie que si c'est les numéro que je click
-					caseCreer.addEventHandler(MouseEvent.MOUSE_CLICKED,new EventHandler<MouseEvent> () {
-						
-						Mot motCourant = arrMots.get(intNombre-1);
-						String strMot =motCourant.getStrMot();
+				 caseCreer = new Case(intNombre, i, j, intNombreCercleGrille); // objet qui envoie le nombre , les
+																					// lignes et le colonne a la classe
+																					// casecreer
+
+				gpaneCase.add(caseCreer, j, i);
+
+				if (intNombre != -1 && intNombre != 0) { // verifie que si c'est les numéro que je click
+					caseCreer.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
+
+						Mot motCourant = arrMots.get(intNombre - 1);
+						String strMot = motCourant.getStrMot();
 						String strIndice = motCourant.getStrIndice();
-						
+
 						Text txtIndice = new Text(strIndice);
 						Font font = Font.font("Verdana", FontWeight.BOLD, FontPosture.REGULAR, 15);
+
 						@Override
 						public void handle(MouseEvent e) {
 							// TODO Auto-generated method stub
-							//System.out.println("gestionnaire d'evenements enregistré avec addEventHandler\n"+"Nombre séléctionné :"+intNombre+"\n");
-				
+							// System.out.println("gestionnaire d'evenements enregistré avec
+							// addEventHandler\n"+"Nombre séléctionné :"+intNombre+"\n");
+
 							txtIndice.setFont(font);
 							txtIndice.setTextAlignment(TextAlignment.CENTER);
 							txtIndice.setWrappingWidth(350);
 							btnOk.setDisable(false);
-							System.out.println("Mot : "+strMot);
+							// System.out.println("Mot : " + strMot);
 							hboxTextBienvenue.getChildren().clear();
 							hboxTextBienvenue.getChildren().addAll(txtIndice);
-							//HBox c = (HBox) e.getSource();
-							Case c1= (Case) e.getSource();
-							int intCoorX =0;
-							int intCoorY =0;
-							
-							//(Case) c = e.getSource();
-							for(Node n: gpaneCase.getChildren()) {
-								if(GridPane.getColumnIndex(n)== c1.getIntLigne()) {
-									//System.out.println(c.getIntLigne());
-									intCoorY = c1.getIntLigne();
+							// HBox c = (HBox) e.getSource();
+							caseCreer = (Case) e.getSource();
+							int intCoorX = 0;
+							int intCoorY = 0;
+
+							// (Case) c = e.getSource();
+							for (Node n : gpaneCase.getChildren()) {
+								if (GridPane.getColumnIndex(n) == caseCreer.getIntLigne()) {
+									// System.out.println(c.getIntLigne());
+									intCoorY = caseCreer.getIntLigne();
+									// c1.getTxtCase().setText("a");
 								}
-								 if(GridPane.getColumnIndex(n) == c1.getIntColonne()) {
-									intCoorX = c1.getIntColonne();
+								if (GridPane.getColumnIndex(n) == caseCreer.getIntColonne()) {
+									intCoorX = caseCreer.getIntColonne();
 								}
+
 							}
-							System.out.println("Coordonnées x:"+intCoorX+"\nCoordonnées y:"+intCoorY);
+							// System.out.println("Coordonnées x:" + intCoorX + "\nCoordonnées y:" +
+							// intCoorY);
+
+							if (motCourant.getOrientation() == EnumOrientation.HORIZONTALE) {
+								// Mettre le focus
+								//if(c1.getIntNb1() == 0)
 							
-							if(motCourant.getOrientation() == EnumOrientation.HORIZONTALE) {
-								
+								caseCreer.requestFocus();
+								//caseCreer.getHboxCase().requestFocus();
+
+							}  if (motCourant.getOrientation() == EnumOrientation.VERTICAL) {
+								// Mettre le focus
+								//if(c1.getIntNb1() == 0)
+								caseCreer.requestFocus();
+								// caseCreer.getTxtCase().setText("V");
 							}
-							else if(motCourant.getOrientation() == EnumOrientation.VERTICAL) {
-								
-							}
+							// c1.requestFocus();
 						}
-						
-						
+
 					});
-				
-
-
-				}
-			/*	if(intNombre ==0) {
-					caseCreer.getHboxCase().addEventHandler(KeyEvent.KEY_TYPED, new EventHandler<KeyEvent>() {
+					caseCreer.setOnKeyPressed(new EventHandler<KeyEvent>() {
 
 						@Override
-						public void handle(KeyEvent event) {
+						public void handle(KeyEvent e) {
 							// TODO Auto-generated method stub
-							
+							// caseCreer.setTxtCase(new Text(""+e.getCode()));;
+							// caseCreer.getTxtCase().setText(""+e.getText());
+							System.out.println(e.getCode());
+							caseCreer.getTxtCase().setText("" + e.getCode());
 						}
 					});
-				}*/
-				
-				
-				
-				
+
+				}
+
 			}
 			System.out.println();
 		}
-		
-	
-		
+
 	}
 
 	public void AfficherMenuRegle() {
@@ -471,7 +479,7 @@ public class InterfaceMotCroises extends Application {
 		alertInfo.setTitle("Règles du jeu");
 		alertInfo.setHeaderText(text.toString().toUpperCase());
 		alertInfo.setContentText(
-				" o Quand vous cliquez sur un numéro, vous obtenez l’indice (texte descriptif) du mot recherché.  Vous pouvez avoir la solution, pour le mot en cours, en cliquant sur le bouton correspondant.\n\n o Le bouton Lettres vous fournit, en désordre, toutes les lettres du mot recherché. Pour répondre, vous écrivez le mot dans la grille correspondante et vous validez à l’aide du bouton OK ou la touche Entrée du clavier.\n\n o Dans le cas d’une mauvaise réponse, la solution vous est donnée. Le bouton Ok est sans effet si la grille du mot courant n’est pas complète. Vous pouvez supprimer les caractères entrés à l’aide de la touche retour arrière (<-) de votre clavier.\n\n o Noter que les caractères des mots validés ne peuvent être effacés. Si vous essayez un autre mot avant d’avoir validé le mot courant, ce dernier est remis à son état initial (toutes les lettres entrées sont effacées) et le nouveau mot devient le mot courant.  \n\no Si vous demandez les lettres et décidez de répondre plus tard, le programme doit se souvenir que vous avez déjà vu les lettres pour vous attribuer, le cas échéant, les points en conséquence. Notez que le programme vous redonnera la même séquence de lettres lors des prochains essais.");
+				" * Quand vous cliquez sur un numéro, vous obtenez l’indice (texte descriptif) du mot recherché.  Vous pouvez avoir la solution, pour le mot en cours, en cliquant sur le bouton correspondant.\n\n * Le bouton Lettres vous fournit, en désordre, toutes les lettres du mot recherché. Pour répondre, vous écrivez le mot dans la grille correspondante et vous validez à l’aide du bouton OK ou la touche Entrée du clavier.\n\n * Dans le cas d’une mauvaise réponse, la solution vous est donnée. Le bouton Ok est sans effet si la grille du mot courant n’est pas complète. Vous pouvez supprimer les caractères entrés à l’aide de la touche retour arrière (<-) de votre clavier.\n\n * Noter que les caractères des mots validés ne peuvent être effacés. Si vous essayez un autre mot avant d’avoir validé le mot courant, ce dernier est remis à son état initial (toutes les lettres entrées sont effacées) et le nouveau mot devient le mot courant.  \n\n* Si vous demandez les lettres et décidez de répondre plus tard, le programme doit se souvenir que vous avez déjà vu les lettres pour vous attribuer, le cas échéant, les points en conséquence. Notez que le programme vous redonnera la même séquence de lettres lors des prochains essais.");
 		alertInfo.showAndWait();
 	}
 

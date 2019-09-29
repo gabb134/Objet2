@@ -14,6 +14,9 @@ import javafx.scene.layout.CornerRadii;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontPosture;
+import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
@@ -78,7 +81,7 @@ public class Case extends HBox{
 		
 		Background couleurFillCercle = new Background(new BackgroundFill(Color.BLACK, new CornerRadii(30), new Insets(0)));
 		
-		
+		Font fontText = Font.font("Verdana", FontWeight.BOLD, FontPosture.REGULAR, 15);
 		
 		switch (intNb1) {
 		case -1: // quand c'est vide
@@ -91,6 +94,10 @@ public class Case extends HBox{
 		this.setBorder(bordureCase);
 		this.getChildren().addAll(txtCase);
 		this.setBackground(couleurFill);
+		this.setAlignment(Pos.CENTER);
+		txtCase.setFont(fontText);
+		
+		txtCase.setTextAlignment(TextAlignment.CENTER);
 
 			break;
 
