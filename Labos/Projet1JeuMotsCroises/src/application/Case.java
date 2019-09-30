@@ -50,6 +50,13 @@ public class Case extends HBox{
 		return intColonne;
 	}
 
+	public void setIntLigne(int intLigne) {
+		this.intLigne = intLigne;
+	}
+	public void setIntColonne(int intColonne) {
+		this.intColonne = intColonne;
+	}
+
 	private int intNombreCercleGrille;
 
 	public Case (int intNb1,int intLigne,int intColonne,int intNombreCercleGrille) {

@@ -78,7 +78,8 @@ public class InterfaceMotCroises extends Application {
 	Button btnAide;
 	Case c1;
 	Case caseCreer;
-
+	int intCoorX = 0;
+	int intCoorY = 0;
 	Case [][] tabCase;
 	@Override
 	public void start(Stage primaryStage) {
@@ -377,7 +378,7 @@ public class InterfaceMotCroises extends Application {
 		/*
 		 * for(Mot m:arrMots) { //System.out.println(m); }
 		 */
-
+	
 		for (int i = 0; i < tabNombres.length; i++) {
 
 			for (int j = 0; j < tabNombres[i].length; j++) {
@@ -390,7 +391,7 @@ public class InterfaceMotCroises extends Application {
 				}
 				 caseCreer = new Case(intNombre, i, j, intNombreCercleGrille); // objet qui envoie le nombre , les
 																					// lignes et le colonne a la classe
-					tabCase[i][j] = caseCreer; //tableau de case pour parcvourir *CLé pour faire le projet														// case
+					tabCase[i][j] = caseCreer; //tableau de case pour parcourir *CLé pour faire le projet														// case
 
 				gpaneCase.add(caseCreer, j, i);
 
@@ -419,19 +420,24 @@ public class InterfaceMotCroises extends Application {
 							hboxTextBienvenue.getChildren().addAll(txtIndice);
 							// HBox c = (HBox) e.getSource();
 							caseCreer = (Case) e.getSource();
-							int intCoorX = 0;
-							int intCoorY = 0;
+							
 
 							// (Case) c = e.getSource();
 							for (Node n : gpaneCase.getChildren()) {
-								if (GridPane.getColumnIndex(n) == caseCreer.getIntLigne()) {
+								if (GridPane.getRowIndex(n) == caseCreer.getIntLigne()) {
 									// System.out.println(c.getIntLigne());
 									intCoorY = caseCreer.getIntLigne();
 									// c1.getTxtCase().setText("a");
+									
+									
 								}
 								if (GridPane.getColumnIndex(n) == caseCreer.getIntColonne()) {
 									intCoorX = caseCreer.getIntColonne();
+									
+									
 								}
+								
+								
 
 							}
 							 System.out.println("Coordonnées x:" + intCoorX + "\nCoordonnées y:" +
@@ -441,14 +447,22 @@ public class InterfaceMotCroises extends Application {
 								// Mettre le focus
 								//if(c1.getIntNb1() == 0)
 								
+								intCoorY+=1;
+								//caseCreer.setIntColonne(intCoorY);
+								//tabCase[intCoorX][intCoorY].requestFocus();
 								
-								
+								caseCreer = trouverCaseSelectionner(intCoorX, intCoorY);;
 								caseCreer.requestFocus();
 								//caseCreer.getHboxCase().requestFocus();
 
 							}  if (motCourant.getOrientation() == EnumOrientation.VERTICAL) {
 								// Mettre le focus
 								//if(c1.getIntNb1() == 0)
+							
+								intCoorX +=1;
+								//caseCreer.setIntLigne(intCoorX);
+								//tabCase[intCoorX][intCoorY].requestFocus();
+								caseCreer = trouverCaseSelectionner(intCoorX, intCoorY);
 								caseCreer.requestFocus();
 								// caseCreer.getTxtCase().setText("V");
 							}
@@ -465,6 +479,8 @@ public class InterfaceMotCroises extends Application {
 							// caseCreer.getTxtCase().setText(""+e.getText());
 							System.out.println(e.getCode());
 							caseCreer.getTxtCase().setText("" + e.getCode());
+							 System.out.println("Coordonnées x apres:" + intCoorX + "\nCoordonnées y apres:" +
+									 intCoorY);
 						}
 					});
 
@@ -474,6 +490,22 @@ public class InterfaceMotCroises extends Application {
 			System.out.println();
 		}
 
+	}
+	
+	public Case trouverCaseSelectionner(int ligne, int colonne) {
+		
+		for (Node n : gpaneCase.getChildren()) {
+			if (GridPane.getRowIndex(n) == ligne && GridPane.getColumnIndex(n)==colonne) {
+				// System.out.println(c.getIntLigne());
+				//intCoorY = caseCreer.getIntLigne();
+				// c1.getTxtCase().setText("a");
+				caseCreer.setIntLigne(ligne);
+				caseCreer.setIntColonne(colonne);
+			}
+			
+			
+		}
+		return caseCreer;
 	}
 
 	public void AfficherMenuRegle() {

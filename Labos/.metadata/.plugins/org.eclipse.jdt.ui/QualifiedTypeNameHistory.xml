@@ -42,8 +42,6 @@
 <fullyQualifiedTypeName name="application.Mot"/>
 <fullyQualifiedTypeName name="javafx.geometry.Orientation"/>
 <fullyQualifiedTypeName name="application.EnumOrientation"/>
-<fullyQualifiedTypeName name="javafx.scene.Node"/>
-<fullyQualifiedTypeName name="javafx.scene.layout.GridPane"/>
 <fullyQualifiedTypeName name="javafx.scene.layout.HBox"/>
 <fullyQualifiedTypeName name="javafx.event.Event"/>
 <fullyQualifiedTypeName name="com.sun.javafx.geom.AreaOp.IntOp"/>
@@ -52,4 +50,6 @@
 <fullyQualifiedTypeName name="javafx.scene.text.Text"/>
 <fullyQualifiedTypeName name="application.InterfaceMotCroises"/>
 <fullyQualifiedTypeName name="application.Case"/>
+<fullyQualifiedTypeName name="javafx.scene.Node"/>
+<fullyQualifiedTypeName name="javafx.scene.layout.GridPane"/>
 </qualifiedTypeNameHistroy>
