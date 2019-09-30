@@ -14,7 +14,7 @@ public class LectureDonnees {
 	private int[][] tabNombres;
 	private ArrayList<Mot> arrMots = new ArrayList<Mot>();
 	//private ArrayList<Case> arrCase = new ArrayList<Case>();
-	
+	private Case [][] tabCase;
 	//GridPane gpane;
 
 	public LectureDonnees(String strFIchier,String strFichierMot) {
@@ -48,7 +48,8 @@ public class LectureDonnees {
 						intLignes = Integer.parseInt(nbLignes);
 						intColonnes = Integer.parseInt(nbColonnes);
 						tabNombres = new int[intLignes][intColonnes];
-
+						tabCase = new Case[intLignes][intColonnes];
+						
 					} else if (compteurLignes > Integer.parseInt(nbLignes)) {
 						strNumeros = strLigne.trim();
 						// System.out.println(strNumeros);
@@ -148,6 +149,12 @@ public class LectureDonnees {
 		
 		
 
+	}
+
+
+
+	public Case[][] getTabCase() {
+		return tabCase;
 	}
 
 

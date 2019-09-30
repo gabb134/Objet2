@@ -79,6 +79,7 @@ public class InterfaceMotCroises extends Application {
 	Case c1;
 	Case caseCreer;
 
+	Case [][] tabCase;
 	@Override
 	public void start(Stage primaryStage) {
 		try {
@@ -372,7 +373,7 @@ public class InterfaceMotCroises extends Application {
 
 		tabNombres = l.getTabNombres();
 		arrMots = l.getArrMots();
-
+		tabCase = l.getTabCase();
 		/*
 		 * for(Mot m:arrMots) { //System.out.println(m); }
 		 */
@@ -389,7 +390,7 @@ public class InterfaceMotCroises extends Application {
 				}
 				 caseCreer = new Case(intNombre, i, j, intNombreCercleGrille); // objet qui envoie le nombre , les
 																					// lignes et le colonne a la classe
-																					// casecreer
+					tabCase[i][j] = caseCreer; //tableau de case pour parcvourir *CLé pour faire le projet														// case
 
 				gpaneCase.add(caseCreer, j, i);
 
@@ -433,13 +434,15 @@ public class InterfaceMotCroises extends Application {
 								}
 
 							}
-							// System.out.println("Coordonnées x:" + intCoorX + "\nCoordonnées y:" +
-							// intCoorY);
+							 System.out.println("Coordonnées x:" + intCoorX + "\nCoordonnées y:" +
+							 intCoorY);
 
 							if (motCourant.getOrientation() == EnumOrientation.HORIZONTALE) {
 								// Mettre le focus
 								//if(c1.getIntNb1() == 0)
-							
+								
+								
+								
 								caseCreer.requestFocus();
 								//caseCreer.getHboxCase().requestFocus();
 
