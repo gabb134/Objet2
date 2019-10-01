@@ -1,6 +1,7 @@
 package application;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 import com.sun.javafx.geom.AreaOp.IntOp;
 
@@ -151,6 +152,9 @@ public class InterfaceMotCroises extends Application {
 			btnOk = new Button("OK");
 			btnAide = new Button("AIDE");
 			txtReponse = new TextField();
+			btnOk.setDisable(true);
+			btnLettres.setDisable(true);
+			btnSolution.setDisable(true);
 			Text txtVotreScore = new Text("VOTRE SCORE");
 			Text txtMaximum = new Text("MAXIMUM");
 			VBox vboxMax = new VBox(7);
@@ -380,7 +384,8 @@ public class InterfaceMotCroises extends Application {
 
 		// ((Text)hboxTextBienvenue.getChildren().get(0)).setText(value);
 		btnOk.setDisable(true);
-
+		btnLettres.setDisable(true);
+		btnSolution.setDisable(true);
 		tabNombres = l.getTabNombres();
 		arrMots = l.getArrMots();
 		tabCase = l.getTabCase();
@@ -420,17 +425,15 @@ public class InterfaceMotCroises extends Application {
 				c.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
 					// int intNombre = c.getIntNombreCercleGrille();
 
-					
-
 					@Override
 					public void handle(MouseEvent e) {
-						
-						 motCourant = arrMots.get(intNombre - 1);
-							String strMot = motCourant.getStrMot();
-							String strIndice = motCourant.getStrIndice();
 
-							Text txtIndice = new Text(strIndice);
-							Font font = Font.font("Verdana", FontWeight.BOLD, FontPosture.REGULAR, 15);
+						motCourant = arrMots.get(intNombre - 1);
+						String strMot = motCourant.getStrMot();
+						String strIndice = motCourant.getStrIndice();
+
+						Text txtIndice = new Text(strIndice);
+						Font font = Font.font("Verdana", FontWeight.BOLD, FontPosture.REGULAR, 15);
 						// TODO Auto-generated method stub
 						// System.out.println("gestionnaire d'evenements enregistré avec
 						// addEventHandler\n"+"Nombre séléctionné :"+intNombre+"\n");
@@ -440,6 +443,8 @@ public class InterfaceMotCroises extends Application {
 						txtIndice.setTextAlignment(TextAlignment.CENTER);
 						txtIndice.setWrappingWidth(350);
 						btnOk.setDisable(false);
+						btnLettres.setDisable(false);
+						btnSolution.setDisable(false);
 						// System.out.println("Mot : " + strMot);
 						hboxTextBienvenue.getChildren().clear();
 						hboxTextBienvenue.getChildren().addAll(txtIndice);
@@ -490,7 +495,8 @@ public class InterfaceMotCroises extends Application {
 
 						}
 						caseCourante.requestFocus();
-						//System.out.println(caseCourante.getIntLigne() + ", " + caseCourante.getIntColonne());
+						// System.out.println(caseCourante.getIntLigne() + ", " +
+						// caseCourante.getIntColonne());
 
 					}
 
@@ -504,17 +510,22 @@ public class InterfaceMotCroises extends Application {
 						// caseCreer.setTxtCase(new Text(""+e.getCode()));;
 						// caseCreer.getTxtCase().setText(""+e.getText());
 						System.out.println("allo");
-						System.out.println(((Case)e.getSource()).isFocused());
+						System.out.println(((Case) e.getSource()).isFocused());
 						System.out.println(caseCourante.getIntLigne() + ", " + caseCourante.getIntColonne());
 						if (e.getCode() == KeyCode.BACK_SPACE) {
 							if (motCourant.getOrientation() == EnumOrientation.HORIZONTALE) { // Les lignes
-								if (!c.getTxtCase().getText().isEmpty())
-									intCoorY -= 1;
+								if (!c.getTxtCase().getText().isEmpty()) {
+
+								} else {
+									c.getTxtCase().setText("");
+								}
+
+								intCoorY -= 1;
 
 							}
 							if (motCourant.getOrientation() == EnumOrientation.VERTICAL) { // Les colonnes
 								if (!c.getTxtCase().getText().isEmpty()) {
-									caseParcours.requestFocus();
+									// caseParcours.requestFocus();
 								} else {
 									c.getTxtCase().setText("");
 
@@ -527,27 +538,28 @@ public class InterfaceMotCroises extends Application {
 								if (caseEcrire.getIntLigne() == intCoorX && caseEcrire.getIntColonne() == intCoorY) {
 
 									caseEcrire.getTxtCase().setText("");
-
+									caseEcrire.requestFocus();
 								}
 							}
 						} else if (e.getCode().isLetterKey()) {
 							System.out.println("Ecrire");
-                             System.out.println(e.getCharacter());
-							 ((Case) e.getSource()).getTxtCase().setText(""+e.getCode());
-							//caseAcrire.getTxtCase().setText(e.getCharacter());
+							System.out.println(e.getCharacter());
+							((Case) e.getSource()).getTxtCase().setText("" + e.getCode());
+							// caseAcrire.getTxtCase().setText(e.getCharacter());
 
-							//System.out.println(caseAcrire.getIntLigne() + ", " + caseAcrire.getIntColonne());
+							// System.out.println(caseAcrire.getIntLigne() + ", " +
+							// caseAcrire.getIntColonne());
 							if (motCourant.getOrientation() == EnumOrientation.HORIZONTALE) {
 
 								// intCompteurIndexCase++;
 								if (intCoorY < intLogngeurMotCaseY) {
 									intCoorY += 1;
-									//caseParcours.requestFocus();
-									//System.out.println("Compteur des y :" + intCoorY);
+									// caseParcours.requestFocus();
+									// System.out.println("Compteur des y :" + intCoorY);
 								}
 
-								//System.out.println("Longeur du mot: " + motCourant.getStrMot().length());
-								//System.out.println("Le mot: " + intLogngeurMotCaseY);
+								// System.out.println("Longeur du mot: " + motCourant.getStrMot().length());
+								// System.out.println("Le mot: " + intLogngeurMotCaseY);
 							}
 							if (motCourant.getOrientation() == EnumOrientation.VERTICAL) {
 
@@ -555,11 +567,11 @@ public class InterfaceMotCroises extends Application {
 
 								if (intCoorX < intLogngeurMotCaseX) {
 									intCoorX += 1;
-									//caseParcours.requestFocus();
+									// caseParcours.requestFocus();
 								}
-								//System.out.println("Compteur des X :" + intLogngeurMotCaseX);
-								//System.out.println("Longeur du mot: " + motCourant.getStrMot().length());
-								//System.out.println("Le mot: " + intLogngeurMotCaseX);
+								// System.out.println("Compteur des X :" + intLogngeurMotCaseX);
+								// System.out.println("Longeur du mot: " + motCourant.getStrMot().length());
+								// System.out.println("Le mot: " + intLogngeurMotCaseX);
 
 							}
 							// System.out.println(e.getCode());
@@ -579,34 +591,53 @@ public class InterfaceMotCroises extends Application {
 
 				});
 			}
+			btnLettres.setOnAction(new EventHandler<ActionEvent>() {
 
+				@Override
+				public void handle(ActionEvent event) {
+					// TODO Auto-generated method stub
+					// System.out.println(strmo);
+					/*
+					 * Mot motCourant1; String strMot1 = ""; String strIndice1; for (Case caseLettre
+					 * : arrCase) { int intNombre = caseLettre.getIntNombreCercleGrille(); if
+					 * (intNombre != -1 && intNombre != 0) { motCourant1 = arrMots.get(intNombre -
+					 * 1); strMot1 = motCourant1.getStrMot(); strIndice1 =
+					 * motCourant1.getStrIndice(); System.out.println(strMot1); } }
+					 */
+					
+					//System.out.println(motCourant.getStrMot());
+					System.out.println("lettre");
+					
+					ArrayList<String> arrMotMelanger = new ArrayList<>();
+					
+					arrMotMelanger.add(motCourant.getStrMot());
+					
+					Collections.shuffle(arrMotMelanger);
+					String motMelanger = "";
+					for(String s:arrMotMelanger)
+						motMelanger+=s;
+					
+					
+					System.out.println(motMelanger);
+					
+				}
+
+			});
+			btnSolution.setOnAction(new EventHandler<ActionEvent>() {
+
+				@Override
+				public void handle(ActionEvent event) {
+					// TODO Auto-generated method stub
+
+				}
+			});
 		}
 
-		btnLettres.setOnAction(new EventHandler<ActionEvent>() {
+	}
 
-			@Override
-			public void handle(ActionEvent event) {
-				// TODO Auto-generated method stub
-				// System.out.println(strmo);
-				/*
-				 * Mot motCourant1; String strMot1 = ""; String strIndice1; for (Case caseLettre
-				 * : arrCase) { int intNombre = caseLettre.getIntNombreCercleGrille(); if
-				 * (intNombre != -1 && intNombre != 0) { motCourant1 = arrMots.get(intNombre -
-				 * 1); strMot1 = motCourant1.getStrMot(); strIndice1 =
-				 * motCourant1.getStrIndice(); System.out.println(strMot1); } }
-				 */
+	public void confirmerMot() {
+		// pour le button Ok et pour la touche enter
 
-			}
-
-		});
-		btnSolution.setOnAction(new EventHandler<ActionEvent>() {
-
-			@Override
-			public void handle(ActionEvent event) {
-				// TODO Auto-generated method stub
-
-			}
-		});
 	}
 
 	public void effacerMotCase() {
