@@ -80,7 +80,10 @@ public class InterfaceMotCroises extends Application {
 	Case caseCreer;
 	int intCoorX = 0;
 	int intCoorY = 0;
-	Case [][] tabCase;
+	Case[][] tabCase;
+	Case caseParcours;
+	ArrayList<Case> arrCase = new ArrayList<>();
+
 	@Override
 	public void start(Stage primaryStage) {
 		try {
@@ -378,7 +381,7 @@ public class InterfaceMotCroises extends Application {
 		/*
 		 * for(Mot m:arrMots) { //System.out.println(m); }
 		 */
-	
+
 		for (int i = 0; i < tabNombres.length; i++) {
 
 			for (int j = 0; j < tabNombres[i].length; j++) {
@@ -389,123 +392,178 @@ public class InterfaceMotCroises extends Application {
 				if (intNombre != -1 && intNombre != 0) {
 					intNombreCercleGrille = intNombre;
 				}
-				 caseCreer = new Case(intNombre, i, j, intNombreCercleGrille); // objet qui envoie le nombre , les
-																					// lignes et le colonne a la classe
-					tabCase[i][j] = caseCreer; //tableau de case pour parcourir *CLé pour faire le projet														// case
+				caseCreer = new Case(intNombre, i, j, intNombreCercleGrille); // objet qui envoie le nombre , les
+																				// lignes et le colonne a la classe
+				tabCase[i][j] = caseCreer; // tableau de case pour parcourir *CLé pour faire le projet // case
 
 				gpaneCase.add(caseCreer, j, i);
 
-				if (intNombre != -1 && intNombre != 0) { // verifie que si c'est les numéro que je click
-					caseCreer.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
-
-						Mot motCourant = arrMots.get(intNombre - 1);
-						String strMot = motCourant.getStrMot();
-						String strIndice = motCourant.getStrIndice();
-
-						Text txtIndice = new Text(strIndice);
-						Font font = Font.font("Verdana", FontWeight.BOLD, FontPosture.REGULAR, 15);
-
-						@Override
-						public void handle(MouseEvent e) {
-							// TODO Auto-generated method stub
-							// System.out.println("gestionnaire d'evenements enregistré avec
-							// addEventHandler\n"+"Nombre séléctionné :"+intNombre+"\n");
-
-							txtIndice.setFont(font);
-							txtIndice.setTextAlignment(TextAlignment.CENTER);
-							txtIndice.setWrappingWidth(350);
-							btnOk.setDisable(false);
-							// System.out.println("Mot : " + strMot);
-							hboxTextBienvenue.getChildren().clear();
-							hboxTextBienvenue.getChildren().addAll(txtIndice);
-							// HBox c = (HBox) e.getSource();
-							caseCreer = (Case) e.getSource();
-							
-
-							// (Case) c = e.getSource();
-							for (Node n : gpaneCase.getChildren()) {
-								if (GridPane.getRowIndex(n) == caseCreer.getIntLigne()) {
-									// System.out.println(c.getIntLigne());
-									intCoorY = caseCreer.getIntLigne();
-									// c1.getTxtCase().setText("a");
-									
-									
-								}
-								if (GridPane.getColumnIndex(n) == caseCreer.getIntColonne()) {
-									intCoorX = caseCreer.getIntColonne();
-									
-									
-								}
-								
-								
-
-							}
-							 System.out.println("Coordonnées x:" + intCoorX + "\nCoordonnées y:" +
-							 intCoorY);
-
-							if (motCourant.getOrientation() == EnumOrientation.HORIZONTALE) {
-								// Mettre le focus
-								//if(c1.getIntNb1() == 0)
-								
-								intCoorY+=1;
-								//caseCreer.setIntColonne(intCoorY);
-								//tabCase[intCoorX][intCoorY].requestFocus();
-								
-								caseCreer = trouverCaseSelectionner(intCoorX, intCoorY);;
-								caseCreer.requestFocus();
-								//caseCreer.getHboxCase().requestFocus();
-
-							}  if (motCourant.getOrientation() == EnumOrientation.VERTICAL) {
-								// Mettre le focus
-								//if(c1.getIntNb1() == 0)
-							
-								intCoorX +=1;
-								//caseCreer.setIntLigne(intCoorX);
-								//tabCase[intCoorX][intCoorY].requestFocus();
-								caseCreer = trouverCaseSelectionner(intCoorX, intCoorY);
-								caseCreer.requestFocus();
-								// caseCreer.getTxtCase().setText("V");
-							}
-							// c1.requestFocus();
-						}
-
-					});
-					caseCreer.setOnKeyPressed(new EventHandler<KeyEvent>() {
-
-						@Override
-						public void handle(KeyEvent e) {
-							// TODO Auto-generated method stub
-							// caseCreer.setTxtCase(new Text(""+e.getCode()));;
-							// caseCreer.getTxtCase().setText(""+e.getText());
-							System.out.println(e.getCode());
-							caseCreer.getTxtCase().setText("" + e.getCode());
-							 System.out.println("Coordonnées x apres:" + intCoorX + "\nCoordonnées y apres:" +
-									 intCoorY);
-						}
-					});
-
-				}
+				arrCase.add(caseCreer);
 
 			}
 			System.out.println();
 		}
 
-	}
-	
-	public Case trouverCaseSelectionner(int ligne, int colonne) {
-		
-		for (Node n : gpaneCase.getChildren()) {
-			if (GridPane.getRowIndex(n) == ligne && GridPane.getColumnIndex(n)==colonne) {
-				// System.out.println(c.getIntLigne());
-				//intCoorY = caseCreer.getIntLigne();
-				// c1.getTxtCase().setText("a");
-				caseCreer.setIntLigne(ligne);
-				caseCreer.setIntColonne(colonne);
+		// System.out.println(arrMots.get(2));
+		for (Case c : arrCase) {
+			int intNombre = c.getIntNombreCercleGrille();
+			if (intNombre != -1 && intNombre != 0) {
+
+				System.out.println(intNombre);
+				c.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
+					// int intNombre = c.getIntNombreCercleGrille();
+
+					Mot motCourant = arrMots.get(intNombre - 1);
+					String strMot = motCourant.getStrMot();
+					String strIndice = motCourant.getStrIndice();
+
+					Text txtIndice = new Text(strIndice);
+					Font font = Font.font("Verdana", FontWeight.BOLD, FontPosture.REGULAR, 15);
+
+					@Override
+					public void handle(MouseEvent e) {
+						// TODO Auto-generated method stub
+						// System.out.println("gestionnaire d'evenements enregistré avec
+						// addEventHandler\n"+"Nombre séléctionné :"+intNombre+"\n");
+
+						txtIndice.setFont(font);
+						txtIndice.setTextAlignment(TextAlignment.CENTER);
+						txtIndice.setWrappingWidth(350);
+						btnOk.setDisable(false);
+						// System.out.println("Mot : " + strMot);
+						hboxTextBienvenue.getChildren().clear();
+						hboxTextBienvenue.getChildren().addAll(txtIndice);
+						// HBox c = (HBox) e.getSource();
+						caseParcours = (Case) e.getSource();
+
+						// (Case) c = e.getSource();
+						for (Node n : gpaneCase.getChildren()) {
+							if (GridPane.getRowIndex(n) == c.getIntLigne()) {
+								// System.out.println(c.getIntLigne());
+								intCoorX = c.getIntLigne();
+								// c1.getTxtCase().setText("a");
+
+							}
+							if (GridPane.getColumnIndex(n) == c.getIntColonne()) {
+								intCoorY = c.getIntColonne();
+
+							}
+
+						}
+						System.out.println("Coordonnées x:" + intCoorX + "\nCoordonnées y:" + intCoorY);
+
+						if (motCourant.getOrientation() == EnumOrientation.HORIZONTALE) {
+
+							// intCoorY += 1;
+							caseParcours.requestFocus();
+
+						}
+						if (motCourant.getOrientation() == EnumOrientation.VERTICAL) {
+
+							// intCoorX += 1;
+							caseParcours.requestFocus();
+
+						}
+
+					}
+
+				});
+				c.setOnKeyPressed(new EventHandler<KeyEvent>() {
+
+					@Override
+					public void handle(KeyEvent e) {
+						// TODO Auto-generated method stub
+						// caseCreer.setTxtCase(new Text(""+e.getCode()));;
+						// caseCreer.getTxtCase().setText(""+e.getText());
+						Mot motCourant = arrMots.get(intNombre - 1);
+						if (!e.getCode().isLetterKey()) {
+
+						} else {
+						
+
+							if (motCourant.getOrientation() == EnumOrientation.HORIZONTALE) {
+
+								intCoorY += 1;
+								caseParcours.requestFocus();
+
+							}
+							if (motCourant.getOrientation() == EnumOrientation.VERTICAL) {
+
+								intCoorX += 1;
+								caseParcours.requestFocus();
+
+							}
+							System.out.println(e.getCode());
+							for (Case caseEcrire : arrCase) {
+								if (caseEcrire.getIntLigne() == intCoorX && caseEcrire.getIntColonne() == intCoorY) {
+
+									caseEcrire.getTxtCase().setText("" + e.getCode());
+									System.out.println(
+											"Coordonnées x apres:" + intCoorX + "\nCoordonnées y apres:" + intCoorY);
+								}
+							}
+
+						}
+
+						if (e.getCode() == KeyCode.BACK_SPACE) {
+							if (motCourant.getOrientation() == EnumOrientation.HORIZONTALE) {
+
+								intCoorY -= 1;
+								caseParcours.requestFocus();
+
+							}
+							if (motCourant.getOrientation() == EnumOrientation.VERTICAL) {
+
+								intCoorX -= 1;
+								caseParcours.requestFocus();
+
+							}
+							System.out.println(e.getCode());
+							for (Case caseEcrire : arrCase) {
+								if (caseEcrire.getIntLigne() == intCoorX && caseEcrire.getIntColonne() == intCoorY) {
+
+									caseEcrire.getTxtCase().setText("");
+									System.out.println("Coordonnées x apres:" + intCoorX + "\nCoordonnées y apres:" + intCoorY);
+								}
+							}
+						}
+
+					}
+				});
+
 			}
-			
-			
 		}
-		return caseCreer;
+
+		btnLettres.setOnAction(new EventHandler<ActionEvent>() {
+
+			@Override
+			public void handle(ActionEvent event) {
+				// TODO Auto-generated method stub
+				// System.out.println(strmo);
+				/*Mot motCourant1;
+				String strMot1 = "";
+				String strIndice1;
+				for (Case caseLettre : arrCase) {
+					int intNombre = caseLettre.getIntNombreCercleGrille();
+					if (intNombre != -1 && intNombre != 0) {
+						motCourant1 = arrMots.get(intNombre - 1);
+						strMot1 = motCourant1.getStrMot();
+						strIndice1 = motCourant1.getStrIndice();
+						System.out.println(strMot1);
+					}
+				}*/
+
+			}
+
+		});
+		btnSolution.setOnAction(new EventHandler<ActionEvent>() {
+
+			@Override
+			public void handle(ActionEvent event) {
+				// TODO Auto-generated method stub
+
+			}
+		});
 	}
 
 	public void AfficherMenuRegle() {

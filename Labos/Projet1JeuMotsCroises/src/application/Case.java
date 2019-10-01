@@ -122,6 +122,9 @@ public class Case extends HBox{
 		
 	
 	}
+	public int getIntNombreCercleGrille() {
+		return intNombreCercleGrille;
+	}
 	public HBox creerHbox() { //methode qui cree les hbox selon les donnees dans la grille
 		
 		
