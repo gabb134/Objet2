@@ -85,6 +85,11 @@ public class InterfaceMotCroises extends Application {
 	int intCompteurIndexCase = 0;
 	ArrayList<Case> arrCase = new ArrayList<>();
 
+	int intLogngeurMotCaseY = 0;
+	int intLogngeurMotCaseX = 0;
+	Case caseCourante;
+	Mot motCourant = null;
+
 	@Override
 	public void start(Stage primaryStage) {
 		try {
@@ -411,22 +416,25 @@ public class InterfaceMotCroises extends Application {
 			int intNombre = c.getIntNombreCercleGrille();
 			if (intNombre != -1 && intNombre != 0) {
 
-				System.out.println(intNombre);
+				// System.out.println(intNombre);
 				c.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
 					// int intNombre = c.getIntNombreCercleGrille();
 
-					Mot motCourant = arrMots.get(intNombre - 1);
-					String strMot = motCourant.getStrMot();
-					String strIndice = motCourant.getStrIndice();
-
-					Text txtIndice = new Text(strIndice);
-					Font font = Font.font("Verdana", FontWeight.BOLD, FontPosture.REGULAR, 15);
+					
 
 					@Override
 					public void handle(MouseEvent e) {
+						
+						 motCourant = arrMots.get(intNombre - 1);
+							String strMot = motCourant.getStrMot();
+							String strIndice = motCourant.getStrIndice();
+
+							Text txtIndice = new Text(strIndice);
+							Font font = Font.font("Verdana", FontWeight.BOLD, FontPosture.REGULAR, 15);
 						// TODO Auto-generated method stub
 						// System.out.println("gestionnaire d'evenements enregistré avec
 						// addEventHandler\n"+"Nombre séléctionné :"+intNombre+"\n");
+						effacerMotCase();
 
 						txtIndice.setFont(font);
 						txtIndice.setTextAlignment(TextAlignment.CENTER);
@@ -436,46 +444,58 @@ public class InterfaceMotCroises extends Application {
 						hboxTextBienvenue.getChildren().clear();
 						hboxTextBienvenue.getChildren().addAll(txtIndice);
 						// HBox c = (HBox) e.getSource();
-						caseParcours = (Case) e.getSource();
+						caseParcours = (Case) e.getSource(); // case que jai cliquer
 
 						// (Case) c = e.getSource();
-						for (Node n : gpaneCase.getChildren()) {
-							if (GridPane.getRowIndex(n) == c.getIntLigne()) {
-								// System.out.println(c.getIntLigne());
-								intCoorX = c.getIntLigne();
-								// c1.getTxtCase().setText("a");
+						// caseParcours.getTxtCase().setText(e.getSource());
 
-							}
-							if (GridPane.getColumnIndex(n) == c.getIntColonne()) {
-								intCoorY = c.getIntColonne();
-
-							}
-
-						}
 						// System.out.println("Coordonnées x:" + intCoorX + "\nCoordonnées y:" +
 						// intCoorY);
 
+						intCoorX = caseParcours.getIntLigne();
+						intCoorY = caseParcours.getIntColonne();
+
+						System.out.println("case cliquer " + "x:" + intCoorX + " y" + intCoorY);
+
 						if (motCourant.getOrientation() == EnumOrientation.HORIZONTALE) {
-							
-							// intCoorY += 1;
-							if (c.getTxtCase().getText().isEmpty())
-							caseParcours.requestFocus();
-							else
+
 							intCoorY += 1;
+							intLogngeurMotCaseY = intCoorY + motCourant.getStrMot().length();
+							// if (c.getTxtCase().getText().isEmpty())
+
+							// else
+							// intCoorY += 1;
 
 						}
 						if (motCourant.getOrientation() == EnumOrientation.VERTICAL) {
-						
+
+							intCoorX += 1;
+
+							// if (c.getTxtCase().getText().isEmpty())
+
+							intLogngeurMotCaseX = intCoorX + motCourant.getStrMot().length();
+							// else
 							// intCoorX += 1;
-							if (c.getTxtCase().getText().isEmpty())
-							caseParcours.requestFocus();
-							else
-								intCoorX+=1;
+
 						}
+
+						for (Node n : gpaneCase.getChildren()) {
+							if (GridPane.getRowIndex(n) == intCoorX && GridPane.getColumnIndex(n) == intCoorY) {
+								// System.out.println(c.getIntLigne());
+								// intCoorX = c.getIntLigne();
+								// c1.getTxtCase().setText("a");
+								// intCoorY = c.getIntColonne();
+								caseCourante = (Case) n;
+							}
+
+						}
+						caseCourante.requestFocus();
+						//System.out.println(caseCourante.getIntLigne() + ", " + caseCourante.getIntColonne());
 
 					}
 
 				});
+			} else if (intNombre == 0) {
 				c.setOnKeyPressed(new EventHandler<KeyEvent>() {
 
 					@Override
@@ -483,24 +503,23 @@ public class InterfaceMotCroises extends Application {
 						// TODO Auto-generated method stub
 						// caseCreer.setTxtCase(new Text(""+e.getCode()));;
 						// caseCreer.getTxtCase().setText(""+e.getText());
-						Mot motCourant = arrMots.get(intNombre - 1);
+						System.out.println("allo");
+						System.out.println(((Case)e.getSource()).isFocused());
+						System.out.println(caseCourante.getIntLigne() + ", " + caseCourante.getIntColonne());
 						if (e.getCode() == KeyCode.BACK_SPACE) {
 							if (motCourant.getOrientation() == EnumOrientation.HORIZONTALE) { // Les lignes
 								if (!c.getTxtCase().getText().isEmpty())
 									intCoorY -= 1;
 
-								// intCoorY -= 1;
-
-								//caseParcours.requestFocus();
-
 							}
 							if (motCourant.getOrientation() == EnumOrientation.VERTICAL) { // Les colonnes
 								if (!c.getTxtCase().getText().isEmpty()) {
-									intCoorX -= 1;
-								}
+									caseParcours.requestFocus();
+								} else {
+									c.getTxtCase().setText("");
 
-								// intCoorX -= 1;
-								//caseParcours.requestFocus();
+								}
+								intCoorX -= 1;
 
 							}
 							// System.out.println(e.getCode());
@@ -509,44 +528,46 @@ public class InterfaceMotCroises extends Application {
 
 									caseEcrire.getTxtCase().setText("");
 
-									// System.out.println(caseEcrire.getTxtCase().toString());
-									// System.out.println("Coordonnées x apres:" + intCoorX + "\nCoordonnées y
-									// apres:" + intCoorY);
 								}
 							}
-						}
-						else if (e.getCode().isLetterKey()) {
+						} else if (e.getCode().isLetterKey()) {
+							System.out.println("Ecrire");
+                             System.out.println(e.getCharacter());
+							 ((Case) e.getSource()).getTxtCase().setText(""+e.getCode());
+							//caseAcrire.getTxtCase().setText(e.getCharacter());
 
+							//System.out.println(caseAcrire.getIntLigne() + ", " + caseAcrire.getIntColonne());
 							if (motCourant.getOrientation() == EnumOrientation.HORIZONTALE) {
-								intCompteurIndexCase++;
-								
-								
 
-								//if(c.getTxtCase().getText().isEmpty())
+								// intCompteurIndexCase++;
+								if (intCoorY < intLogngeurMotCaseY) {
 									intCoorY += 1;
-								///else
-								//	intCoorY -= 1;
-									
-								
-								caseParcours.requestFocus();
+									//caseParcours.requestFocus();
+									//System.out.println("Compteur des y :" + intCoorY);
+								}
 
-								System.out.println("Horizontale");
-								
+								//System.out.println("Longeur du mot: " + motCourant.getStrMot().length());
+								//System.out.println("Le mot: " + intLogngeurMotCaseY);
 							}
 							if (motCourant.getOrientation() == EnumOrientation.VERTICAL) {
-								//if(c.getTxtCase().getText().isEmpty())
-								intCompteurIndexCase++;
-								intCoorX += 1;
-								//else
-								//	intCoorX -= 1;
-								caseParcours.requestFocus();
-								System.out.println("Vertical");
+
+								// intCompteurIndexCase++;
+
+								if (intCoorX < intLogngeurMotCaseX) {
+									intCoorX += 1;
+									//caseParcours.requestFocus();
+								}
+								//System.out.println("Compteur des X :" + intLogngeurMotCaseX);
+								//System.out.println("Longeur du mot: " + motCourant.getStrMot().length());
+								//System.out.println("Le mot: " + intLogngeurMotCaseX);
+
 							}
-							System.out.println(e.getCode());
-							for (Case caseEcrire : arrCase) {
+							// System.out.println(e.getCode());
+							for (Case caseEcrire : arrCase) {// Il donne le focus a la prochaine case ***
 								if (caseEcrire.getIntLigne() == intCoorX && caseEcrire.getIntColonne() == intCoorY) {
 
-									caseEcrire.getTxtCase().setText("" + e.getCode());
+									caseEcrire.requestFocus();
+									// caseEcrire.getTxtCase().setText("" + e.getCode());
 									// System.out.println("Coordonnées x apres:" + intCoorX + "\nCoordonnées y
 									// apres:" + intCoorY);
 								}
@@ -554,12 +575,11 @@ public class InterfaceMotCroises extends Application {
 
 						}
 
-						 
-
 					}
-				});
 
+				});
 			}
+
 		}
 
 		btnLettres.setOnAction(new EventHandler<ActionEvent>() {
@@ -587,6 +607,12 @@ public class InterfaceMotCroises extends Application {
 
 			}
 		});
+	}
+
+	public void effacerMotCase() {
+		for (Case c : arrCase) {
+			c.getTxtCase().setText("");
+		}
 	}
 
 	public void AfficherMenuRegle() {
