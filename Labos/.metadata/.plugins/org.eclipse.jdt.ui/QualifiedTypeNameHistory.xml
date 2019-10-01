@@ -40,17 +40,18 @@
 <fullyQualifiedTypeName name="javafx.geometry.Orientation"/>
 <fullyQualifiedTypeName name="application.EnumOrientation"/>
 <fullyQualifiedTypeName name="javafx.scene.layout.HBox"/>
-<fullyQualifiedTypeName name="javafx.event.Event"/>
 <fullyQualifiedTypeName name="com.sun.javafx.geom.AreaOp.IntOp"/>
-<fullyQualifiedTypeName name="javafx.scene.input.KeyEvent"/>
 <fullyQualifiedTypeName name="javafx.scene.text.Text"/>
 <fullyQualifiedTypeName name="javafx.scene.Node"/>
 <fullyQualifiedTypeName name="javafx.scene.layout.GridPane"/>
 <fullyQualifiedTypeName name="application.Case"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
-<fullyQualifiedTypeName name="javafx.event.EventHandler"/>
 <fullyQualifiedTypeName name="javafx.scene.control.Button"/>
 <fullyQualifiedTypeName name="javafx.scene.input.KeyCode"/>
+<fullyQualifiedTypeName name="java.beans.EventHandler"/>
 <fullyQualifiedTypeName name="application.InterfaceMotCroises"/>
+<fullyQualifiedTypeName name="javafx.event.Event"/>
+<fullyQualifiedTypeName name="javafx.event.EventHandler"/>
+<fullyQualifiedTypeName name="javafx.scene.input.KeyEvent"/>
 </qualifiedTypeNameHistroy>
