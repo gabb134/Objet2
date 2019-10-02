@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Encapsulate field &apos;application.Mot.booSolution&apos; in &apos;application.Mot&apos;&#x0D;&#x0A;- Original project: &apos;Projet1JeuMotsCroises&apos;&#x0D;&#x0A;- Original element: &apos;application.Mot.booSolution&apos;&#x0D;&#x0A;- Getter method name: &apos;getBooSolution&apos;&#x0D;&#x0A;- Setter method name: &apos;setBooSolution&apos;&#x0D;&#x0A;- Field visibility: &apos;public&apos;&#x0D;&#x0A;- Do not use getter and setter methods in declaring type" comments="false" declaring="false" description="Encapsulate field &apos;booSolution&apos;" flags="589830" getter="getBooSolution" id="org.eclipse.jdt.ui.self.encapsulate" input="/src&lt;application{Mot.java[Mot^booSolution" insertion="6" setter="setBooSolution" stamp="1569990797768" version="1.0" visibility="1"/>
+</session>

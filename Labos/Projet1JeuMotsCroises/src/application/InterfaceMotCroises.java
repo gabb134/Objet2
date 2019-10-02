@@ -90,6 +90,7 @@ public class InterfaceMotCroises extends Application {
 	int intLogngeurMotCaseX = 0;
 	Case caseCourante;
 	Mot motCourant = null;
+	String strTest = "";
 
 	@Override
 	public void start(Stage primaryStage) {
@@ -162,7 +163,7 @@ public class InterfaceMotCroises extends Application {
 			HBox hboxMax = new HBox(5);
 			HBox hboxVotreScore = new HBox(5);
 			TextField txtFieldvotreSocre = new TextField("0");
-			TextField txtFieldmaximum = new TextField("125");
+			TextField txtFieldmaximum = new TextField("0");
 
 			BorderStroke bordureNoir = new BorderStroke(Color.BLACK, BorderStrokeStyle.SOLID, new CornerRadii(5),
 					new BorderWidths(2), new Insets(0));
@@ -186,6 +187,8 @@ public class InterfaceMotCroises extends Application {
 			// txtReponse.setPrefSize(10, 2);
 			txtReponse.setMaxSize(220, -10);
 			txtReponse.setEditable(false);
+			txtReponse.setAlignment(Pos.CENTER);
+			txtReponse.setFont(font1);
 			btnLettres.setBorder(borduregGpane);
 			btnSolution.setBorder(borduregGpane);
 			btnOk.setBorder(borduregGpane);
@@ -386,9 +389,12 @@ public class InterfaceMotCroises extends Application {
 		btnOk.setDisable(true);
 		btnLettres.setDisable(true);
 		btnSolution.setDisable(true);
+		txtReponse.setText("");
+		
 		tabNombres = l.getTabNombres();
 		arrMots = l.getArrMots();
 		tabCase = l.getTabCase();
+	
 		/*
 		 * for(Mot m:arrMots) { //System.out.println(m); }
 		 */
@@ -411,16 +417,20 @@ public class InterfaceMotCroises extends Application {
 				gpaneCase.add(caseCreer, j, i);
 
 				arrCase.add(caseCreer);
+				
+				
 
 			}
 			System.out.println();
 		}
-
+		
 		// System.out.println(arrMots.get(2));
 		for (Case c : arrCase) {
+			
+			
 			int intNombre = c.getIntNombreCercleGrille();
 			if (intNombre != -1 && intNombre != 0) {
-
+				
 				// System.out.println(intNombre);
 				c.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
 					// int intNombre = c.getIntNombreCercleGrille();
@@ -445,6 +455,10 @@ public class InterfaceMotCroises extends Application {
 						btnOk.setDisable(false);
 						btnLettres.setDisable(false);
 						btnSolution.setDisable(false);
+						//txtReponse.setText("");
+						//motCourant.setBooMelanger(true);
+						//if(motCourant.getBooMelanger()==true)
+						//	txtReponse.setText(strTest);
 						// System.out.println("Mot : " + strMot);
 						hboxTextBienvenue.getChildren().clear();
 						hboxTextBienvenue.getChildren().addAll(txtIndice);
@@ -596,30 +610,41 @@ public class InterfaceMotCroises extends Application {
 				@Override
 				public void handle(ActionEvent event) {
 					// TODO Auto-generated method stub
-					// System.out.println(strmo);
-					/*
-					 * Mot motCourant1; String strMot1 = ""; String strIndice1; for (Case caseLettre
-					 * : arrCase) { int intNombre = caseLettre.getIntNombreCercleGrille(); if
-					 * (intNombre != -1 && intNombre != 0) { motCourant1 = arrMots.get(intNombre -
-					 * 1); strMot1 = motCourant1.getStrMot(); strIndice1 =
-					 * motCourant1.getStrIndice(); System.out.println(strMot1); } }
-					 */
-					
-					//System.out.println(motCourant.getStrMot());
+					txtReponse.setText("");
+					// System.out.println(motCourant.getStrMot());
 					System.out.println("lettre");
-					
-					ArrayList<String> arrMotMelanger = new ArrayList<>();
-					
-					arrMotMelanger.add(motCourant.getStrMot());
-					
+					String strMotMelanger = "";
+
+					// for(Character c:arrMotMelanger)
+					// System.out.println(c);
+
+					ArrayList<Character> arrMotMelanger = new ArrayList<>();
+
+					for (int i = 0; i < motCourant.getStrMot().length(); i++) {
+						arrMotMelanger.add(motCourant.getStrMot().charAt(i));
+					}
 					Collections.shuffle(arrMotMelanger);
-					String motMelanger = "";
-					for(String s:arrMotMelanger)
-						motMelanger+=s;
+					while (motCourant.getBooMelanger() == false) {
+
+						for (int i = 0; i < arrMotMelanger.size(); i++) {
+
+							strMotMelanger += arrMotMelanger.get(i);
+							strTest = strMotMelanger;
+							
+							txtReponse.setText(strTest);
+						}
+						motCourant.setBooMelanger(true);
+					}	
+					
+					//btnLettres.setDisable(true);
+
+					// System.out.println(strMotMelanger);
+
+				 if(motCourant.getBooMelanger()==true)
+					 txtReponse.setText(strTest);
 					
 					
-					System.out.println(motMelanger);
-					
+
 				}
 
 			});
@@ -628,7 +653,19 @@ public class InterfaceMotCroises extends Application {
 				@Override
 				public void handle(ActionEvent event) {
 					// TODO Auto-generated method stub
+					txtReponse.setText("");
+					
+					motCourant.setBooSolution(true);
+					txtReponse.setText(motCourant.getStrMot());
 
+				}
+			});
+			btnOk.setOnAction(new EventHandler<ActionEvent>() {
+
+				@Override
+				public void handle(ActionEvent event) {
+					// TODO Auto-generated method stub
+					
 				}
 			});
 		}
@@ -639,6 +676,7 @@ public class InterfaceMotCroises extends Application {
 		// pour le button Ok et pour la touche enter
 
 	}
+	
 
 	public void effacerMotCase() {
 		for (Case c : arrCase) {
