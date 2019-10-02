@@ -150,7 +150,12 @@ public class LectureDonnees {
 		
 
 	}
-
+	public void melangerLettre() {
+		System.out.println(arrMots.get(2).getStrMot());
+		
+		
+	}
+	
 
 
 	public Case[][] getTabCase() {
@@ -194,7 +199,8 @@ public class LectureDonnees {
 
 	public static void main(String[] args) {
 		LectureDonnees l = new LectureDonnees("grilleTechnologie.txt","donneesTechnologie.txt");
-		 l.afficherGrille();
+		/// l.afficherGrille();
 		// l.lectureDonneesMot("donneesBible.txt");
+		l.melangerLettre();
 	}
 }
