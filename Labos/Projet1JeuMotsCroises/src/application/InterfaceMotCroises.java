@@ -90,6 +90,12 @@ public class InterfaceMotCroises extends Application {
 	int intLogngeurMotCaseX = 0;
 	Case caseCourante;
 	Mot motCourant = null;
+	
+	TextField txtFieldvotreSocre;
+	TextField txtFieldmaximum;
+	int intScoreMotier =0;
+	int intScoreComplet =0;
+	int intScoreMaxmum = 0;
 
 	private String strLettreTapez = "";
 
@@ -163,8 +169,8 @@ public class InterfaceMotCroises extends Application {
 			VBox vboxVotreScore = new VBox(7);
 			HBox hboxMax = new HBox(5);
 			HBox hboxVotreScore = new HBox(5);
-			TextField txtFieldvotreSocre = new TextField("0");
-			TextField txtFieldmaximum = new TextField("0");
+			 txtFieldvotreSocre = new TextField("0");
+			 txtFieldmaximum = new TextField("0");
 
 			BorderStroke bordureNoir = new BorderStroke(Color.BLACK, BorderStrokeStyle.SOLID, new CornerRadii(5),
 					new BorderWidths(2), new Insets(0));
@@ -390,11 +396,28 @@ public class InterfaceMotCroises extends Application {
 		btnOk.setDisable(true);
 		btnLettres.setDisable(true);
 		btnSolution.setDisable(true);
+		intScoreComplet = 0;
+		intScoreMotier = 0;
+		txtFieldvotreSocre.setText(Integer.toString(intScoreComplet));
+		txtFieldvotreSocre.setText(Integer.toString(intScoreMotier));
+		
+		
 		txtReponse.setText("");
-
+		
 		tabNombres = l.getTabNombres();
 		arrMots = l.getArrMots();
 		tabCase = l.getTabCase();
+		intScoreMaxmum=0;
+		
+		for(Mot m: arrMots) {
+			
+			intScoreMaxmum += m.getStrMot().length()*2;
+			
+			
+		}
+		txtFieldmaximum.setText(Integer.toString(intScoreMaxmum));
+		
+		
 
 		/*
 		 * for(Mot m:arrMots) { //System.out.println(m); }
@@ -450,10 +473,11 @@ public class InterfaceMotCroises extends Application {
 						txtIndice.setFont(font);
 						txtIndice.setTextAlignment(TextAlignment.CENTER);
 						txtIndice.setWrappingWidth(350);
-						btnOk.setDisable(false);
+						btnOk.setDisable(true);
 						btnLettres.setDisable(false);
 						btnSolution.setDisable(false);
 						strLettreTapez = "";
+						txtReponse.setText("");
 						// txtReponse.setText("");
 						// motCourant.setBooMelanger(true);
 						// if(motCourant.getBooMelanger()==true)
@@ -485,88 +509,103 @@ public class InterfaceMotCroises extends Application {
 						if (motCourant.getOrientation() == EnumOrientation.HORIZONTALE) {
 
 							intCoorY += 1;
-							intLogngeurMotCaseY = intCoorY + motCourant.getStrMot().length();
-							// if (c.getTxtCase().getText().isEmpty())
-
-							// else
-							// intCoorY += 1;
-
+							//intLogngeurMotCaseY = intCoorY + motCourant.getStrMot().length();
+							
+							//
+						
 						}
 						if (motCourant.getOrientation() == EnumOrientation.VERTICAL) {
 
 							intCoorX += 1;
 
-							// if (c.getTxtCase().getText().isEmpty())
-
-							intLogngeurMotCaseX = intCoorX + motCourant.getStrMot().length();
-							// else
-							// intCoorX += 1;
+							//intLogngeurMotCaseX = intCoorX + motCourant.getStrMot().length();
+					
 
 						}
+						
+						
 
 						for (Node n : gpaneCase.getChildren()) {
 							if (GridPane.getRowIndex(n) == intCoorX && GridPane.getColumnIndex(n) == intCoorY) {
-								// System.out.println(c.getIntLigne());
-								// intCoorX = c.getIntLigne();
-								// c1.getTxtCase().setText("a");
-								// intCoorY = c.getIntColonne();
+
 								caseCourante = (Case) n;
 							}
 
 						}
 						caseCourante.requestFocus();
-						// System.out.println(caseCourante.getIntLigne() + ", " +
-						// caseCourante.getIntColonne());
+
+
 
 					}
 
 				});
 			} else if (intNombre == 0) {
+				
 				c.setOnKeyPressed(new EventHandler<KeyEvent>() {
 
 					@Override
 					public void handle(KeyEvent e) {
 						// TODO Auto-generated method stub
-						// caseCreer.setTxtCase(new Text(""+e.getCode()));;
-						// caseCreer.getTxtCase().setText(""+e.getText());
-						System.out.println("allo");
-						System.out.println(((Case) e.getSource()).isFocused());
-						System.out.println(caseCourante.getIntLigne() + ", " + caseCourante.getIntColonne());
-						if (e.getCode() == KeyCode.BACK_SPACE) {
+
+						//System.out.println("allo");
+						//System.out.println(((Case) e.getSource()).isFocused());
+					//	System.out.println(caseCourante.getIntLigne() + ", " + caseCourante.getIntColonne());
+					if (e.getCode() == KeyCode.BACK_SPACE && strLettreTapez.length() != -1) {
+							
+						if (!c.getTxtCase().getText().isEmpty()) 
+						strLettreTapez = strLettreTapez.replace(strLettreTapez.substring(strLettreTapez.length() - 1), "");
 							if (motCourant.getOrientation() == EnumOrientation.HORIZONTALE) { // Les lignes
 								if (!c.getTxtCase().getText().isEmpty()) {
+									
 
 								} else {
-									c.getTxtCase().setText("");
+									//c.getTxtCase().setText("");
 								}
-
+								//if (!c.getTxtCase().getText().isEmpty())
+									//strLettreTapez = strLettreTapez.replace(strLettreTapez.substring(strLettreTapez.length() - 1), "");
 								intCoorY -= 1;
-
+								
 							}
 							if (motCourant.getOrientation() == EnumOrientation.VERTICAL) { // Les colonnes
 								if (!c.getTxtCase().getText().isEmpty()) {
 									// caseParcours.requestFocus();
+									
+
 								} else {
-									c.getTxtCase().setText("");
+									//c.getTxtCase().setText("");
 
 								}
+								//if (!c.getTxtCase().getText().isEmpty())
+									//strLettreTapez = strLettreTapez.replace(strLettreTapez.substring(strLettreTapez.length() - 1), "");
 								intCoorX -= 1;
+								
 
 							}
 							// System.out.println(e.getCode());
+							Boolean booQuitter = false;
 							for (Case caseEcrire : arrCase) {
 								if (caseEcrire.getIntLigne() == intCoorX && caseEcrire.getIntColonne() == intCoorY) {
 
 									caseEcrire.getTxtCase().setText("");
 									caseEcrire.requestFocus();
-									if (!c.getTxtCase().getText().isEmpty())
-										strLettreTapez = strLettreTapez.replace(strLettreTapez.substring(strLettreTapez.length() - 1), "");
+									//if (!c.getTxtCase().getText().isEmpty())
+									
 								}
 							}
-						} else if (e.getCode().isLetterKey()) {
-							System.out.println("Ecrire");
+						} else if (e.getCode().isLetterKey() &&strLettreTapez.length() < motCourant.getStrMot().length()) {
+							System.out.println("Ecrire"); 
 							System.out.println(e.getCharacter());
+							
 							((Case) e.getSource()).getTxtCase().setText("" + e.getCode());
+							
+							System.out.println("Lettre  "+ e.getCode());
+						//	if(((Case)e.getSource()).isDisabled()) {
+						//		System.out.println("disable");
+							//}
+							
+							
+							//if (!c.getTxtCase().getText().isEmpty())
+								strLettreTapez += e.getCode();
 							// caseAcrire.getTxtCase().setText(e.getCharacter());
 
 							// System.out.println(caseAcrire.getIntLigne() + ", " +
@@ -574,13 +613,13 @@ public class InterfaceMotCroises extends Application {
 							if (motCourant.getOrientation() == EnumOrientation.HORIZONTALE) {
 
 								// intCompteurIndexCase++;
-								if (intCoorY < intLogngeurMotCaseY) {
+								//if (intCoorY < intLogngeurMotCaseY) {
 									intCoorY += 1;
 
 									// strLettreTapez+= e.getCode();
 									// caseParcours.requestFocus();
-									// System.out.println("Compteur des y :" + intCoorY);
-								}
+								//	// System.out.println("Compteur des y :" + intCoorY);
+								//}
 
 								// System.out.println("Longeur du mot: " + motCourant.getStrMot().length());
 								// System.out.println("Le mot: " + intLogngeurMotCaseY);
@@ -589,11 +628,11 @@ public class InterfaceMotCroises extends Application {
 
 								// intCompteurIndexCase++;
 
-								if (intCoorX < intLogngeurMotCaseX) {
+							///	if (intCoorX < intLogngeurMotCaseX) {
 									intCoorX += 1;
 
 									// caseParcours.requestFocus();
-								}
+							//	}
 								// System.out.println("Compteur des X :" + intLogngeurMotCaseX);
 								// System.out.println("Longeur du mot: " + motCourant.getStrMot().length());
 								// System.out.println("Le mot: " + intLogngeurMotCaseX);
@@ -609,12 +648,19 @@ public class InterfaceMotCroises extends Application {
 									// caseEcrire.getTxtCase().setText("" + e.getCode());
 									// System.out.println("Coordonnées x apres:" + intCoorX + "\nCoordonnées y
 									// apres:" + intCoorY);
-									if (!c.getTxtCase().getText().isEmpty())
-										strLettreTapez += c.getTxtCase().getText();
+									//btnOk.setDisable(false);
+								
 								}
+								
 							}
-
+							System.out.println("Allo = "+strLettreTapez);
 						}
+						else {
+							System.out.println("Dans le else: "+strLettreTapez+"\n"+"lettre: "+e.getCode());
+							System.out.println();
+						}
+						if(strLettreTapez.length() == motCourant.getStrMot().length())
+							btnOk.setDisable(false);
 
 					}
 
@@ -638,10 +684,77 @@ public class InterfaceMotCroises extends Application {
 				@Override
 				public void handle(ActionEvent event) {
 					// TODO Auto-generated method stub
+					Background couleurRouge = new Background(new BackgroundFill(Color.INDIANRED, new CornerRadii(5), new Insets(0)));
+					int intColonneMot = motCourant.getIntColonne();
+					int intLigneMot =  motCourant.getIntLigne();
 					txtReponse.setText("");
 
 					motCourant.setBooSolution(true);
 					txtReponse.setText(motCourant.getStrMot());
+					
+					// EN vert			System.out.println("trouver");
+						
+
+						if (motCourant.getOrientation() == EnumOrientation.HORIZONTALE) {
+							for (int i = 0; i < motCourant.getStrMot().length(); i++) {
+								for (Node n : gpaneCase.getChildren()) {
+									if (GridPane.getColumnIndex(n) == intColonneMot+i && GridPane.getRowIndex(n) == intLigneMot) {
+										
+										
+							
+										System.out.println("lignes: "+intLigneMot + ", Colonnes: " + (intColonneMot+i));
+											Case cEnfant = (Case) n;
+											cEnfant.getTxtCase().setDisable(true);
+											cEnfant.setDisable(true);
+											cEnfant.setBackground(couleurRouge);
+											System.out.println("text dans hbox: "+cEnfant.getTxtCase().getText());
+											
+											cEnfant.setBooValider(true);
+											//for(int j = 0;j<motCourant.getStrMot().length();j++) {
+												
+											//}
+											cEnfant.getTxtCase().setText(Character.toString( motCourant.getStrMot().charAt(i)));
+											
+											
+											
+											//cEnfant.getTxtCase().setText("a");
+									}
+								}
+							}
+							//System.out.println("les colonnes apres "+intColonneMot);
+						} else if (motCourant.getOrientation() == EnumOrientation.VERTICAL) {
+							
+							for (int i = 0; i < motCourant.getStrMot().length(); i++) {
+								for (Node n : gpaneCase.getChildren()) {
+									if (GridPane.getColumnIndex(n) == intColonneMot && GridPane.getRowIndex(n) == intLigneMot+i) {
+										
+									
+											Case cEnfant = (Case) n;
+											cEnfant.getTxtCase().setDisable(true);
+											cEnfant.setDisable(true);
+											cEnfant.setBackground(couleurRouge);
+											System.out.println("text dans hbox: "+cEnfant.getTxtCase().getText());
+											
+											cEnfant.setBooValider(true);
+											//for(int j = 0;j<motCourant.getStrMot().length();j++) {
+												
+											//}
+											cEnfant.getTxtCase().setText(Character.toString( motCourant.getStrMot().charAt(i)));
+											
+										
+									
+									}
+								}
+							}
+							System.out.println("les lignes apres "+intLigneMot);
+						}
+						// c.getTxtCase().setDisable(true);
+						// c.getHboxCase().setDisable(true);
+
+						// c.getHboxCase().setBackground(couleurVert);
+						// btnOk.setDisable(true);
+						
+					
 
 				}
 			});
@@ -649,74 +762,206 @@ public class InterfaceMotCroises extends Application {
 
 				@Override
 				public void handle(ActionEvent e) {
-					// TODO Auto-generated method stub
-
-					Background couleurVert = new Background(
-							new BackgroundFill(Color.LIMEGREEN, new CornerRadii(5), new Insets(0)));
-
-					System.out.println(strLettreTapez);
-
-					int intColonneMot = motCourant.getIntColonne();
-					int intLigneMot =  motCourant.getIntLigne();
-
-					if (strLettreTapez.equals(motCourant.getStrMot().toUpperCase())
-							&& motCourant.getBooMelanger() == false) {// EN vert
-						System.out.println("trouver");
-						System.out.println(intLigneMot + ", " + intColonneMot);
-
-						if (motCourant.getOrientation() == EnumOrientation.HORIZONTALE) {
-							for (int i = 0; i < motCourant.getStrMot().length(); i++) {
-								for (Node n : gpaneCase.getChildren()) {
-									if (GridPane.getColumnIndex(n) == intColonneMot
-											&& GridPane.getRowIndex(n) == intLigneMot) {
-										intColonneMot += i;
-										Case cEnfant = (Case) n;
-										cEnfant.getTxtCase().setDisable(true);
-										cEnfant.getHboxCase().setDisable(true);
-										cEnfant.getHboxCase().setBackground(couleurVert);
-									}
-								}
-							}
-						} else if (motCourant.getOrientation() == EnumOrientation.VERTICAL) {
-							
-							for (int i = 0; i < motCourant.getStrMot().length(); i++) {
-								for (Node n : gpaneCase.getChildren()) {
-									if (GridPane.getColumnIndex(n) == intColonneMot
-											&& GridPane.getRowIndex(n) == intLigneMot) {
-										intLigneMot += i;
-										Case cEnfant = (Case) n;
-										cEnfant.getTxtCase().setDisable(true);
-										cEnfant.getHboxCase().setDisable(true);
-										cEnfant.getHboxCase().setBackground(couleurVert);
-									}
-								}
-							}
-
-						}
-						// c.getTxtCase().setDisable(true);
-						// c.getHboxCase().setDisable(true);
-
-						// c.getHboxCase().setBackground(couleurVert);
-						// btnOk.setDisable(true);
-
-					} else {
-						System.out.println("Pas trouver");
-					}
-
+					// TODO Auto-generated method stubbt
+					
+					confirmerMot();
 				}
 			});
+			
+			
 		}
 
 	}
 
 	public void confirmerMot() {
 		// pour le button Ok et pour la touche enter
+		
+		btnOk.setDisable(true);
+		
+		
+		// ***Corriger strLettreTapez lorsque je fais le backspace et quand c'est en vertical
+
+		Background couleurVert = new Background(new BackgroundFill(Color.LIGHTGREEN, new CornerRadii(5), new Insets(0)));
+		Background couleurJaune = new Background(new BackgroundFill(Color.LIGHTYELLOW, new CornerRadii(5), new Insets(0)));
+		Background couleurRouge = new Background(new BackgroundFill(Color.INDIANRED, new CornerRadii(5), new Insets(0)));
+		System.out.println(strLettreTapez);
+
+		int intColonneMot = motCourant.getIntColonne();
+		int intLigneMot =  motCourant.getIntLigne();
+		
+		//System.out.println("longeur case max : "+intLogngeurMotCaseY);
+		
+		System.out.println("lignes: "+intLigneMot + ", Colonnes: " + intColonneMot);
+		if (strLettreTapez.equals(motCourant.getStrMot().toUpperCase()) && motCourant.getBooMelanger() == false && motCourant.getBooSolution()==false) {// EN vert
+			System.out.println("trouver");
+			
+
+			if (motCourant.getOrientation() == EnumOrientation.HORIZONTALE) {
+				for (int i = 0; i < motCourant.getStrMot().length(); i++) {
+					for (Node n : gpaneCase.getChildren()) {
+						if (GridPane.getColumnIndex(n) == intColonneMot+i && GridPane.getRowIndex(n) == intLigneMot) {
+							
+							
+				
+							System.out.println("lignes: "+intLigneMot + ", Colonnes: " + (intColonneMot+i));
+								Case cEnfant = (Case) n;
+								cEnfant.getTxtCase().setDisable(true);
+								cEnfant.setDisable(true);
+								cEnfant.setBackground(couleurVert);
+								System.out.println("text dans hbox: "+cEnfant.getTxtCase().getText());
+								
+								cEnfant.setBooValider(true);
+								
+								
+								
+								//cEnfant.getTxtCase().setText("a");
+						}
+					}
+				}
+				//System.out.println("les colonnes apres "+intColonneMot);
+			} else if (motCourant.getOrientation() == EnumOrientation.VERTICAL) {
+				
+				for (int i = 0; i < motCourant.getStrMot().length(); i++) {
+					for (Node n : gpaneCase.getChildren()) {
+						if (GridPane.getColumnIndex(n) == intColonneMot && GridPane.getRowIndex(n) == intLigneMot+i) {
+							
+						
+								Case cEnfant = (Case) n;
+								cEnfant.getTxtCase().setDisable(true);
+								cEnfant.setDisable(true);
+								cEnfant.setBackground(couleurVert);
+								System.out.println("text dans hbox: "+cEnfant.getTxtCase().getText());
+								
+								cEnfant.setBooValider(true);
+							
+						
+						}
+					}
+				}
+				System.out.println("les lignes apres "+intLigneMot);
+			}
+			// c.getTxtCase().setDisable(true);
+			// c.getHboxCase().setDisable(true);
+
+			// c.getHboxCase().setBackground(couleurVert);
+			// btnOk.setDisable(true);
+			intScoreComplet= intScoreComplet+ motCourant.getStrMot().length()*2;
+			
+			txtFieldvotreSocre.setText(Integer.toString(intScoreComplet));
+		}
+		else {
+			if (motCourant.getOrientation() == EnumOrientation.HORIZONTALE) {
+				for (int i = 0; i < motCourant.getStrMot().length(); i++) {
+					for (Node n : gpaneCase.getChildren()) {
+						if (GridPane.getColumnIndex(n) == intColonneMot+i && GridPane.getRowIndex(n) == intLigneMot) {
+							
+							
+				
+							//System.out.println("lignes: "+intLigneMot + ", Colonnes: " + (intColonneMot+i));
+								Case cEnfant = (Case) n;
+								cEnfant.getTxtCase().setDisable(true);
+								cEnfant.setDisable(true);
+								cEnfant.setBackground(couleurRouge);
+								//System.out.println("text dans hbox: "+cEnfant.getTxtCase().getText());
+								
+								cEnfant.setBooValider(true);
+								
+								
+								
+								//cEnfant.getTxtCase().setText("a");
+						}
+					}
+				}
+				//System.out.println("les colonnes apres "+intColonneMot);
+			} else if (motCourant.getOrientation() == EnumOrientation.VERTICAL) {
+				
+				for (int i = 0; i < motCourant.getStrMot().length(); i++) {
+					for (Node n : gpaneCase.getChildren()) {
+						if (GridPane.getColumnIndex(n) == intColonneMot && GridPane.getRowIndex(n) == intLigneMot+i) {
+							
+						
+								Case cEnfant = (Case) n;
+								cEnfant.getTxtCase().setDisable(true);
+								cEnfant.setDisable(true);
+								cEnfant.setBackground(couleurRouge);
+								//System.out.println("text dans hbox: "+cEnfant.getTxtCase().getText());
+								
+								cEnfant.setBooValider(true);
+							
+						
+						}
+					}
+				}
+				System.out.println("les lignes apres "+intLigneMot);
+			}
+		}
+		if (strLettreTapez.equals(motCourant.getStrMot().toUpperCase()) && motCourant.getBooMelanger() == true && motCourant.getBooSolution()==false) {// EN vert
+			System.out.println("trouver");
+			
+
+			if (motCourant.getOrientation() == EnumOrientation.HORIZONTALE) {
+				for (int i = 0; i < motCourant.getStrMot().length(); i++) {
+					for (Node n : gpaneCase.getChildren()) {
+						if (GridPane.getColumnIndex(n) == intColonneMot+i && GridPane.getRowIndex(n) == intLigneMot) {
+							
+							
+				
+							System.out.println("lignes: "+intLigneMot + ", Colonnes: " + (intColonneMot+i));
+								Case cEnfant = (Case) n;
+								cEnfant.getTxtCase().setDisable(true);
+								cEnfant.setDisable(true);
+								cEnfant.setBackground(couleurJaune);
+								System.out.println("text dans hbox: "+cEnfant.getTxtCase().getText());
+								
+								cEnfant.setBooValider(true);
+								
+								
+								//cEnfant.getTxtCase().setText("a");
+								//cEnfant.getTxtCase().setText("a");
+						}
+					}
+				}
+				//System.out.println("les colonnes apres "+intColonneMot);
+			} else if (motCourant.getOrientation() == EnumOrientation.VERTICAL) {
+				
+				for (int i = 0; i < motCourant.getStrMot().length(); i++) {
+					for (Node n : gpaneCase.getChildren()) {
+						if (GridPane.getColumnIndex(n) == intColonneMot && GridPane.getRowIndex(n) == intLigneMot+i) {
+							
+						
+								Case cEnfant = (Case) n;
+								cEnfant.getTxtCase().setDisable(true);
+								cEnfant.getHboxCase().setDisable(true);
+								cEnfant.getHboxCase().setBackground(couleurVert);
+							
+						
+						}
+					}
+				}
+				System.out.println("les lignes apres "+intLigneMot);
+			}
+			// c.getTxtCase().setDisable(true);
+			// c.getHboxCase().setDisable(true);
+
+			// c.getHboxCase().setBackground(couleurVert);
+			// btnOk.setDisable(true);
+
+			intScoreMotier= intScoreMotier+ motCourant.getStrMot().length();
+			
+			txtFieldvotreSocre.setText(Integer.toString(intScoreMotier));
+		} 
 
 	}
 
 	public void effacerMotCase() {
+		
 		for (Case c : arrCase) {
-			c.getTxtCase().setText("");
+			if(c.getBooValider()==true) {
+				
+			}
+			else {
+				c.getTxtCase().setText("");
+			}
 		}
 	}
 

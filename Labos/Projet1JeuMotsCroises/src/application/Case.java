@@ -28,6 +28,7 @@ public class Case extends HBox{
 	private HBox hboxCase;
 	//private HBox hboxCercle;
 	private int intLigne;
+	private Boolean booValider;
 	
 	public HBox getHboxCase() {
 		return hboxCase;
@@ -71,6 +72,7 @@ public class Case extends HBox{
 			
 		this.setPrefSize(30, 30);
 		
+		this.booValider = false;
 			
 			//hboxCercle = new HBox(1);
 			//hboxCercle.setPrefSize(15, 15);			
@@ -85,6 +87,7 @@ public class Case extends HBox{
 		BorderStroke bordureNoirCercle = new BorderStroke(Color.BLACK, BorderStrokeStyle.SOLID, new CornerRadii(20), new BorderWidths(4), new Insets(0));
 		Border bordureCercle = new Border(bordureNoirCercle);
 		Background couleurFill = new Background(new BackgroundFill(Color.LIGHTSTEELBLUE, new CornerRadii(5), new Insets(0)));
+		
 		
 		Background couleurFillCercle = new Background(new BackgroundFill(Color.BLACK, new CornerRadii(30), new Insets(0)));
 		
@@ -135,6 +138,12 @@ public class Case extends HBox{
 
 	public int getIntNb1() {
 		return intNb1;
+	}
+	public Boolean getBooValider() {
+		return booValider;
+	}
+	public void setBooValider(Boolean booValider) {
+		this.booValider = booValider;
 	}
 	
 	

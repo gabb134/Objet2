@@ -6,8 +6,9 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="btnOk"/>
+		<item key="selection" value="Fill"/>
 		<list key="findhistory">
+			<item value="fill"/>
 			<item value="btnok"/>
 			<item value="textfield"/>
 			<item value="gpane"/>
