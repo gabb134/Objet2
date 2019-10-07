@@ -6,8 +6,9 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="Fill"/>
+		<item key="selection" value="System.out"/>
 		<list key="findhistory">
+			<item value="System.out"/>
 			<item value="fill"/>
 			<item value="btnok"/>
 			<item value="textfield"/>

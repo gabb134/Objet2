@@ -21,8 +21,9 @@ import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
 
-public class Case extends HBox{
+public class Case extends HBox{/*Classe qui permet de construire mes cases */
 
+	/* Mettre les Commentaires  */
 	//GridPane gpane;
 	private int intNb1;
 	private HBox hboxCase;

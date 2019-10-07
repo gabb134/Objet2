@@ -3,7 +3,7 @@ package application;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class Mot{
+public class Mot{/*Classe qui construit mon mot et initilise des variables qui seront utilisees durant le projet*/
 	private EnumOrientation orientation ;
 	private String strIndice;
 	private String strMot;

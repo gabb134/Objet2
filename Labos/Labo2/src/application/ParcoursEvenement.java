@@ -13,8 +13,8 @@ import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 
 public class ParcoursEvenement extends Application {
-	Circle cRouge;
-	HBox root;
+	private Circle cRouge;
+	private HBox root;
 
 	@Override
 	public void start(Stage primaryStage) {

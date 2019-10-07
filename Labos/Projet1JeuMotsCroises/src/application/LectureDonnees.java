@@ -16,7 +16,7 @@ public class LectureDonnees {
 	//private ArrayList<Case> arrCase = new ArrayList<Case>();
 	private Case [][] tabCase;
 	//GridPane gpane;
-
+/* Mettre les Commentaires  */
 	public LectureDonnees(String strFIchier,String strFichierMot) {
 		//this.gpane = gpane;
 		BufferedReader brFichier = null;
@@ -151,7 +151,7 @@ public class LectureDonnees {
 
 	}
 	public void melangerLettre() {
-		System.out.println(arrMots.get(2).getStrMot());
+		//System.out.println(arrMots.get(2).getStrMot());
 		
 		
 	}
@@ -201,6 +201,6 @@ public class LectureDonnees {
 		LectureDonnees l = new LectureDonnees("grilleTechnologie.txt","donneesTechnologie.txt");
 		/// l.afficherGrille();
 		// l.lectureDonneesMot("donneesBible.txt");
-		l.melangerLettre();
+		//l.melangerLettre();
 	}
 }
