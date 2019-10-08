@@ -853,7 +853,7 @@ public class InterfaceMotCroises extends Application {
 
 			// c.getHboxCase().setBackground(couleurVert);
 			// btnOk.setDisable(true);
-			intScoreComplet= intScoreComplet+ motCourant.getStrMot().length()*2;
+			intScoreComplet= intScoreComplet+intScoreMotier+ motCourant.getStrMot().length()*2;
 			
 			txtFieldvotreSocre.setText(Integer.toString(intScoreComplet));
 		}
@@ -954,7 +954,7 @@ public class InterfaceMotCroises extends Application {
 			// c.getHboxCase().setBackground(couleurVert);
 			// btnOk.setDisable(true);
 
-			intScoreMotier= intScoreMotier+ motCourant.getStrMot().length();
+			intScoreMotier= intScoreMotier+ intScoreComplet + motCourant.getStrMot().length();
 			
 			txtFieldvotreSocre.setText(Integer.toString(intScoreMotier));
 		} 

@@ -65,42 +65,42 @@ public class InterfaceMotCroises extends Application {
 	private VBox vboxDroite;
 	private VBox vboxGauche;
 	private GridPane gpaneCase;
-	HBox hboxtxtTheme;
-	Text textBinevenue;
-	HBox hboxTextBienvenue;
-	HBox hboxTextIndice;
-	TextField txtReponse;
+	private HBox hboxtxtTheme;
+	private Text textBinevenue;
+	private HBox hboxTextBienvenue;
+	private HBox hboxTextIndice;
+	private TextField txtReponse;
 	private int[][] tabNombres;
 	private ArrayList<Mot> arrMots;
 
-	Button btnLettres;
-	Button btnSolution;
-	Button btnOk;
-	Button btnAide;
-	Case c1;
-	Case caseCreer;
+	private Button btnLettres;
+	private Button btnSolution;
+	private Button btnOk;
+	private Button btnAide;
+	private Case c1;
+	private Case caseCreer;
 	int intCoorX = 0;
 	int intCoorY = 0;
-	Case[][] tabCase;
-	Case caseParcours;
+	private Case[][] tabCase;
+	private Case caseParcours;
 	int intCompteurIndexCase = 0;
-	ArrayList<Case> arrCase = new ArrayList<>();
+	private ArrayList<Case> arrCase = new ArrayList<>();
 
-	int intLogngeurMotCaseY = 0;
-	int intLogngeurMotCaseX = 0;
-	Case caseCourante;
-	Mot motCourant = null;
+	private int intLogngeurMotCaseY = 0;
+	private int intLogngeurMotCaseX = 0;
+	private Case caseCourante;
+	private Mot motCourant = null;
 	
-	TextField txtFieldvotreSocre;
-	TextField txtFieldmaximum;
-	int intScoreMotier =0;
-	int intScoreComplet =0;
-	int intScoreMaxmum = 0;
+	private TextField txtFieldvotreSocre;
+	private TextField txtFieldmaximum;
+	private int intScoreMotier =0;
+	private int intScoreComplet =0;
+	private int intScoreMaxmum = 0;
 
 	private String strLettreTapez = "";
 
 	@Override
-	public void start(Stage primaryStage) {
+	public void start(Stage primaryStage) { /*Creation de l'interface a l'aide du BorderPane*/
 		try {
 			root = new BorderPane();
 			Scene scene = new Scene(root, 1000, 800);
@@ -246,7 +246,7 @@ public class InterfaceMotCroises extends Application {
 			// hboxTextIndice = new HBox(5);
 			vboxDroite.getChildren().addAll(hboxTextBienvenue, gpane);
 
-			// BARRE DE MENU
+			// BARRE DE MENU Ici, on met les informations dans la barre de menu eton lui met des evenements 
 			Menu menuThemes = new Menu("_Thèmes");
 			Menu menuAide = new Menu("Aide");
 			menuThemes.setMnemonicParsing(true);
@@ -377,7 +377,8 @@ public class InterfaceMotCroises extends Application {
 		}
 	}
 
-	public void GestionGrille(LectureDonnees l) {
+	public void GestionGrille(LectureDonnees l) { /*Methode qui prend un objet LectureDonnees et qui lis les 2 fichiers peut importe la grille, ensuite, 
+	Elle cree la grille et la construit par la suite. Je parcours les cases pour pouvoir ecrire, effacer, etc. */
 
 		// POUR LA GRILLE LES CASES ET LES CERCLES DES NUMEROS
 		gpaneCase = new GridPane();
@@ -453,7 +454,7 @@ public class InterfaceMotCroises extends Application {
 			if (intNombre != -1 && intNombre != 0) {
 
 				// System.out.println(intNombre);
-				c.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
+				c.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {/*Evenement qui met le focus sur la prochaine case*/
 					// int intNombre = c.getIntNombreCercleGrille();
 
 					@Override
@@ -504,7 +505,7 @@ public class InterfaceMotCroises extends Application {
 							motCourant.setIntColonne(intCoorY);
 						}
 
-						System.out.println("case cliquer " + "x:" + intCoorX + " y" + intCoorY);
+						//System.out.println("case cliquer " + "x:" + intCoorX + " y" + intCoorY);
 
 						if (motCourant.getOrientation() == EnumOrientation.HORIZONTALE) {
 
@@ -541,7 +542,7 @@ public class InterfaceMotCroises extends Application {
 				});
 			} else if (intNombre == 0) {
 				
-				c.setOnKeyPressed(new EventHandler<KeyEvent>() {
+				c.setOnKeyPressed(new EventHandler<KeyEvent>() { /*Evenement qui permet d'ecrire ou d'effacer dans les cases*/
 
 					@Override
 					public void handle(KeyEvent e) {
@@ -550,10 +551,13 @@ public class InterfaceMotCroises extends Application {
 						//System.out.println("allo");
 						//System.out.println(((Case) e.getSource()).isFocused());
 					//	System.out.println(caseCourante.getIntLigne() + ", " + caseCourante.getIntColonne());
-					if (e.getCode() == KeyCode.BACK_SPACE && strLettreTapez.length() != -1) {
+					if (e.getCode() == KeyCode.BACK_SPACE && strLettreTapez.length() != -1) {/*Lorsque j'efface, j'enleve les mots des cases et du String tapé*/
 							
-						if (!c.getTxtCase().getText().isEmpty()) 
-						strLettreTapez = strLettreTapez.replace(strLettreTapez.substring(strLettreTapez.length() - 1), "");
+						if (!c.getTxtCase().getText().isEmpty()) {
+							strLettreTapez = strLettreTapez.replace(strLettreTapez.substring(strLettreTapez.length() - 1), "");
+							
+						}
+						
 							if (motCourant.getOrientation() == EnumOrientation.HORIZONTALE) { // Les lignes
 								if (!c.getTxtCase().getText().isEmpty()) {
 									
@@ -592,7 +596,7 @@ public class InterfaceMotCroises extends Application {
 									
 								}
 							}
-						} else if (e.getCode().isLetterKey() &&strLettreTapez.length() < motCourant.getStrMot().length()) {
+						} else if (e.getCode().isLetterKey() || e.getCode() == KeyCode.MINUS &&strLettreTapez.length() < motCourant.getStrMot().length()) { //Lorsque j'ecrit dans les cases et je rempli le String tapé
 							//System.out.println("Ecrire"); 
 							//System.out.println(e.getCharacter());
 							
@@ -655,6 +659,10 @@ public class InterfaceMotCroises extends Application {
 							}
 							//System.out.println("Allo = "+strLettreTapez);
 						}
+						
+						else if(e.getCode() == KeyCode.ENTER) {
+							confirmerMot();
+						}
 						else {
 							//System.out.println("Dans le else: "+strLettreTapez+"\n"+"lettre: "+e.getCode());
 							//System.out.println();
@@ -666,7 +674,7 @@ public class InterfaceMotCroises extends Application {
 
 				});
 			}
-			btnLettres.setOnAction(new EventHandler<ActionEvent>() {
+			btnLettres.setOnAction(new EventHandler<ActionEvent>() {/*Evenement qui met les lettres melanger et qui met un Boolean pour pouvoir mettre la cases en jaune */
 
 				@Override
 				public void handle(ActionEvent event) {
@@ -679,7 +687,7 @@ public class InterfaceMotCroises extends Application {
 				}
 
 			});
-			btnSolution.setOnAction(new EventHandler<ActionEvent>() {
+			btnSolution.setOnAction(new EventHandler<ActionEvent>() { /*Evenement qui met le mot au complet dans les cases et qui le met en rouge*/
 
 				@Override
 				public void handle(ActionEvent event) {
@@ -707,13 +715,13 @@ public class InterfaceMotCroises extends Application {
 											cEnfant.getTxtCase().setDisable(true);
 											cEnfant.setDisable(true);
 											cEnfant.setBackground(couleurRouge);
-											System.out.println("text dans hbox: "+cEnfant.getTxtCase().getText());
+											//System.out.println("text dans hbox: "+cEnfant.getTxtCase().getText());
 											
 											cEnfant.setBooValider(true);
 											//for(int j = 0;j<motCourant.getStrMot().length();j++) {
 												
 											//}
-											cEnfant.getTxtCase().setText(Character.toString( motCourant.getStrMot().charAt(i)));
+											cEnfant.getTxtCase().setText(Character.toString( motCourant.getStrMot().toUpperCase().charAt(i)));
 											
 											
 											
@@ -739,7 +747,7 @@ public class InterfaceMotCroises extends Application {
 											//for(int j = 0;j<motCourant.getStrMot().length();j++) {
 												
 											//}
-											cEnfant.getTxtCase().setText(Character.toString( motCourant.getStrMot().charAt(i)));
+											cEnfant.getTxtCase().setText(Character.toString( motCourant.getStrMot().toUpperCase().charAt(i)));
 											
 										
 									
@@ -758,7 +766,7 @@ public class InterfaceMotCroises extends Application {
 
 				}
 			});
-			btnOk.setOnAction(new EventHandler<ActionEvent>() {
+			btnOk.setOnAction(new EventHandler<ActionEvent>() {/*Evenement lorsque je click sur le button OK*/
 
 				@Override
 				public void handle(ActionEvent e) {
@@ -773,7 +781,7 @@ public class InterfaceMotCroises extends Application {
 
 	}
 
-	public void confirmerMot() {
+	public void confirmerMot() {/*Methode qui permet de veifier si le mot tapez est celui qui correspond au vrai mot et affecte les couleurs au cases et met a jours le score*/
 		// pour le button Ok et pour la touche enter
 		
 		btnOk.setDisable(true);
@@ -784,16 +792,16 @@ public class InterfaceMotCroises extends Application {
 		Background couleurVert = new Background(new BackgroundFill(Color.LIGHTGREEN, new CornerRadii(5), new Insets(0)));
 		Background couleurJaune = new Background(new BackgroundFill(Color.LIGHTYELLOW, new CornerRadii(5), new Insets(0)));
 		Background couleurRouge = new Background(new BackgroundFill(Color.INDIANRED, new CornerRadii(5), new Insets(0)));
-		System.out.println(strLettreTapez);
+		//System.out.println(strLettreTapez);
 
 		int intColonneMot = motCourant.getIntColonne();
 		int intLigneMot =  motCourant.getIntLigne();
 		
 		//System.out.println("longeur case max : "+intLogngeurMotCaseY);
 		
-		System.out.println("lignes: "+intLigneMot + ", Colonnes: " + intColonneMot);
-		if (strLettreTapez.equals(motCourant.getStrMot().toUpperCase()) && motCourant.getBooMelanger() == false && motCourant.getBooSolution()==false) {// EN vert
-			System.out.println("trouver");
+		//System.out.println("lignes: "+intLigneMot + ", Colonnes: " + intColonneMot);
+		if (strLettreTapez.toUpperCase().equals(motCourant.getStrMot().toUpperCase()) && motCourant.getBooMelanger() == false && motCourant.getBooSolution()==false) {// EN vert
+			//System.out.println("trouver");
 			
 
 			if (motCourant.getOrientation() == EnumOrientation.HORIZONTALE) {
@@ -808,7 +816,7 @@ public class InterfaceMotCroises extends Application {
 								cEnfant.getTxtCase().setDisable(true);
 								cEnfant.setDisable(true);
 								cEnfant.setBackground(couleurVert);
-								System.out.println("text dans hbox: "+cEnfant.getTxtCase().getText());
+								//System.out.println("text dans hbox: "+cEnfant.getTxtCase().getText());
 								
 								cEnfant.setBooValider(true);
 								
@@ -838,7 +846,7 @@ public class InterfaceMotCroises extends Application {
 						}
 					}
 				}
-				System.out.println("les lignes apres "+intLigneMot);
+				//System.out.println("les lignes apres "+intLigneMot);
 			}
 			// c.getTxtCase().setDisable(true);
 			// c.getHboxCase().setDisable(true);
@@ -895,8 +903,8 @@ public class InterfaceMotCroises extends Application {
 				//System.out.println("les lignes apres "+intLigneMot);
 			}
 		}
-		if (strLettreTapez.equals(motCourant.getStrMot().toUpperCase()) && motCourant.getBooMelanger() == true && motCourant.getBooSolution()==false) {// EN vert
-			System.out.println("trouver");
+		if (strLettreTapez.toUpperCase().equals(motCourant.getStrMot().toUpperCase()) && motCourant.getBooMelanger() == true && motCourant.getBooSolution()==false) {// EN vert
+			//System.out.println("trouver");
 			
 
 			if (motCourant.getOrientation() == EnumOrientation.HORIZONTALE) {
@@ -911,7 +919,7 @@ public class InterfaceMotCroises extends Application {
 								cEnfant.getTxtCase().setDisable(true);
 								cEnfant.setDisable(true);
 								cEnfant.setBackground(couleurJaune);
-								System.out.println("text dans hbox: "+cEnfant.getTxtCase().getText());
+								//System.out.println("text dans hbox: "+cEnfant.getTxtCase().getText());
 								
 								cEnfant.setBooValider(true);
 								
@@ -946,14 +954,14 @@ public class InterfaceMotCroises extends Application {
 			// c.getHboxCase().setBackground(couleurVert);
 			// btnOk.setDisable(true);
 
-			intScoreMotier= intScoreMotier+ motCourant.getStrMot().length();
+			intScoreMotier= intScoreMotier+ intScoreComplet + motCourant.getStrMot().length();
 			
 			txtFieldvotreSocre.setText(Integer.toString(intScoreMotier));
 		} 
 
 	}
 
-	public void effacerMotCase() {
+	public void effacerMotCase() { //Methode qui efface les mots dans le cases quand je click sur un cercle
 		
 		for (Case c : arrCase) {
 			if(c.getBooValider()==true) {
@@ -965,7 +973,7 @@ public class InterfaceMotCroises extends Application {
 		}
 	}
 
-	public void AfficherMenuRegle() {
+	public void AfficherMenuRegle() { //Methode qui affiche les regles du jeu 
 		Alert alertInfo = new Alert(AlertType.INFORMATION);
 		String text = "Règles du jeu";
 		alertInfo.setTitle("Règles du jeu");
