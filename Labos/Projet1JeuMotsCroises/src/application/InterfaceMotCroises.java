@@ -413,7 +413,7 @@ public class InterfaceMotCroises extends Application {
 		for(Mot m: arrMots) {
 			
 			intScoreMaxmum += m.getStrMot().length()*2;
-			
+			System.out.println(m.getStrMot());
 			
 		}
 		txtFieldmaximum.setText(Integer.toString(intScoreMaxmum));
