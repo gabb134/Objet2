@@ -1,13 +1,10 @@
 package application;
 
-public class Document {
+public class Document implements Comparable<Document> {
 
-	
 	private int numero;
 	private String auteur;
 	private String titre;
-	
-	
 
 	public Document(int numero, String auteur, String titre) {
 		super();
@@ -16,11 +13,23 @@ public class Document {
 		this.titre = titre;
 	}
 
-	public String toString() {
+	public int hashCode() {
+
+		return (new Integer(numero).hashCode() + titre.hashCode() + auteur.hashCode());
 		
-		return "Numéro: "+numero+"\nAuteur: "+auteur+"\nTitre: "+titre+"\n";
 	}
-	
+
+	public boolean equals(Object d) {
+
+		return this.numero == getNumero() && this.titre.equals(getTitre()) && this.auteur.equals(getAuteur());
+
+	}
+
+	public String toString() {
+
+		return "Numéro: " + numero + "\nAuteur: " + auteur + "\nTitre: " + titre + "\n";
+	}
+
 	public int getNumero() {
 		return numero;
 	}
@@ -44,9 +53,17 @@ public class Document {
 	public void setTitre(String titre) {
 		this.titre = titre;
 	}
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
+	}
+
+	@Override
+	public int compareTo(Document o) {
+		// TODO Auto-generated method stub
+
+		return this.titre.compareTo(o.getTitre());
 	}
 
 }

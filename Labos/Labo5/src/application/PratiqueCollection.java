@@ -1,6 +1,7 @@
 package application;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.Iterator;
 
@@ -17,7 +18,7 @@ public class PratiqueCollection {
 		
 		
 		 ArrayList<Document> listDoc = new ArrayList<>();
-		Document d1 = new Document (1,"aabb", "auteur1");
+		Document d1 = new Document  (1,"aabb", "auteur1");
 		 Document d2 = new Document (2,"aaab", "auteur2");
 		 Document d3 = new Document (3,"bbaa", "auteur3");
 		 Document d4 = new Document (4,"abaa", "auteur4");
@@ -36,14 +37,22 @@ public class PratiqueCollection {
 		 
 		 
 		 
-	//	 for (Document doc: listDoc){ System.out.println(doc); } 
+		// for (Document doc: listDoc){ System.out.println(doc); } 
 
 		
 		 HashSet<Document> ensDoc = new HashSet<Document>(listDoc);
+		 
 		 Iterator<Document> i = ensDoc.iterator();
 		 
-		 while(i.hasNext())
-			 System.out.println(i.next());
+		/* while(i.hasNext())
+			 System.out.println(i.next());*/
+		 
+		 Collections.sort(listDoc);
+		 
+		/* while(i.hasNext())
+			 System.out.println(i.next());*/
+		 for (Document doc: listDoc){ System.out.println(doc); } 
+		 
 	}
 
 }
