@@ -12,7 +12,8 @@ public class TriParAuteur implements Comparator<Document>{
 	@Override
 	public int compare(Document o1, Document o2) {
 		// TODO Auto-generated method stub
-		return 0;
+		return o1.getAuteur().compareTo(o2.getAuteur());
 	}
+	
 
 }

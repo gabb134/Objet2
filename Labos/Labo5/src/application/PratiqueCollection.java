@@ -2,8 +2,12 @@ package application;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.List;
+
+import org.w3c.dom.ls.LSInput;
 
 public class PratiqueCollection {
 	
@@ -43,15 +47,30 @@ public class PratiqueCollection {
 		 HashSet<Document> ensDoc = new HashSet<Document>(listDoc);
 		 
 		 Iterator<Document> i = ensDoc.iterator();
-		 
-		/* while(i.hasNext())
-			 System.out.println(i.next());*/
+		 System.out.println("*Avant le tri*");
+		 while(i.hasNext())
+			 System.out.println(i.next());
 		 
 		 Collections.sort(listDoc);
 		 
 		/* while(i.hasNext())
 			 System.out.println(i.next());*/
-		 for (Document doc: listDoc){ System.out.println(doc); } 
+		 System.out.println();
+		 System.out.println("*Apres le tri par titre*");
+		 for (Document doc: listDoc){ System.out.println(doc); }
+		 
+		 Collections.sort(listDoc,new TriParAuteur());
+		 
+		 System.out.println();
+		 System.out.println("*Apres le tri par auteur en décroissant*");
+		 for (Document doc: listDoc){ System.out.println(doc); }
+		 
+		 Collections.sort(listDoc, new TriParAuteurEtParTitre().reversed());
+		
+		 System.out.println();
+		 System.out.println("*Apres le tri par titre et par auteur*");
+		 for (Document doc: listDoc){ System.out.println(doc); }
+
 		 
 	}
 
