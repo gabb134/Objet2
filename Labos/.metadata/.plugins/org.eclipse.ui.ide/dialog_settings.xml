@@ -14,6 +14,7 @@
 		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\GabrielMarrero\Documents\Objet2\Theorie\Cours7\exempleCours7"/>
 			<item value="C:\Users\GabrielMarrero\Documents\Objet2\Labos\preparationProjet2"/>
 			<item value="C:\Users\GabrielMarrero\Documents\Objet2\Labos\Projet2Mediatheque"/>
 			<item value="C:\Users\GabrielMarrero\Documents\Objet2\Labos\OutilsProjet2EtPréparation"/>
@@ -33,7 +34,6 @@
 			<item value="C:\Users\gabo\OneDrive - Cegep Gerald-Godin\Automne2019\Objet2\Theorie\Cours 1\Cours1_suite\Cours1 (suite)\exempleCours1"/>
 			<item value="C:\Users\cg.marrero\OneDrive - Cegep Gerald-Godin\Automne2019\Objet2\Theorie\Cours 1\Cours1_suite\Cours1 (suite)\gestionnaireDeMiseEnPage"/>
 			<item value="C:\Users\cg.marrero\OneDrive - Cegep Gerald-Godin\Automne2019\Objet2\Theorie\Cours 1\Cours1_suite\Cours1 (suite)\exempleCours1"/>
-			<item value="/Users/gabo/OneDrive - Cegep Gerald-Godin/Automne2019/Objet2/Theorie/Cours 1/Cours1_suite/Cours1 (suite)/gestionnaireDeMiseEnPage"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
 			<item value=""/>
